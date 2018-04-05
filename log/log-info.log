@@ -1,0 +1,812 @@
+===2018-04-05 09:00:21.329 [main] INFO  com.army.Army Line:48 -Starting Army on USER-20171102JJ with PID 7820 (started by Administrator in D:\上家项目资料\army)
+===2018-04-05 09:00:21.337 [main] INFO  com.army.Army Line:659-No active profile set, falling back to default profiles: default
+===2018-04-05 09:00:21.392 [main] INFO  org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext Line:581-Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@3349e9bb: startup date [Thu Apr 05 09:00:21 CST 2018]; root of context hierarchy
+===2018-04-05 09:00:21.464 [background-preinit] INFO  org.hibernate.validator.internal.util.Version Line:30 -HV000001: Hibernate Validator 5.2.4.Final
+===2018-04-05 09:00:22.248 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker Line:328-Bean 'druidConfiguration' of type [class com.army.util.DruidConfiguration$$EnhancerBySpringCGLIB$$f95aaf32] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+===2018-04-05 09:00:22.319 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker Line:328-Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [class org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$df54bbb1] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+===2018-04-05 09:00:22.613 [main] INFO  org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer Line:88 -Tomcat initialized with port(s): 8080 (http)
+===2018-04-05 09:00:22.621 [main] INFO  org.apache.catalina.core.StandardService Line:179-Starting service Tomcat
+===2018-04-05 09:00:22.622 [main] INFO  org.apache.catalina.core.StandardEngine Line:179-Starting Servlet Engine: Apache Tomcat/8.5.4
+===2018-04-05 09:00:22.920 [localhost-startStop-1] INFO  org.apache.jasper.servlet.TldScanner Line:179-At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+===2018-04-05 09:00:22.922 [localhost-startStop-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] Line:179-Initializing Spring embedded WebApplicationContext
+===2018-04-05 09:00:22.922 [localhost-startStop-1] INFO  org.springframework.web.context.ContextLoader Line:276-Root WebApplicationContext: initialization completed in 1530 ms
+===2018-04-05 09:00:23.236 [localhost-startStop-1] INFO  org.springframework.boot.web.servlet.ServletRegistrationBean Line:190-Mapping servlet: 'statViewServlet' to [/druid/*]
+===2018-04-05 09:00:23.237 [localhost-startStop-1] INFO  org.springframework.boot.web.servlet.ServletRegistrationBean Line:190-Mapping servlet: 'dispatcherServlet' to [/]
+===2018-04-05 09:00:23.241 [localhost-startStop-1] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean Line:258-Mapping filter: 'metricFilter' to: [/*]
+===2018-04-05 09:00:23.242 [localhost-startStop-1] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean Line:258-Mapping filter: 'characterEncodingFilter' to: [/*]
+===2018-04-05 09:00:23.242 [localhost-startStop-1] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean Line:258-Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+===2018-04-05 09:00:23.243 [localhost-startStop-1] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean Line:258-Mapping filter: 'httpPutFormContentFilter' to: [/*]
+===2018-04-05 09:00:23.243 [localhost-startStop-1] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean Line:258-Mapping filter: 'requestContextFilter' to: [/*]
+===2018-04-05 09:00:23.243 [localhost-startStop-1] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean Line:258-Mapping filter: 'webRequestLoggingFilter' to: [/*]
+===2018-04-05 09:00:23.244 [localhost-startStop-1] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean Line:271-Mapping filter: 'webStatFilter' to urls: [/*]
+===2018-04-05 09:00:23.244 [localhost-startStop-1] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean Line:258-Mapping filter: 'applicationContextIdFilter' to: [/*]
+===2018-04-05 09:00:24.115 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter Line:534-Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@3349e9bb: startup date [Thu Apr 05 09:00:21 CST 2018]; root of context hierarchy
+===2018-04-05 09:00:24.159 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping Line:543-Mapped "{[/data/getCount]}" onto public com.alibaba.fastjson.JSONObject com.army.controller.WebJumpController.getCount()
+===2018-04-05 09:00:24.161 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping Line:543-Mapped "{[/data/manager/findAllTVManeger],methods=[POST]}" onto public com.alibaba.fastjson.JSONArray com.army.controller.WebJumpController.findAllTVManeger(javax.servlet.http.HttpServletRequest,com.army.vo.PreFileInfo) throws java.lang.Exception
+===2018-04-05 09:00:24.162 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping Line:543-Mapped "{[/data/manager/deleteImg]}" onto public com.alibaba.fastjson.JSONObject com.army.controller.WebJumpController.deleteImg(javax.servlet.http.HttpServletRequest,com.army.vo.ImgsHisInfo) throws java.lang.Exception
+===2018-04-05 09:00:24.162 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping Line:543-Mapped "{[/data/manager/deleteVedio]}" onto public com.alibaba.fastjson.JSONObject com.army.controller.WebJumpController.deleteVedio(javax.servlet.http.HttpServletRequest,com.army.vo.VedioInfo) throws java.lang.Exception
+===2018-04-05 09:00:24.162 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping Line:543-Mapped "{[/data/manager/openfile]}" onto public com.alibaba.fastjson.JSONObject com.army.controller.WebJumpController.openfile() throws java.lang.Exception
+===2018-04-05 09:00:24.162 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping Line:543-Mapped "{[/data/manager/loadImg]}" onto public com.alibaba.fastjson.JSONObject com.army.controller.WebJumpController.loadImg(javax.servlet.http.HttpServletRequest,com.army.vo.ImgsHisInfo) throws java.lang.Exception
+===2018-04-05 09:00:24.162 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping Line:543-Mapped "{[/data/manager/deleteTv]}" onto public com.alibaba.fastjson.JSONObject com.army.controller.WebJumpController.deleteTv(javax.servlet.http.HttpServletRequest,com.army.vo.TVListInfo) throws java.lang.Exception
+===2018-04-05 09:00:24.163 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping Line:543-Mapped "{[/data/manager/findAllImgs]}" onto public com.alibaba.fastjson.JSONArray com.army.controller.WebJumpController.findAllImgs(javax.servlet.http.HttpServletRequest,com.army.vo.ImgsHisInfo) throws java.lang.Exception
+===2018-04-05 09:00:24.163 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping Line:543-Mapped "{[/data/manager/deletemusic]}" onto public com.alibaba.fastjson.JSONObject com.army.controller.WebJumpController.deletemusic(javax.servlet.http.HttpServletRequest,com.army.vo.MusicInfo) throws java.lang.Exception
+===2018-04-05 09:00:24.163 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping Line:543-Mapped "{[/data/findpullNewsById],methods=[POST]}" onto public com.alibaba.fastjson.JSONObject com.army.controller.WebJumpController.findpullNewsById(com.army.vo.ReptileNewsInfo) throws java.lang.Exception
+===2018-04-05 09:00:24.164 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping Line:543-Mapped "{[/data/manager/findById],methods=[POST]}" onto public com.alibaba.fastjson.JSONObject com.army.controller.WebJumpController.findById(com.army.vo.ReptileNewsInfo) throws java.lang.Exception
+===2018-04-05 09:00:24.164 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping Line:543-Mapped "{[/data/findAllTv],methods=[POST]}" onto public com.alibaba.fastjson.JSONArray com.army.controller.WebJumpController.findAllTv(com.army.vo.PreFileInfo) throws java.lang.Exception
+===2018-04-05 09:00:24.164 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping Line:543-Mapped "{[/data/manager/insertPreFile],methods=[POST]}" onto public com.alibaba.fastjson.JSONObject com.army.controller.WebJumpController.insertPreFile(javax.servlet.http.HttpServletRequest,com.army.vo.PreFileInfo) throws java.lang.Exception
+===2018-04-05 09:00:24.165 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping Line:543-Mapped "{[/data/login],methods=[POST]}" onto public com.alibaba.fastjson.JSONObject com.army.controller.WebJumpController.userLogin(javax.servlet.http.HttpServletRequest,com.army.vo.UserInfo) throws java.lang.Exception
+===2018-04-05 09:00:24.165 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping Line:543-Mapped "{[/data/manager/uploadFile],methods=[POST]}" onto public com.alibaba.fastjson.JSONObject com.army.controller.WebJumpController.uploadFile(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.lang.Exception
+===2018-04-05 09:00:24.165 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping Line:543-Mapped "{[/data/manager/updateTv],methods=[POST]}" onto public com.alibaba.fastjson.JSONObject com.army.controller.WebJumpController.updateTv(com.army.vo.PreFileInfo) throws java.lang.Exception
+===2018-04-05 09:00:24.165 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping Line:543-Mapped "{[/data/manager/findOpt],methods=[POST]}" onto public com.alibaba.fastjson.JSONArray com.army.controller.WebJumpController.findOpt(javax.servlet.http.HttpServletRequest,java.lang.String) throws java.lang.Exception
+===2018-04-05 09:00:24.166 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping Line:543-Mapped "{[/data/manager/findAllUser],methods=[POST]}" onto public com.alibaba.fastjson.JSONArray com.army.controller.WebJumpController.findAllUser(com.army.vo.UserInfo) throws java.lang.Exception
+===2018-04-05 09:00:24.166 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping Line:543-Mapped "{[/data/manager/findUserById],methods=[POST]}" onto public com.alibaba.fastjson.JSONObject com.army.controller.WebJumpController.findUserById(com.army.vo.UserInfo) throws java.lang.Exception
+===2018-04-05 09:00:24.166 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping Line:543-Mapped "{[/data/manager/updateUser],methods=[POST]}" onto public com.alibaba.fastjson.JSONObject com.army.controller.WebJumpController.updateUser(javax.servlet.http.HttpServletRequest,com.army.vo.UserInfo) throws java.lang.Exception
+===2018-04-05 09:00:24.167 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping Line:543-Mapped "{[/data/manager/findAllCount],methods=[POST]}" onto public com.alibaba.fastjson.JSONArray com.army.controller.WebJumpController.findAllCount(javax.servlet.http.HttpServletRequest) throws java.lang.Exception
+===2018-04-05 09:00:24.167 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping Line:543-Mapped "{[/data/manager/insertNew],methods=[POST]}" onto public com.alibaba.fastjson.JSONObject com.army.controller.WebJumpController.insertNew(javax.servlet.http.HttpServletRequest,com.army.vo.NewsInfo) throws java.lang.Exception
+===2018-04-05 09:00:24.167 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping Line:543-Mapped "{[/data/findAllNews],methods=[POST]}" onto public com.alibaba.fastjson.JSONArray com.army.controller.WebJumpController.findAllNews(com.army.vo.NewsInfo) throws java.lang.Exception
+===2018-04-05 09:00:24.167 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping Line:543-Mapped "{[/data/manager/findNewById],methods=[POST]}" onto public com.alibaba.fastjson.JSONObject com.army.controller.WebJumpController.findNewById(com.army.vo.NewsInfo) throws java.lang.Exception
+===2018-04-05 09:00:24.168 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping Line:543-Mapped "{[/data/findNewById],methods=[POST]}" onto public com.alibaba.fastjson.JSONObject com.army.controller.WebJumpController.findwebNewById(com.army.vo.NewsInfo) throws java.lang.Exception
+===2018-04-05 09:00:24.168 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping Line:543-Mapped "{[/data/manager/change],methods=[POST]}" onto public com.alibaba.fastjson.JSONObject com.army.controller.WebJumpController.changerValid(javax.servlet.http.HttpServletRequest,com.army.vo.NewsInfo) throws java.lang.Exception
+===2018-04-05 09:00:24.168 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping Line:543-Mapped "{[/data/manager/insertNotice],methods=[POST]}" onto public com.alibaba.fastjson.JSONObject com.army.controller.WebJumpController.insertNotice(javax.servlet.http.HttpServletRequest,com.army.vo.NoticeInfo) throws java.lang.Exception
+===2018-04-05 09:00:24.168 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping Line:543-Mapped "{[/data/manager/findNotice],methods=[POST]}" onto public com.alibaba.fastjson.JSONObject com.army.controller.WebJumpController.findNotice(com.army.vo.NoticeInfo) throws java.lang.Exception
+===2018-04-05 09:00:24.169 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping Line:543-Mapped "{[/data/manager/updateNotice],methods=[POST]}" onto public com.alibaba.fastjson.JSONObject com.army.controller.WebJumpController.updateNotice(javax.servlet.http.HttpServletRequest,com.army.vo.NoticeInfo) throws java.lang.Exception
+===2018-04-05 09:00:24.170 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping Line:543-Mapped "{[/data/findAllNotice],methods=[POST]}" onto public com.alibaba.fastjson.JSONArray com.army.controller.WebJumpController.findAllNotice() throws java.lang.Exception
+===2018-04-05 09:00:24.170 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping Line:543-Mapped "{[/data/regist],methods=[POST]}" onto public com.alibaba.fastjson.JSONObject com.army.controller.WebJumpController.userRegist(com.army.vo.UserInfo) throws java.lang.Exception
+===2018-04-05 09:00:24.170 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping Line:543-Mapped "{[/data/manager/getUser],methods=[POST]}" onto public com.alibaba.fastjson.JSONObject com.army.controller.WebJumpController.getUser(javax.servlet.http.HttpServletRequest) throws java.lang.Exception
+===2018-04-05 09:00:24.171 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping Line:543-Mapped "{[/data/manager/outLogin],methods=[POST]}" onto public com.alibaba.fastjson.JSONObject com.army.controller.WebJumpController.outLogin(javax.servlet.http.HttpServletRequest) throws java.lang.Exception
+===2018-04-05 09:00:24.171 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping Line:543-Mapped "{[/data/page/{pageName}]}" onto public org.springframework.web.servlet.ModelAndView com.army.controller.WebJumpController.pageUrl(java.lang.String)
+===2018-04-05 09:00:24.172 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping Line:543-Mapped "{[/data/page/{preFile}/{pageName}]}" onto public org.springframework.web.servlet.ModelAndView com.army.controller.WebJumpController.pageUrl(java.lang.String,java.lang.String)
+===2018-04-05 09:00:24.172 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping Line:543-Mapped "{[/data/manager/updateMusic],methods=[POST]}" onto public com.alibaba.fastjson.JSONObject com.army.controller.WebJumpController.updateMusic(javax.servlet.http.HttpServletRequest,com.army.vo.MusicInfo) throws java.lang.Exception
+===2018-04-05 09:00:24.172 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping Line:543-Mapped "{[/data/manager/insertMusics],methods=[POST]}" onto public com.alibaba.fastjson.JSONObject com.army.controller.WebJumpController.insertMusics(javax.servlet.http.HttpServletRequest,com.army.vo.MusicInfo) throws java.lang.Exception
+===2018-04-05 09:00:24.172 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping Line:543-Mapped "{[/data/findAllMusic],methods=[POST]}" onto public com.alibaba.fastjson.JSONArray com.army.controller.WebJumpController.findAllMusic(com.army.vo.MusicInfo) throws java.lang.Exception
+===2018-04-05 09:00:24.172 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping Line:543-Mapped "{[/data/manager/updateMoive],methods=[POST]}" onto public com.alibaba.fastjson.JSONObject com.army.controller.WebJumpController.updateMoive(javax.servlet.http.HttpServletRequest,com.army.vo.VedioInfo) throws java.lang.Exception
+===2018-04-05 09:00:24.172 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping Line:543-Mapped "{[/data/manager/insertMoive],methods=[POST]}" onto public com.alibaba.fastjson.JSONObject com.army.controller.WebJumpController.insertMoive(javax.servlet.http.HttpServletRequest,com.army.vo.VedioInfo) throws java.lang.Exception
+===2018-04-05 09:00:24.173 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping Line:543-Mapped "{[/data/findAllMoive],methods=[POST]}" onto public com.alibaba.fastjson.JSONArray com.army.controller.WebJumpController.findAllMoive(com.army.vo.VedioInfo) throws java.lang.Exception
+===2018-04-05 09:00:24.173 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping Line:543-Mapped "{[/data/manager/updateApp],methods=[POST]}" onto public com.alibaba.fastjson.JSONObject com.army.controller.WebJumpController.updateApp(javax.servlet.http.HttpServletRequest,com.army.vo.AppInfo) throws java.lang.Exception
+===2018-04-05 09:00:24.173 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping Line:543-Mapped "{[/data/manager/findAllApp],methods=[POST]}" onto public com.alibaba.fastjson.JSONArray com.army.controller.WebJumpController.findAllApp() throws java.lang.Exception
+===2018-04-05 09:00:24.173 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping Line:543-Mapped "{[/data/manager/findAllAppByName],methods=[POST]}" onto public com.alibaba.fastjson.JSONArray com.army.controller.WebJumpController.findAllAppByName(com.army.vo.AppInfo) throws java.lang.Exception
+===2018-04-05 09:00:24.173 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping Line:543-Mapped "{[/data/findAllReptileNews],methods=[POST]}" onto public com.alibaba.fastjson.JSONArray com.army.controller.WebJumpController.findAllReptileNews(com.army.vo.ReptileNewsInfo) throws java.lang.Exception
+===2018-04-05 09:00:24.174 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping Line:543-Mapped "{[/data/manager/findAllReptileNewsManager],methods=[POST]}" onto public com.alibaba.fastjson.JSONArray com.army.controller.WebJumpController.findAllReptileNewsManager(javax.servlet.http.HttpServletRequest,com.army.vo.ReptileNewsInfo) throws java.lang.Exception
+===2018-04-05 09:00:24.174 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping Line:543-Mapped "{[/data/manager/insertReptileNews],methods=[POST]}" onto public com.alibaba.fastjson.JSONObject com.army.controller.WebJumpController.insertReptileNews() throws java.lang.Exception
+===2018-04-05 09:00:24.174 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping Line:543-Mapped "{[/data/manager/updateReptileNews],methods=[POST]}" onto public com.alibaba.fastjson.JSONObject com.army.controller.WebJumpController.updateReptileNews(javax.servlet.http.HttpServletRequest,com.army.vo.ReptileNewsInfo) throws java.lang.Exception
+===2018-04-05 09:00:24.174 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping Line:543-Mapped "{[/data/manager/findAllNewManager],methods=[POST]}" onto public com.alibaba.fastjson.JSONArray com.army.controller.WebJumpController.findAllNewManager(javax.servlet.http.HttpServletRequest,com.army.vo.NewsInfo) throws java.lang.Exception
+===2018-04-05 09:00:24.174 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping Line:543-Mapped "{[/data/manager/findAllNoticeManager],methods=[POST]}" onto public com.alibaba.fastjson.JSONArray com.army.controller.WebJumpController.findAllNoticeManager(javax.servlet.http.HttpServletRequest,com.army.vo.NoticeInfo) throws java.lang.Exception
+===2018-04-05 09:00:24.174 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping Line:543-Mapped "{[/data/manager/findAllMusicManeger],methods=[POST]}" onto public com.alibaba.fastjson.JSONArray com.army.controller.WebJumpController.findAllMusicManeger(javax.servlet.http.HttpServletRequest,com.army.vo.MusicInfo) throws java.lang.Exception
+===2018-04-05 09:00:24.174 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping Line:543-Mapped "{[/data/manager/findAllMusicByName],methods=[POST]}" onto public com.alibaba.fastjson.JSONArray com.army.controller.WebJumpController.findAllMusicByName(com.army.vo.MusicInfo) throws java.lang.Exception
+===2018-04-05 09:00:24.175 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping Line:543-Mapped "{[/data/manager/findAllVedioManeger],methods=[POST]}" onto public com.alibaba.fastjson.JSONArray com.army.controller.WebJumpController.findAllVedioManeger(javax.servlet.http.HttpServletRequest,com.army.vo.VedioInfo) throws java.lang.Exception
+===2018-04-05 09:00:24.175 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping Line:543-Mapped "{[/data/manager/findAllMoiveByName],methods=[POST]}" onto public com.alibaba.fastjson.JSONArray com.army.controller.WebJumpController.findAllMoiveByName(com.army.vo.VedioInfo) throws java.lang.Exception
+===2018-04-05 09:00:24.176 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping Line:543-Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+===2018-04-05 09:00:24.177 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping Line:543-Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+===2018-04-05 09:00:24.182 [main] INFO  org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter Line:303-Adding welcome page: ServletContext resource [/index.html]
+===2018-04-05 09:00:24.191 [main] INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping Line:341-Root mapping to handler of type [class org.springframework.web.servlet.mvc.ParameterizableViewController]
+===2018-04-05 09:00:24.197 [main] INFO  org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping Line:354-Mapped URL path [/MoiveService] onto handler '/MoiveService'
+===2018-04-05 09:00:24.198 [main] INFO  org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping Line:354-Mapped URL path [/musicService] onto handler '/musicService'
+===2018-04-05 09:00:24.198 [main] INFO  org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping Line:354-Mapped URL path [/newsService] onto handler '/newsService'
+===2018-04-05 09:00:24.202 [main] INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping Line:354-Mapped URL path [/upload/image/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+===2018-04-05 09:00:24.202 [main] INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping Line:354-Mapped URL path [/upload/vedio/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+===2018-04-05 09:00:24.203 [main] INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping Line:354-Mapped URL path [/upload/music/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+===2018-04-05 09:00:24.203 [main] INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping Line:354-Mapped URL path [/upload/app/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+===2018-04-05 09:00:24.203 [main] INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping Line:354-Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+===2018-04-05 09:00:24.203 [main] INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping Line:354-Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+===2018-04-05 09:00:24.245 [main] INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping Line:354-Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+===2018-04-05 09:00:24.570 [main] INFO  org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping Line:543-Mapped "{[/env/{name:.*}],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EnvironmentMvcEndpoint.value(java.lang.String)
+===2018-04-05 09:00:24.570 [main] INFO  org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping Line:543-Mapped "{[/env || /env.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+===2018-04-05 09:00:24.570 [main] INFO  org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping Line:543-Mapped "{[/dump || /dump.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+===2018-04-05 09:00:24.571 [main] INFO  org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping Line:543-Mapped "{[/health || /health.json],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.HealthMvcEndpoint.invoke(java.security.Principal)
+===2018-04-05 09:00:24.571 [main] INFO  org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping Line:543-Mapped "{[/autoconfig || /autoconfig.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+===2018-04-05 09:00:24.572 [main] INFO  org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping Line:543-Mapped "{[/heapdump || /heapdump.json],methods=[GET],produces=[application/octet-stream]}" onto public void org.springframework.boot.actuate.endpoint.mvc.HeapdumpMvcEndpoint.invoke(boolean,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.io.IOException,javax.servlet.ServletException
+===2018-04-05 09:00:24.572 [main] INFO  org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping Line:543-Mapped "{[/trace || /trace.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+===2018-04-05 09:00:24.573 [main] INFO  org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping Line:543-Mapped "{[/metrics/{name:.*}],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.MetricsMvcEndpoint.value(java.lang.String)
+===2018-04-05 09:00:24.573 [main] INFO  org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping Line:543-Mapped "{[/metrics || /metrics.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+===2018-04-05 09:00:24.573 [main] INFO  org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping Line:543-Mapped "{[/configprops || /configprops.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+===2018-04-05 09:00:24.575 [main] INFO  org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping Line:543-Mapped "{[/beans || /beans.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+===2018-04-05 09:00:24.576 [main] INFO  org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping Line:543-Mapped "{[/logfile || /logfile.json],methods=[GET || HEAD]}" onto public void org.springframework.boot.actuate.endpoint.mvc.LogFileMvcEndpoint.invoke(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws javax.servlet.ServletException,java.io.IOException
+===2018-04-05 09:00:24.576 [main] INFO  org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping Line:543-Mapped "{[/info || /info.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+===2018-04-05 09:00:24.577 [main] INFO  org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping Line:543-Mapped "{[/mappings || /mappings.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+===2018-04-05 09:00:24.720 [main] INFO  org.springframework.jmx.export.annotation.AnnotationMBeanExporter Line:431-Registering beans for JMX exposure on startup
+===2018-04-05 09:00:24.721 [main] INFO  org.springframework.jmx.export.annotation.AnnotationMBeanExporter Line:912-Bean with name 'dataSource' has been autodetected for JMX exposure
+===2018-04-05 09:00:24.729 [main] INFO  org.springframework.jmx.export.annotation.AnnotationMBeanExporter Line:667-Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=dataSource,type=DruidDataSource]
+===2018-04-05 09:00:24.731 [main] INFO  org.springframework.boot.actuate.endpoint.jmx.EndpointMBeanExporter Line:431-Registering beans for JMX exposure on startup
+===2018-04-05 09:00:24.739 [main] INFO  org.springframework.context.support.DefaultLifecycleProcessor Line:341-Starting beans in phase 0
+===2018-04-05 09:00:24.747 [main] INFO  org.springframework.boot.actuate.endpoint.jmx.EndpointMBeanExporter Line:674-Located managed bean 'requestMappingEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=requestMappingEndpoint]
+===2018-04-05 09:00:24.764 [main] INFO  org.springframework.boot.actuate.endpoint.jmx.EndpointMBeanExporter Line:674-Located managed bean 'environmentEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=environmentEndpoint]
+===2018-04-05 09:00:24.767 [main] INFO  org.springframework.boot.actuate.endpoint.jmx.EndpointMBeanExporter Line:674-Located managed bean 'healthEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=healthEndpoint]
+===2018-04-05 09:00:24.770 [main] INFO  org.springframework.boot.actuate.endpoint.jmx.EndpointMBeanExporter Line:674-Located managed bean 'beansEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=beansEndpoint]
+===2018-04-05 09:00:24.773 [main] INFO  org.springframework.boot.actuate.endpoint.jmx.EndpointMBeanExporter Line:674-Located managed bean 'infoEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=infoEndpoint]
+===2018-04-05 09:00:24.775 [main] INFO  org.springframework.boot.actuate.endpoint.jmx.EndpointMBeanExporter Line:674-Located managed bean 'metricsEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=metricsEndpoint]
+===2018-04-05 09:00:24.777 [main] INFO  org.springframework.boot.actuate.endpoint.jmx.EndpointMBeanExporter Line:674-Located managed bean 'traceEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=traceEndpoint]
+===2018-04-05 09:00:24.779 [main] INFO  org.springframework.boot.actuate.endpoint.jmx.EndpointMBeanExporter Line:674-Located managed bean 'dumpEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=dumpEndpoint]
+===2018-04-05 09:00:24.783 [main] INFO  org.springframework.boot.actuate.endpoint.jmx.EndpointMBeanExporter Line:674-Located managed bean 'autoConfigurationReportEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=autoConfigurationReportEndpoint]
+===2018-04-05 09:00:24.787 [main] INFO  org.springframework.boot.actuate.endpoint.jmx.EndpointMBeanExporter Line:674-Located managed bean 'configurationPropertiesReportEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=configurationPropertiesReportEndpoint]
+===2018-04-05 09:00:24.797 [main] INFO  org.springframework.scheduling.annotation.ScheduledAnnotationBeanPostProcessor Line:244-No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+===2018-04-05 09:00:24.803 [main] INFO  org.apache.coyote.http11.Http11NioProtocol Line:179-Initializing ProtocolHandler ["http-nio-8080"]
+===2018-04-05 09:00:24.811 [main] INFO  org.apache.coyote.http11.Http11NioProtocol Line:179-Starting ProtocolHandler [http-nio-8080]
+===2018-04-05 09:00:24.956 [main] INFO  org.apache.tomcat.util.net.NioSelectorPool Line:179-Using a shared selector for servlet write/read
+===2018-04-05 09:00:24.974 [main] INFO  org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer Line:186-Tomcat started on port(s): 8080 (http)
+===2018-04-05 09:00:24.976 [main] INFO  com.army.util.TimerTask Line:34 -start.............
+===2018-04-05 09:00:24.979 [main] INFO  com.army.Army Line:57 -Started Army in 4.004 seconds (JVM running for 4.671)
+===2018-04-05 09:01:00.005 [pool-2-thread-1] INFO  com.army.util.Count Line:141-刷新访问量:头条访问量：3213624
+天下杂谈问量：15497
+音乐访问量：12463
+视频访问量：35454
+
+===2018-04-05 09:02:00.001 [pool-2-thread-1] INFO  com.army.util.Count Line:141-刷新访问量:头条访问量：3213624
+天下杂谈问量：15497
+音乐访问量：12463
+视频访问量：35454
+
+===2018-04-05 09:03:00.002 [pool-2-thread-1] INFO  com.army.util.Count Line:141-刷新访问量:头条访问量：3213624
+天下杂谈问量：15497
+音乐访问量：12463
+视频访问量：35454
+
+===2018-04-05 09:04:00.001 [pool-2-thread-1] INFO  com.army.util.Count Line:141-刷新访问量:头条访问量：3213624
+天下杂谈问量：15497
+音乐访问量：12463
+视频访问量：35454
+
+===2018-04-05 09:05:00.001 [pool-2-thread-1] INFO  com.army.util.Count Line:141-刷新访问量:头条访问量：3213624
+天下杂谈问量：15497
+音乐访问量：12463
+视频访问量：35454
+
+===2018-04-05 09:06:00.003 [pool-2-thread-1] INFO  com.army.util.Count Line:141-刷新访问量:头条访问量：3213624
+天下杂谈问量：15497
+音乐访问量：12463
+视频访问量：35454
+
+===2018-04-05 09:07:00.002 [pool-2-thread-1] INFO  com.army.util.Count Line:141-刷新访问量:头条访问量：3213624
+天下杂谈问量：15497
+音乐访问量：12463
+视频访问量：35454
+
+===2018-04-05 09:08:00.002 [pool-2-thread-1] INFO  com.army.util.Count Line:141-刷新访问量:头条访问量：3213624
+天下杂谈问量：15497
+音乐访问量：12463
+视频访问量：35454
+
+===2018-04-05 09:09:00.002 [pool-2-thread-1] INFO  com.army.util.Count Line:141-刷新访问量:头条访问量：3213624
+天下杂谈问量：15497
+音乐访问量：12463
+视频访问量：35454
+
+===2018-04-05 09:10:00.001 [pool-2-thread-1] INFO  com.army.util.Count Line:141-刷新访问量:头条访问量：3213624
+天下杂谈问量：15497
+音乐访问量：12463
+视频访问量：35454
+
+===2018-04-05 09:11:00.002 [pool-2-thread-1] INFO  com.army.util.Count Line:141-刷新访问量:头条访问量：3213624
+天下杂谈问量：15497
+音乐访问量：12463
+视频访问量：35454
+
+===2018-04-05 09:12:00.004 [pool-2-thread-1] INFO  com.army.util.Count Line:141-刷新访问量:头条访问量：3213624
+天下杂谈问量：15497
+音乐访问量：12463
+视频访问量：35454
+
+===2018-04-05 09:13:00.007 [pool-2-thread-1] INFO  com.army.util.Count Line:141-刷新访问量:头条访问量：3213624
+天下杂谈问量：15497
+音乐访问量：12463
+视频访问量：35454
+
+===2018-04-05 09:14:00.002 [pool-2-thread-1] INFO  com.army.util.Count Line:141-刷新访问量:头条访问量：3213624
+天下杂谈问量：15497
+音乐访问量：12463
+视频访问量：35454
+
+===2018-04-05 09:15:00.003 [pool-2-thread-1] INFO  com.army.util.Count Line:141-刷新访问量:头条访问量：3213624
+天下杂谈问量：15497
+音乐访问量：12463
+视频访问量：35454
+
+===2018-04-05 09:16:00.002 [pool-2-thread-1] INFO  com.army.util.Count Line:141-刷新访问量:头条访问量：3213624
+天下杂谈问量：15497
+音乐访问量：12463
+视频访问量：35454
+
+===2018-04-05 09:17:00.003 [pool-2-thread-1] INFO  com.army.util.Count Line:141-刷新访问量:头条访问量：3213624
+天下杂谈问量：15497
+音乐访问量：12463
+视频访问量：35454
+
+===2018-04-05 09:18:00.002 [pool-2-thread-1] INFO  com.army.util.Count Line:141-刷新访问量:头条访问量：3213624
+天下杂谈问量：15497
+音乐访问量：12463
+视频访问量：35454
+
+===2018-04-05 09:18:23.415 [RMI TCP Connection(22)-127.0.0.1] INFO  org.springframework.boot.admin.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin Line:125-Application shutdown requested.
+===2018-04-05 09:18:23.416 [RMI TCP Connection(22)-127.0.0.1] INFO  org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext Line:982-Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@3349e9bb: startup date [Thu Apr 05 09:00:21 CST 2018]; root of context hierarchy
+===2018-04-05 09:18:23.428 [RMI TCP Connection(22)-127.0.0.1] INFO  org.springframework.context.support.DefaultLifecycleProcessor Line:356-Stopping beans in phase 0
+===2018-04-05 09:18:23.429 [RMI TCP Connection(22)-127.0.0.1] INFO  org.springframework.boot.actuate.endpoint.jmx.EndpointMBeanExporter Line:449-Unregistering JMX-exposed beans on shutdown
+===2018-04-05 09:18:23.430 [RMI TCP Connection(22)-127.0.0.1] INFO  org.springframework.boot.actuate.endpoint.jmx.EndpointMBeanExporter Line:241-Unregistering JMX-exposed beans
+===2018-04-05 09:18:23.430 [RMI TCP Connection(22)-127.0.0.1] INFO  org.springframework.jmx.export.annotation.AnnotationMBeanExporter Line:449-Unregistering JMX-exposed beans on shutdown
+===2018-04-05 09:18:23.430 [RMI TCP Connection(22)-127.0.0.1] INFO  org.springframework.jmx.export.annotation.AnnotationMBeanExporter Line:241-Unregistering JMX-exposed beans
+===2018-04-05 09:18:34.606 [main] INFO  com.army.Army Line:48 -Starting Army on USER-20171102JJ with PID 8988 (started by Administrator in D:\上家项目资料\army)
+===2018-04-05 09:18:34.609 [main] INFO  com.army.Army Line:659-No active profile set, falling back to default profiles: default
+===2018-04-05 09:18:34.652 [main] INFO  org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext Line:581-Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@3349e9bb: startup date [Thu Apr 05 09:18:34 CST 2018]; root of context hierarchy
+===2018-04-05 09:18:34.732 [background-preinit] INFO  org.hibernate.validator.internal.util.Version Line:30 -HV000001: Hibernate Validator 5.2.4.Final
+===2018-04-05 09:18:35.675 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker Line:328-Bean 'druidConfiguration' of type [class com.army.util.DruidConfiguration$$EnhancerBySpringCGLIB$$f95aaf32] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+===2018-04-05 09:18:35.751 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker Line:328-Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [class org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$df54bbb1] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+===2018-04-05 09:18:36.038 [main] INFO  org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer Line:88 -Tomcat initialized with port(s): 8080 (http)
+===2018-04-05 09:18:36.046 [main] INFO  org.apache.catalina.core.StandardService Line:179-Starting service Tomcat
+===2018-04-05 09:18:36.047 [main] INFO  org.apache.catalina.core.StandardEngine Line:179-Starting Servlet Engine: Apache Tomcat/8.5.4
+===2018-04-05 09:18:36.342 [localhost-startStop-1] INFO  org.apache.jasper.servlet.TldScanner Line:179-At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+===2018-04-05 09:18:36.344 [localhost-startStop-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] Line:179-Initializing Spring embedded WebApplicationContext
+===2018-04-05 09:18:36.344 [localhost-startStop-1] INFO  org.springframework.web.context.ContextLoader Line:276-Root WebApplicationContext: initialization completed in 1692 ms
+===2018-04-05 09:18:36.547 [localhost-startStop-1] INFO  org.springframework.boot.web.servlet.ServletRegistrationBean Line:190-Mapping servlet: 'statViewServlet' to [/druid/*]
+===2018-04-05 09:18:36.548 [localhost-startStop-1] INFO  org.springframework.boot.web.servlet.ServletRegistrationBean Line:190-Mapping servlet: 'dispatcherServlet' to [/]
+===2018-04-05 09:18:36.551 [localhost-startStop-1] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean Line:258-Mapping filter: 'metricFilter' to: [/*]
+===2018-04-05 09:18:36.552 [localhost-startStop-1] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean Line:258-Mapping filter: 'characterEncodingFilter' to: [/*]
+===2018-04-05 09:18:36.552 [localhost-startStop-1] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean Line:258-Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+===2018-04-05 09:18:36.552 [localhost-startStop-1] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean Line:258-Mapping filter: 'httpPutFormContentFilter' to: [/*]
+===2018-04-05 09:18:36.552 [localhost-startStop-1] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean Line:258-Mapping filter: 'requestContextFilter' to: [/*]
+===2018-04-05 09:18:36.553 [localhost-startStop-1] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean Line:258-Mapping filter: 'webRequestLoggingFilter' to: [/*]
+===2018-04-05 09:18:36.554 [localhost-startStop-1] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean Line:271-Mapping filter: 'webStatFilter' to urls: [/*]
+===2018-04-05 09:18:36.554 [localhost-startStop-1] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean Line:258-Mapping filter: 'applicationContextIdFilter' to: [/*]
+===2018-04-05 09:18:37.197 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter Line:534-Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@3349e9bb: startup date [Thu Apr 05 09:18:34 CST 2018]; root of context hierarchy
+===2018-04-05 09:18:37.244 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping Line:543-Mapped "{[/data/getCount]}" onto public com.alibaba.fastjson.JSONObject com.army.controller.WebJumpController.getCount()
+===2018-04-05 09:18:37.246 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping Line:543-Mapped "{[/data/manager/findAllAppByName],methods=[POST]}" onto public com.alibaba.fastjson.JSONArray com.army.controller.WebJumpController.findAllAppByName(com.army.vo.AppInfo) throws java.lang.Exception
+===2018-04-05 09:18:37.247 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping Line:543-Mapped "{[/data/manager/findAllTVManeger],methods=[POST]}" onto public com.alibaba.fastjson.JSONArray com.army.controller.WebJumpController.findAllTVManeger(javax.servlet.http.HttpServletRequest,com.army.vo.PreFileInfo) throws java.lang.Exception
+===2018-04-05 09:18:37.247 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping Line:543-Mapped "{[/data/manager/deleteImg]}" onto public com.alibaba.fastjson.JSONObject com.army.controller.WebJumpController.deleteImg(javax.servlet.http.HttpServletRequest,com.army.vo.ImgsHisInfo) throws java.lang.Exception
+===2018-04-05 09:18:37.247 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping Line:543-Mapped "{[/data/manager/deleteVedio]}" onto public com.alibaba.fastjson.JSONObject com.army.controller.WebJumpController.deleteVedio(javax.servlet.http.HttpServletRequest,com.army.vo.VedioInfo) throws java.lang.Exception
+===2018-04-05 09:18:37.247 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping Line:543-Mapped "{[/data/manager/openfile]}" onto public com.alibaba.fastjson.JSONObject com.army.controller.WebJumpController.openfile() throws java.lang.Exception
+===2018-04-05 09:18:37.247 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping Line:543-Mapped "{[/data/manager/loadImg]}" onto public com.alibaba.fastjson.JSONObject com.army.controller.WebJumpController.loadImg(javax.servlet.http.HttpServletRequest,com.army.vo.ImgsHisInfo) throws java.lang.Exception
+===2018-04-05 09:18:37.248 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping Line:543-Mapped "{[/data/manager/deleteTv]}" onto public com.alibaba.fastjson.JSONObject com.army.controller.WebJumpController.deleteTv(javax.servlet.http.HttpServletRequest,com.army.vo.TVListInfo) throws java.lang.Exception
+===2018-04-05 09:18:37.248 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping Line:543-Mapped "{[/data/manager/findAllImgs]}" onto public com.alibaba.fastjson.JSONArray com.army.controller.WebJumpController.findAllImgs(javax.servlet.http.HttpServletRequest,com.army.vo.ImgsHisInfo) throws java.lang.Exception
+===2018-04-05 09:18:37.248 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping Line:543-Mapped "{[/data/manager/deletemusic]}" onto public com.alibaba.fastjson.JSONObject com.army.controller.WebJumpController.deletemusic(javax.servlet.http.HttpServletRequest,com.army.vo.MusicInfo) throws java.lang.Exception
+===2018-04-05 09:18:37.248 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping Line:543-Mapped "{[/data/findpullNewsById],methods=[POST]}" onto public com.alibaba.fastjson.JSONObject com.army.controller.WebJumpController.findpullNewsById(com.army.vo.ReptileNewsInfo) throws java.lang.Exception
+===2018-04-05 09:18:37.249 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping Line:543-Mapped "{[/data/manager/findById],methods=[POST]}" onto public com.alibaba.fastjson.JSONObject com.army.controller.WebJumpController.findById(com.army.vo.ReptileNewsInfo) throws java.lang.Exception
+===2018-04-05 09:18:37.249 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping Line:543-Mapped "{[/data/findAllTv],methods=[POST]}" onto public com.alibaba.fastjson.JSONArray com.army.controller.WebJumpController.findAllTv(com.army.vo.PreFileInfo) throws java.lang.Exception
+===2018-04-05 09:18:37.249 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping Line:543-Mapped "{[/data/manager/insertPreFile],methods=[POST]}" onto public com.alibaba.fastjson.JSONObject com.army.controller.WebJumpController.insertPreFile(javax.servlet.http.HttpServletRequest,com.army.vo.PreFileInfo) throws java.lang.Exception
+===2018-04-05 09:18:37.249 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping Line:543-Mapped "{[/data/login],methods=[POST]}" onto public com.alibaba.fastjson.JSONObject com.army.controller.WebJumpController.userLogin(javax.servlet.http.HttpServletRequest,com.army.vo.UserInfo) throws java.lang.Exception
+===2018-04-05 09:18:37.250 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping Line:543-Mapped "{[/data/manager/uploadFile],methods=[POST]}" onto public com.alibaba.fastjson.JSONObject com.army.controller.WebJumpController.uploadFile(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.lang.Exception
+===2018-04-05 09:18:37.250 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping Line:543-Mapped "{[/data/manager/updateTv],methods=[POST]}" onto public com.alibaba.fastjson.JSONObject com.army.controller.WebJumpController.updateTv(com.army.vo.PreFileInfo) throws java.lang.Exception
+===2018-04-05 09:18:37.250 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping Line:543-Mapped "{[/data/manager/findOpt],methods=[POST]}" onto public com.alibaba.fastjson.JSONArray com.army.controller.WebJumpController.findOpt(javax.servlet.http.HttpServletRequest,java.lang.String) throws java.lang.Exception
+===2018-04-05 09:18:37.250 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping Line:543-Mapped "{[/data/manager/findAllUser],methods=[POST]}" onto public com.alibaba.fastjson.JSONArray com.army.controller.WebJumpController.findAllUser(com.army.vo.UserInfo) throws java.lang.Exception
+===2018-04-05 09:18:37.250 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping Line:543-Mapped "{[/data/manager/findUserById],methods=[POST]}" onto public com.alibaba.fastjson.JSONObject com.army.controller.WebJumpController.findUserById(com.army.vo.UserInfo) throws java.lang.Exception
+===2018-04-05 09:18:37.250 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping Line:543-Mapped "{[/data/manager/updateUser],methods=[POST]}" onto public com.alibaba.fastjson.JSONObject com.army.controller.WebJumpController.updateUser(javax.servlet.http.HttpServletRequest,com.army.vo.UserInfo) throws java.lang.Exception
+===2018-04-05 09:18:37.250 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping Line:543-Mapped "{[/data/manager/findAllCount],methods=[POST]}" onto public com.alibaba.fastjson.JSONArray com.army.controller.WebJumpController.findAllCount(javax.servlet.http.HttpServletRequest) throws java.lang.Exception
+===2018-04-05 09:18:37.251 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping Line:543-Mapped "{[/data/manager/insertNew],methods=[POST]}" onto public com.alibaba.fastjson.JSONObject com.army.controller.WebJumpController.insertNew(javax.servlet.http.HttpServletRequest,com.army.vo.NewsInfo) throws java.lang.Exception
+===2018-04-05 09:18:37.251 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping Line:543-Mapped "{[/data/findAllNews],methods=[POST]}" onto public com.alibaba.fastjson.JSONArray com.army.controller.WebJumpController.findAllNews(com.army.vo.NewsInfo) throws java.lang.Exception
+===2018-04-05 09:18:37.251 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping Line:543-Mapped "{[/data/manager/findNewById],methods=[POST]}" onto public com.alibaba.fastjson.JSONObject com.army.controller.WebJumpController.findNewById(com.army.vo.NewsInfo) throws java.lang.Exception
+===2018-04-05 09:18:37.251 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping Line:543-Mapped "{[/data/findNewById],methods=[POST]}" onto public com.alibaba.fastjson.JSONObject com.army.controller.WebJumpController.findwebNewById(com.army.vo.NewsInfo) throws java.lang.Exception
+===2018-04-05 09:18:37.251 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping Line:543-Mapped "{[/data/manager/change],methods=[POST]}" onto public com.alibaba.fastjson.JSONObject com.army.controller.WebJumpController.changerValid(javax.servlet.http.HttpServletRequest,com.army.vo.NewsInfo) throws java.lang.Exception
+===2018-04-05 09:18:37.252 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping Line:543-Mapped "{[/data/manager/insertNotice],methods=[POST]}" onto public com.alibaba.fastjson.JSONObject com.army.controller.WebJumpController.insertNotice(javax.servlet.http.HttpServletRequest,com.army.vo.NoticeInfo) throws java.lang.Exception
+===2018-04-05 09:18:37.252 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping Line:543-Mapped "{[/data/manager/findNotice],methods=[POST]}" onto public com.alibaba.fastjson.JSONObject com.army.controller.WebJumpController.findNotice(com.army.vo.NoticeInfo) throws java.lang.Exception
+===2018-04-05 09:18:37.252 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping Line:543-Mapped "{[/data/manager/updateNotice],methods=[POST]}" onto public com.alibaba.fastjson.JSONObject com.army.controller.WebJumpController.updateNotice(javax.servlet.http.HttpServletRequest,com.army.vo.NoticeInfo) throws java.lang.Exception
+===2018-04-05 09:18:37.253 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping Line:543-Mapped "{[/data/findAllNotice],methods=[POST]}" onto public com.alibaba.fastjson.JSONArray com.army.controller.WebJumpController.findAllNotice() throws java.lang.Exception
+===2018-04-05 09:18:37.253 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping Line:543-Mapped "{[/data/regist],methods=[POST]}" onto public com.alibaba.fastjson.JSONObject com.army.controller.WebJumpController.userRegist(com.army.vo.UserInfo) throws java.lang.Exception
+===2018-04-05 09:18:37.253 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping Line:543-Mapped "{[/data/manager/getUser],methods=[POST]}" onto public com.alibaba.fastjson.JSONObject com.army.controller.WebJumpController.getUser(javax.servlet.http.HttpServletRequest) throws java.lang.Exception
+===2018-04-05 09:18:37.253 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping Line:543-Mapped "{[/data/manager/outLogin],methods=[POST]}" onto public com.alibaba.fastjson.JSONObject com.army.controller.WebJumpController.outLogin(javax.servlet.http.HttpServletRequest) throws java.lang.Exception
+===2018-04-05 09:18:37.253 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping Line:543-Mapped "{[/data/page/{preFile}/{pageName}]}" onto public org.springframework.web.servlet.ModelAndView com.army.controller.WebJumpController.pageUrl(java.lang.String,java.lang.String)
+===2018-04-05 09:18:37.254 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping Line:543-Mapped "{[/data/page/{pageName}]}" onto public org.springframework.web.servlet.ModelAndView com.army.controller.WebJumpController.pageUrl(java.lang.String)
+===2018-04-05 09:18:37.254 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping Line:543-Mapped "{[/data/manager/updateMusic],methods=[POST]}" onto public com.alibaba.fastjson.JSONObject com.army.controller.WebJumpController.updateMusic(javax.servlet.http.HttpServletRequest,com.army.vo.MusicInfo) throws java.lang.Exception
+===2018-04-05 09:18:37.254 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping Line:543-Mapped "{[/data/manager/insertMusics],methods=[POST]}" onto public com.alibaba.fastjson.JSONObject com.army.controller.WebJumpController.insertMusics(javax.servlet.http.HttpServletRequest,com.army.vo.MusicInfo) throws java.lang.Exception
+===2018-04-05 09:18:37.254 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping Line:543-Mapped "{[/data/findAllMusic],methods=[POST]}" onto public com.alibaba.fastjson.JSONArray com.army.controller.WebJumpController.findAllMusic(com.army.vo.MusicInfo) throws java.lang.Exception
+===2018-04-05 09:18:37.254 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping Line:543-Mapped "{[/data/manager/updateMoive],methods=[POST]}" onto public com.alibaba.fastjson.JSONObject com.army.controller.WebJumpController.updateMoive(javax.servlet.http.HttpServletRequest,com.army.vo.VedioInfo) throws java.lang.Exception
+===2018-04-05 09:18:37.254 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping Line:543-Mapped "{[/data/manager/insertMoive],methods=[POST]}" onto public com.alibaba.fastjson.JSONObject com.army.controller.WebJumpController.insertMoive(javax.servlet.http.HttpServletRequest,com.army.vo.VedioInfo) throws java.lang.Exception
+===2018-04-05 09:18:37.255 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping Line:543-Mapped "{[/data/findAllMoive],methods=[POST]}" onto public com.alibaba.fastjson.JSONArray com.army.controller.WebJumpController.findAllMoive(com.army.vo.VedioInfo) throws java.lang.Exception
+===2018-04-05 09:18:37.255 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping Line:543-Mapped "{[/data/manager/updateApp],methods=[POST]}" onto public com.alibaba.fastjson.JSONObject com.army.controller.WebJumpController.updateApp(javax.servlet.http.HttpServletRequest,com.army.vo.AppInfo) throws java.lang.Exception
+===2018-04-05 09:18:37.255 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping Line:543-Mapped "{[/data/manager/findAllApp],methods=[POST]}" onto public com.alibaba.fastjson.JSONArray com.army.controller.WebJumpController.findAllApp() throws java.lang.Exception
+===2018-04-05 09:18:37.255 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping Line:543-Mapped "{[/data/findAllReptileNews],methods=[POST]}" onto public com.alibaba.fastjson.JSONArray com.army.controller.WebJumpController.findAllReptileNews(com.army.vo.ReptileNewsInfo) throws java.lang.Exception
+===2018-04-05 09:18:37.255 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping Line:543-Mapped "{[/data/manager/findAllReptileNewsManager],methods=[POST]}" onto public com.alibaba.fastjson.JSONArray com.army.controller.WebJumpController.findAllReptileNewsManager(javax.servlet.http.HttpServletRequest,com.army.vo.ReptileNewsInfo) throws java.lang.Exception
+===2018-04-05 09:18:37.256 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping Line:543-Mapped "{[/data/manager/insertReptileNews],methods=[POST]}" onto public com.alibaba.fastjson.JSONObject com.army.controller.WebJumpController.insertReptileNews() throws java.lang.Exception
+===2018-04-05 09:18:37.256 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping Line:543-Mapped "{[/data/manager/updateReptileNews],methods=[POST]}" onto public com.alibaba.fastjson.JSONObject com.army.controller.WebJumpController.updateReptileNews(javax.servlet.http.HttpServletRequest,com.army.vo.ReptileNewsInfo) throws java.lang.Exception
+===2018-04-05 09:18:37.256 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping Line:543-Mapped "{[/data/manager/findAllNewManager],methods=[POST]}" onto public com.alibaba.fastjson.JSONArray com.army.controller.WebJumpController.findAllNewManager(javax.servlet.http.HttpServletRequest,com.army.vo.NewsInfo) throws java.lang.Exception
+===2018-04-05 09:18:37.256 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping Line:543-Mapped "{[/data/manager/findAllNoticeManager],methods=[POST]}" onto public com.alibaba.fastjson.JSONArray com.army.controller.WebJumpController.findAllNoticeManager(javax.servlet.http.HttpServletRequest,com.army.vo.NoticeInfo) throws java.lang.Exception
+===2018-04-05 09:18:37.256 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping Line:543-Mapped "{[/data/manager/findAllMusicManeger],methods=[POST]}" onto public com.alibaba.fastjson.JSONArray com.army.controller.WebJumpController.findAllMusicManeger(javax.servlet.http.HttpServletRequest,com.army.vo.MusicInfo) throws java.lang.Exception
+===2018-04-05 09:18:37.256 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping Line:543-Mapped "{[/data/manager/findAllMusicByName],methods=[POST]}" onto public com.alibaba.fastjson.JSONArray com.army.controller.WebJumpController.findAllMusicByName(com.army.vo.MusicInfo) throws java.lang.Exception
+===2018-04-05 09:18:37.257 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping Line:543-Mapped "{[/data/manager/findAllVedioManeger],methods=[POST]}" onto public com.alibaba.fastjson.JSONArray com.army.controller.WebJumpController.findAllVedioManeger(javax.servlet.http.HttpServletRequest,com.army.vo.VedioInfo) throws java.lang.Exception
+===2018-04-05 09:18:37.257 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping Line:543-Mapped "{[/data/manager/findAllMoiveByName],methods=[POST]}" onto public com.alibaba.fastjson.JSONArray com.army.controller.WebJumpController.findAllMoiveByName(com.army.vo.VedioInfo) throws java.lang.Exception
+===2018-04-05 09:18:37.259 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping Line:543-Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+===2018-04-05 09:18:37.260 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping Line:543-Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+===2018-04-05 09:18:37.265 [main] INFO  org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter Line:303-Adding welcome page: ServletContext resource [/index.html]
+===2018-04-05 09:18:37.277 [main] INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping Line:341-Root mapping to handler of type [class org.springframework.web.servlet.mvc.ParameterizableViewController]
+===2018-04-05 09:18:37.283 [main] INFO  org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping Line:354-Mapped URL path [/MoiveService] onto handler '/MoiveService'
+===2018-04-05 09:18:37.283 [main] INFO  org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping Line:354-Mapped URL path [/musicService] onto handler '/musicService'
+===2018-04-05 09:18:37.283 [main] INFO  org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping Line:354-Mapped URL path [/newsService] onto handler '/newsService'
+===2018-04-05 09:18:37.289 [main] INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping Line:354-Mapped URL path [/upload/image/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+===2018-04-05 09:18:37.289 [main] INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping Line:354-Mapped URL path [/upload/vedio/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+===2018-04-05 09:18:37.289 [main] INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping Line:354-Mapped URL path [/upload/music/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+===2018-04-05 09:18:37.290 [main] INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping Line:354-Mapped URL path [/upload/app/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+===2018-04-05 09:18:37.290 [main] INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping Line:354-Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+===2018-04-05 09:18:37.290 [main] INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping Line:354-Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+===2018-04-05 09:18:37.330 [main] INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping Line:354-Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+===2018-04-05 09:18:37.725 [main] INFO  org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping Line:543-Mapped "{[/env/{name:.*}],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EnvironmentMvcEndpoint.value(java.lang.String)
+===2018-04-05 09:18:37.726 [main] INFO  org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping Line:543-Mapped "{[/env || /env.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+===2018-04-05 09:18:37.726 [main] INFO  org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping Line:543-Mapped "{[/trace || /trace.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+===2018-04-05 09:18:37.727 [main] INFO  org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping Line:543-Mapped "{[/dump || /dump.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+===2018-04-05 09:18:37.727 [main] INFO  org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping Line:543-Mapped "{[/heapdump || /heapdump.json],methods=[GET],produces=[application/octet-stream]}" onto public void org.springframework.boot.actuate.endpoint.mvc.HeapdumpMvcEndpoint.invoke(boolean,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.io.IOException,javax.servlet.ServletException
+===2018-04-05 09:18:37.727 [main] INFO  org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping Line:543-Mapped "{[/info || /info.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+===2018-04-05 09:18:37.728 [main] INFO  org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping Line:543-Mapped "{[/autoconfig || /autoconfig.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+===2018-04-05 09:18:37.729 [main] INFO  org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping Line:543-Mapped "{[/configprops || /configprops.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+===2018-04-05 09:18:37.729 [main] INFO  org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping Line:543-Mapped "{[/mappings || /mappings.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+===2018-04-05 09:18:37.730 [main] INFO  org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping Line:543-Mapped "{[/logfile || /logfile.json],methods=[GET || HEAD]}" onto public void org.springframework.boot.actuate.endpoint.mvc.LogFileMvcEndpoint.invoke(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws javax.servlet.ServletException,java.io.IOException
+===2018-04-05 09:18:37.730 [main] INFO  org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping Line:543-Mapped "{[/health || /health.json],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.HealthMvcEndpoint.invoke(java.security.Principal)
+===2018-04-05 09:18:37.732 [main] INFO  org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping Line:543-Mapped "{[/beans || /beans.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+===2018-04-05 09:18:37.733 [main] INFO  org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping Line:543-Mapped "{[/metrics/{name:.*}],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.MetricsMvcEndpoint.value(java.lang.String)
+===2018-04-05 09:18:37.734 [main] INFO  org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping Line:543-Mapped "{[/metrics || /metrics.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+===2018-04-05 09:18:37.869 [main] INFO  org.springframework.jmx.export.annotation.AnnotationMBeanExporter Line:431-Registering beans for JMX exposure on startup
+===2018-04-05 09:18:37.871 [main] INFO  org.springframework.jmx.export.annotation.AnnotationMBeanExporter Line:912-Bean with name 'dataSource' has been autodetected for JMX exposure
+===2018-04-05 09:18:37.878 [main] INFO  org.springframework.jmx.export.annotation.AnnotationMBeanExporter Line:667-Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=dataSource,type=DruidDataSource]
+===2018-04-05 09:18:37.879 [main] INFO  org.springframework.boot.actuate.endpoint.jmx.EndpointMBeanExporter Line:431-Registering beans for JMX exposure on startup
+===2018-04-05 09:18:37.884 [main] INFO  org.springframework.context.support.DefaultLifecycleProcessor Line:341-Starting beans in phase 0
+===2018-04-05 09:18:37.893 [main] INFO  org.springframework.boot.actuate.endpoint.jmx.EndpointMBeanExporter Line:674-Located managed bean 'requestMappingEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=requestMappingEndpoint]
+===2018-04-05 09:18:37.914 [main] INFO  org.springframework.boot.actuate.endpoint.jmx.EndpointMBeanExporter Line:674-Located managed bean 'environmentEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=environmentEndpoint]
+===2018-04-05 09:18:37.918 [main] INFO  org.springframework.boot.actuate.endpoint.jmx.EndpointMBeanExporter Line:674-Located managed bean 'healthEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=healthEndpoint]
+===2018-04-05 09:18:37.924 [main] INFO  org.springframework.boot.actuate.endpoint.jmx.EndpointMBeanExporter Line:674-Located managed bean 'beansEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=beansEndpoint]
+===2018-04-05 09:18:37.929 [main] INFO  org.springframework.boot.actuate.endpoint.jmx.EndpointMBeanExporter Line:674-Located managed bean 'infoEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=infoEndpoint]
+===2018-04-05 09:18:37.933 [main] INFO  org.springframework.boot.actuate.endpoint.jmx.EndpointMBeanExporter Line:674-Located managed bean 'metricsEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=metricsEndpoint]
+===2018-04-05 09:18:37.936 [main] INFO  org.springframework.boot.actuate.endpoint.jmx.EndpointMBeanExporter Line:674-Located managed bean 'traceEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=traceEndpoint]
+===2018-04-05 09:18:37.941 [main] INFO  org.springframework.boot.actuate.endpoint.jmx.EndpointMBeanExporter Line:674-Located managed bean 'dumpEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=dumpEndpoint]
+===2018-04-05 09:18:37.946 [main] INFO  org.springframework.boot.actuate.endpoint.jmx.EndpointMBeanExporter Line:674-Located managed bean 'autoConfigurationReportEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=autoConfigurationReportEndpoint]
+===2018-04-05 09:18:37.950 [main] INFO  org.springframework.boot.actuate.endpoint.jmx.EndpointMBeanExporter Line:674-Located managed bean 'configurationPropertiesReportEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=configurationPropertiesReportEndpoint]
+===2018-04-05 09:18:37.964 [main] INFO  org.springframework.scheduling.annotation.ScheduledAnnotationBeanPostProcessor Line:244-No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+===2018-04-05 09:18:37.974 [main] INFO  org.apache.coyote.http11.Http11NioProtocol Line:179-Initializing ProtocolHandler ["http-nio-8080"]
+===2018-04-05 09:18:37.983 [main] INFO  org.apache.coyote.http11.Http11NioProtocol Line:179-Starting ProtocolHandler [http-nio-8080]
+===2018-04-05 09:18:38.139 [main] INFO  org.apache.tomcat.util.net.NioSelectorPool Line:179-Using a shared selector for servlet write/read
+===2018-04-05 09:18:38.155 [main] INFO  org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer Line:186-Tomcat started on port(s): 8080 (http)
+===2018-04-05 09:18:38.159 [main] INFO  com.army.util.TimerTask Line:34 -start.............
+===2018-04-05 09:18:38.160 [main] INFO  com.army.Army Line:57 -Started Army in 3.863 seconds (JVM running for 4.423)
+===2018-04-05 09:19:00.002 [pool-2-thread-1] INFO  com.army.util.Count Line:141-刷新访问量:头条访问量：3213624
+天下杂谈问量：15497
+音乐访问量：12463
+视频访问量：35454
+
+===2018-04-05 09:19:08.852 [http-nio-8080-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] Line:179-Initializing Spring FrameworkServlet 'dispatcherServlet'
+===2018-04-05 09:19:08.852 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet Line:489-FrameworkServlet 'dispatcherServlet': initialization started
+===2018-04-05 09:19:08.868 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet Line:508-FrameworkServlet 'dispatcherServlet': initialization completed in 15 ms
+===2018-04-05 09:19:11.822 [http-nio-8080-exec-1] INFO  com.alibaba.druid.pool.DruidDataSource Line:721-{dataSource-1} inited
+===2018-04-05 09:19:29.309 [RMI TCP Connection(5)-127.0.0.1] INFO  org.springframework.boot.admin.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin Line:125-Application shutdown requested.
+===2018-04-05 09:19:29.309 [RMI TCP Connection(5)-127.0.0.1] INFO  org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext Line:982-Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@3349e9bb: startup date [Thu Apr 05 09:18:34 CST 2018]; root of context hierarchy
+===2018-04-05 09:19:29.312 [RMI TCP Connection(5)-127.0.0.1] INFO  org.springframework.context.support.DefaultLifecycleProcessor Line:356-Stopping beans in phase 0
+===2018-04-05 09:19:29.314 [RMI TCP Connection(5)-127.0.0.1] INFO  org.springframework.boot.actuate.endpoint.jmx.EndpointMBeanExporter Line:449-Unregistering JMX-exposed beans on shutdown
+===2018-04-05 09:19:29.315 [RMI TCP Connection(5)-127.0.0.1] INFO  org.springframework.boot.actuate.endpoint.jmx.EndpointMBeanExporter Line:241-Unregistering JMX-exposed beans
+===2018-04-05 09:19:29.316 [RMI TCP Connection(5)-127.0.0.1] INFO  org.springframework.jmx.export.annotation.AnnotationMBeanExporter Line:449-Unregistering JMX-exposed beans on shutdown
+===2018-04-05 09:19:29.317 [RMI TCP Connection(5)-127.0.0.1] INFO  org.springframework.jmx.export.annotation.AnnotationMBeanExporter Line:241-Unregistering JMX-exposed beans
+===2018-04-05 09:19:29.322 [RMI TCP Connection(5)-127.0.0.1] INFO  com.alibaba.druid.pool.DruidDataSource Line:1436-{dataSource-1} closed
+===2018-04-05 09:20:04.926 [main] INFO  com.army.Army Line:48 -Starting Army on USER-20171102JJ with PID 8124 (started by Administrator in D:\上家项目资料\army)
+===2018-04-05 09:20:04.929 [main] INFO  com.army.Army Line:659-No active profile set, falling back to default profiles: default
+===2018-04-05 09:20:04.983 [main] INFO  org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext Line:581-Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@3349e9bb: startup date [Thu Apr 05 09:20:04 CST 2018]; root of context hierarchy
+===2018-04-05 09:20:05.091 [background-preinit] INFO  org.hibernate.validator.internal.util.Version Line:30 -HV000001: Hibernate Validator 5.2.4.Final
+===2018-04-05 09:20:06.431 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker Line:328-Bean 'druidConfiguration' of type [class com.army.util.DruidConfiguration$$EnhancerBySpringCGLIB$$f95aaf32] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+===2018-04-05 09:20:06.539 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker Line:328-Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [class org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$df54bbb1] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+===2018-04-05 09:20:06.925 [main] INFO  org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer Line:88 -Tomcat initialized with port(s): 8080 (http)
+===2018-04-05 09:20:06.946 [main] INFO  org.apache.catalina.core.StandardService Line:179-Starting service Tomcat
+===2018-04-05 09:20:06.951 [main] INFO  org.apache.catalina.core.StandardEngine Line:179-Starting Servlet Engine: Apache Tomcat/8.5.4
+===2018-04-05 09:20:07.354 [localhost-startStop-1] INFO  org.apache.jasper.servlet.TldScanner Line:179-At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+===2018-04-05 09:20:07.357 [localhost-startStop-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] Line:179-Initializing Spring embedded WebApplicationContext
+===2018-04-05 09:20:07.358 [localhost-startStop-1] INFO  org.springframework.web.context.ContextLoader Line:276-Root WebApplicationContext: initialization completed in 2375 ms
+===2018-04-05 09:20:07.634 [localhost-startStop-1] INFO  org.springframework.boot.web.servlet.ServletRegistrationBean Line:190-Mapping servlet: 'statViewServlet' to [/druid/*]
+===2018-04-05 09:20:07.637 [localhost-startStop-1] INFO  org.springframework.boot.web.servlet.ServletRegistrationBean Line:190-Mapping servlet: 'dispatcherServlet' to [/]
+===2018-04-05 09:20:07.646 [localhost-startStop-1] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean Line:258-Mapping filter: 'metricFilter' to: [/*]
+===2018-04-05 09:20:07.647 [localhost-startStop-1] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean Line:258-Mapping filter: 'characterEncodingFilter' to: [/*]
+===2018-04-05 09:20:07.648 [localhost-startStop-1] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean Line:258-Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+===2018-04-05 09:20:07.648 [localhost-startStop-1] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean Line:258-Mapping filter: 'httpPutFormContentFilter' to: [/*]
+===2018-04-05 09:20:07.649 [localhost-startStop-1] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean Line:258-Mapping filter: 'requestContextFilter' to: [/*]
+===2018-04-05 09:20:07.649 [localhost-startStop-1] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean Line:258-Mapping filter: 'webRequestLoggingFilter' to: [/*]
+===2018-04-05 09:20:07.649 [localhost-startStop-1] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean Line:271-Mapping filter: 'webStatFilter' to urls: [/*]
+===2018-04-05 09:20:07.649 [localhost-startStop-1] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean Line:258-Mapping filter: 'applicationContextIdFilter' to: [/*]
+===2018-04-05 09:20:08.612 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter Line:534-Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@3349e9bb: startup date [Thu Apr 05 09:20:04 CST 2018]; root of context hierarchy
+===2018-04-05 09:20:08.711 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping Line:543-Mapped "{[/data/getCount]}" onto public com.alibaba.fastjson.JSONObject com.army.controller.WebJumpController.getCount()
+===2018-04-05 09:20:08.714 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping Line:543-Mapped "{[/data/findAllReptileNews],methods=[POST]}" onto public com.alibaba.fastjson.JSONArray com.army.controller.WebJumpController.findAllReptileNews(com.army.vo.ReptileNewsInfo) throws java.lang.Exception
+===2018-04-05 09:20:08.714 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping Line:543-Mapped "{[/data/manager/findAllReptileNewsManager],methods=[POST]}" onto public com.alibaba.fastjson.JSONArray com.army.controller.WebJumpController.findAllReptileNewsManager(javax.servlet.http.HttpServletRequest,com.army.vo.ReptileNewsInfo) throws java.lang.Exception
+===2018-04-05 09:20:08.714 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping Line:543-Mapped "{[/data/manager/insertReptileNews],methods=[POST]}" onto public com.alibaba.fastjson.JSONObject com.army.controller.WebJumpController.insertReptileNews() throws java.lang.Exception
+===2018-04-05 09:20:08.715 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping Line:543-Mapped "{[/data/manager/updateReptileNews],methods=[POST]}" onto public com.alibaba.fastjson.JSONObject com.army.controller.WebJumpController.updateReptileNews(javax.servlet.http.HttpServletRequest,com.army.vo.ReptileNewsInfo) throws java.lang.Exception
+===2018-04-05 09:20:08.715 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping Line:543-Mapped "{[/data/manager/findAllNewManager],methods=[POST]}" onto public com.alibaba.fastjson.JSONArray com.army.controller.WebJumpController.findAllNewManager(javax.servlet.http.HttpServletRequest,com.army.vo.NewsInfo) throws java.lang.Exception
+===2018-04-05 09:20:08.716 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping Line:543-Mapped "{[/data/manager/findAllNoticeManager],methods=[POST]}" onto public com.alibaba.fastjson.JSONArray com.army.controller.WebJumpController.findAllNoticeManager(javax.servlet.http.HttpServletRequest,com.army.vo.NoticeInfo) throws java.lang.Exception
+===2018-04-05 09:20:08.716 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping Line:543-Mapped "{[/data/manager/findAllMusicManeger],methods=[POST]}" onto public com.alibaba.fastjson.JSONArray com.army.controller.WebJumpController.findAllMusicManeger(javax.servlet.http.HttpServletRequest,com.army.vo.MusicInfo) throws java.lang.Exception
+===2018-04-05 09:20:08.716 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping Line:543-Mapped "{[/data/manager/findAllMusicByName],methods=[POST]}" onto public com.alibaba.fastjson.JSONArray com.army.controller.WebJumpController.findAllMusicByName(com.army.vo.MusicInfo) throws java.lang.Exception
+===2018-04-05 09:20:08.717 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping Line:543-Mapped "{[/data/manager/findAllVedioManeger],methods=[POST]}" onto public com.alibaba.fastjson.JSONArray com.army.controller.WebJumpController.findAllVedioManeger(javax.servlet.http.HttpServletRequest,com.army.vo.VedioInfo) throws java.lang.Exception
+===2018-04-05 09:20:08.718 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping Line:543-Mapped "{[/data/manager/findAllMoiveByName],methods=[POST]}" onto public com.alibaba.fastjson.JSONArray com.army.controller.WebJumpController.findAllMoiveByName(com.army.vo.VedioInfo) throws java.lang.Exception
+===2018-04-05 09:20:08.718 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping Line:543-Mapped "{[/data/manager/findAllTVManeger],methods=[POST]}" onto public com.alibaba.fastjson.JSONArray com.army.controller.WebJumpController.findAllTVManeger(javax.servlet.http.HttpServletRequest,com.army.vo.PreFileInfo) throws java.lang.Exception
+===2018-04-05 09:20:08.719 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping Line:543-Mapped "{[/data/manager/deleteImg]}" onto public com.alibaba.fastjson.JSONObject com.army.controller.WebJumpController.deleteImg(javax.servlet.http.HttpServletRequest,com.army.vo.ImgsHisInfo) throws java.lang.Exception
+===2018-04-05 09:20:08.720 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping Line:543-Mapped "{[/data/manager/deleteVedio]}" onto public com.alibaba.fastjson.JSONObject com.army.controller.WebJumpController.deleteVedio(javax.servlet.http.HttpServletRequest,com.army.vo.VedioInfo) throws java.lang.Exception
+===2018-04-05 09:20:08.720 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping Line:543-Mapped "{[/data/manager/openfile]}" onto public com.alibaba.fastjson.JSONObject com.army.controller.WebJumpController.openfile() throws java.lang.Exception
+===2018-04-05 09:20:08.720 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping Line:543-Mapped "{[/data/manager/loadImg]}" onto public com.alibaba.fastjson.JSONObject com.army.controller.WebJumpController.loadImg(javax.servlet.http.HttpServletRequest,com.army.vo.ImgsHisInfo) throws java.lang.Exception
+===2018-04-05 09:20:08.720 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping Line:543-Mapped "{[/data/manager/deleteTv]}" onto public com.alibaba.fastjson.JSONObject com.army.controller.WebJumpController.deleteTv(javax.servlet.http.HttpServletRequest,com.army.vo.TVListInfo) throws java.lang.Exception
+===2018-04-05 09:20:08.720 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping Line:543-Mapped "{[/data/manager/findAllImgs]}" onto public com.alibaba.fastjson.JSONArray com.army.controller.WebJumpController.findAllImgs(javax.servlet.http.HttpServletRequest,com.army.vo.ImgsHisInfo) throws java.lang.Exception
+===2018-04-05 09:20:08.720 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping Line:543-Mapped "{[/data/manager/deletemusic]}" onto public com.alibaba.fastjson.JSONObject com.army.controller.WebJumpController.deletemusic(javax.servlet.http.HttpServletRequest,com.army.vo.MusicInfo) throws java.lang.Exception
+===2018-04-05 09:20:08.721 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping Line:543-Mapped "{[/data/findpullNewsById],methods=[POST]}" onto public com.alibaba.fastjson.JSONObject com.army.controller.WebJumpController.findpullNewsById(com.army.vo.ReptileNewsInfo) throws java.lang.Exception
+===2018-04-05 09:20:08.721 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping Line:543-Mapped "{[/data/manager/findById],methods=[POST]}" onto public com.alibaba.fastjson.JSONObject com.army.controller.WebJumpController.findById(com.army.vo.ReptileNewsInfo) throws java.lang.Exception
+===2018-04-05 09:20:08.721 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping Line:543-Mapped "{[/data/findAllTv],methods=[POST]}" onto public com.alibaba.fastjson.JSONArray com.army.controller.WebJumpController.findAllTv(com.army.vo.PreFileInfo) throws java.lang.Exception
+===2018-04-05 09:20:08.721 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping Line:543-Mapped "{[/data/manager/insertPreFile],methods=[POST]}" onto public com.alibaba.fastjson.JSONObject com.army.controller.WebJumpController.insertPreFile(javax.servlet.http.HttpServletRequest,com.army.vo.PreFileInfo) throws java.lang.Exception
+===2018-04-05 09:20:08.722 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping Line:543-Mapped "{[/data/login],methods=[POST]}" onto public com.alibaba.fastjson.JSONObject com.army.controller.WebJumpController.userLogin(javax.servlet.http.HttpServletRequest,com.army.vo.UserInfo) throws java.lang.Exception
+===2018-04-05 09:20:08.722 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping Line:543-Mapped "{[/data/manager/uploadFile],methods=[POST]}" onto public com.alibaba.fastjson.JSONObject com.army.controller.WebJumpController.uploadFile(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.lang.Exception
+===2018-04-05 09:20:08.722 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping Line:543-Mapped "{[/data/manager/updateTv],methods=[POST]}" onto public com.alibaba.fastjson.JSONObject com.army.controller.WebJumpController.updateTv(com.army.vo.PreFileInfo) throws java.lang.Exception
+===2018-04-05 09:20:08.723 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping Line:543-Mapped "{[/data/manager/findOpt],methods=[POST]}" onto public com.alibaba.fastjson.JSONArray com.army.controller.WebJumpController.findOpt(javax.servlet.http.HttpServletRequest,java.lang.String) throws java.lang.Exception
+===2018-04-05 09:20:08.723 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping Line:543-Mapped "{[/data/manager/findAllUser],methods=[POST]}" onto public com.alibaba.fastjson.JSONArray com.army.controller.WebJumpController.findAllUser(com.army.vo.UserInfo) throws java.lang.Exception
+===2018-04-05 09:20:08.723 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping Line:543-Mapped "{[/data/manager/findUserById],methods=[POST]}" onto public com.alibaba.fastjson.JSONObject com.army.controller.WebJumpController.findUserById(com.army.vo.UserInfo) throws java.lang.Exception
+===2018-04-05 09:20:08.723 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping Line:543-Mapped "{[/data/manager/updateUser],methods=[POST]}" onto public com.alibaba.fastjson.JSONObject com.army.controller.WebJumpController.updateUser(javax.servlet.http.HttpServletRequest,com.army.vo.UserInfo) throws java.lang.Exception
+===2018-04-05 09:20:08.724 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping Line:543-Mapped "{[/data/manager/findAllCount],methods=[POST]}" onto public com.alibaba.fastjson.JSONArray com.army.controller.WebJumpController.findAllCount(javax.servlet.http.HttpServletRequest) throws java.lang.Exception
+===2018-04-05 09:20:08.724 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping Line:543-Mapped "{[/data/manager/insertNew],methods=[POST]}" onto public com.alibaba.fastjson.JSONObject com.army.controller.WebJumpController.insertNew(javax.servlet.http.HttpServletRequest,com.army.vo.NewsInfo) throws java.lang.Exception
+===2018-04-05 09:20:08.724 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping Line:543-Mapped "{[/data/findAllNews],methods=[POST]}" onto public com.alibaba.fastjson.JSONArray com.army.controller.WebJumpController.findAllNews(com.army.vo.NewsInfo) throws java.lang.Exception
+===2018-04-05 09:20:08.724 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping Line:543-Mapped "{[/data/manager/findNewById],methods=[POST]}" onto public com.alibaba.fastjson.JSONObject com.army.controller.WebJumpController.findNewById(com.army.vo.NewsInfo) throws java.lang.Exception
+===2018-04-05 09:20:08.725 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping Line:543-Mapped "{[/data/findNewById],methods=[POST]}" onto public com.alibaba.fastjson.JSONObject com.army.controller.WebJumpController.findwebNewById(com.army.vo.NewsInfo) throws java.lang.Exception
+===2018-04-05 09:20:08.725 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping Line:543-Mapped "{[/data/manager/change],methods=[POST]}" onto public com.alibaba.fastjson.JSONObject com.army.controller.WebJumpController.changerValid(javax.servlet.http.HttpServletRequest,com.army.vo.NewsInfo) throws java.lang.Exception
+===2018-04-05 09:20:08.725 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping Line:543-Mapped "{[/data/manager/insertNotice],methods=[POST]}" onto public com.alibaba.fastjson.JSONObject com.army.controller.WebJumpController.insertNotice(javax.servlet.http.HttpServletRequest,com.army.vo.NoticeInfo) throws java.lang.Exception
+===2018-04-05 09:20:08.726 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping Line:543-Mapped "{[/data/manager/findNotice],methods=[POST]}" onto public com.alibaba.fastjson.JSONObject com.army.controller.WebJumpController.findNotice(com.army.vo.NoticeInfo) throws java.lang.Exception
+===2018-04-05 09:20:08.726 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping Line:543-Mapped "{[/data/manager/updateNotice],methods=[POST]}" onto public com.alibaba.fastjson.JSONObject com.army.controller.WebJumpController.updateNotice(javax.servlet.http.HttpServletRequest,com.army.vo.NoticeInfo) throws java.lang.Exception
+===2018-04-05 09:20:08.726 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping Line:543-Mapped "{[/data/findAllNotice],methods=[POST]}" onto public com.alibaba.fastjson.JSONArray com.army.controller.WebJumpController.findAllNotice() throws java.lang.Exception
+===2018-04-05 09:20:08.726 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping Line:543-Mapped "{[/data/regist],methods=[POST]}" onto public com.alibaba.fastjson.JSONObject com.army.controller.WebJumpController.userRegist(com.army.vo.UserInfo) throws java.lang.Exception
+===2018-04-05 09:20:08.727 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping Line:543-Mapped "{[/data/manager/getUser],methods=[POST]}" onto public com.alibaba.fastjson.JSONObject com.army.controller.WebJumpController.getUser(javax.servlet.http.HttpServletRequest) throws java.lang.Exception
+===2018-04-05 09:20:08.727 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping Line:543-Mapped "{[/data/manager/outLogin],methods=[POST]}" onto public com.alibaba.fastjson.JSONObject com.army.controller.WebJumpController.outLogin(javax.servlet.http.HttpServletRequest) throws java.lang.Exception
+===2018-04-05 09:20:08.727 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping Line:543-Mapped "{[/data/page/{pageName}]}" onto public org.springframework.web.servlet.ModelAndView com.army.controller.WebJumpController.pageUrl(java.lang.String)
+===2018-04-05 09:20:08.728 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping Line:543-Mapped "{[/data/page/{preFile}/{pageName}]}" onto public org.springframework.web.servlet.ModelAndView com.army.controller.WebJumpController.pageUrl(java.lang.String,java.lang.String)
+===2018-04-05 09:20:08.728 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping Line:543-Mapped "{[/data/manager/updateMusic],methods=[POST]}" onto public com.alibaba.fastjson.JSONObject com.army.controller.WebJumpController.updateMusic(javax.servlet.http.HttpServletRequest,com.army.vo.MusicInfo) throws java.lang.Exception
+===2018-04-05 09:20:08.728 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping Line:543-Mapped "{[/data/manager/insertMusics],methods=[POST]}" onto public com.alibaba.fastjson.JSONObject com.army.controller.WebJumpController.insertMusics(javax.servlet.http.HttpServletRequest,com.army.vo.MusicInfo) throws java.lang.Exception
+===2018-04-05 09:20:08.729 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping Line:543-Mapped "{[/data/findAllMusic],methods=[POST]}" onto public com.alibaba.fastjson.JSONArray com.army.controller.WebJumpController.findAllMusic(com.army.vo.MusicInfo) throws java.lang.Exception
+===2018-04-05 09:20:08.729 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping Line:543-Mapped "{[/data/manager/updateMoive],methods=[POST]}" onto public com.alibaba.fastjson.JSONObject com.army.controller.WebJumpController.updateMoive(javax.servlet.http.HttpServletRequest,com.army.vo.VedioInfo) throws java.lang.Exception
+===2018-04-05 09:20:08.729 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping Line:543-Mapped "{[/data/manager/insertMoive],methods=[POST]}" onto public com.alibaba.fastjson.JSONObject com.army.controller.WebJumpController.insertMoive(javax.servlet.http.HttpServletRequest,com.army.vo.VedioInfo) throws java.lang.Exception
+===2018-04-05 09:20:08.729 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping Line:543-Mapped "{[/data/findAllMoive],methods=[POST]}" onto public com.alibaba.fastjson.JSONArray com.army.controller.WebJumpController.findAllMoive(com.army.vo.VedioInfo) throws java.lang.Exception
+===2018-04-05 09:20:08.730 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping Line:543-Mapped "{[/data/manager/updateApp],methods=[POST]}" onto public com.alibaba.fastjson.JSONObject com.army.controller.WebJumpController.updateApp(javax.servlet.http.HttpServletRequest,com.army.vo.AppInfo) throws java.lang.Exception
+===2018-04-05 09:20:08.730 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping Line:543-Mapped "{[/data/manager/findAllApp],methods=[POST]}" onto public com.alibaba.fastjson.JSONArray com.army.controller.WebJumpController.findAllApp() throws java.lang.Exception
+===2018-04-05 09:20:08.730 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping Line:543-Mapped "{[/data/manager/findAllAppByName],methods=[POST]}" onto public com.alibaba.fastjson.JSONArray com.army.controller.WebJumpController.findAllAppByName(com.army.vo.AppInfo) throws java.lang.Exception
+===2018-04-05 09:20:08.733 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping Line:543-Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+===2018-04-05 09:20:08.733 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping Line:543-Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+===2018-04-05 09:20:08.741 [main] INFO  org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter Line:303-Adding welcome page: ServletContext resource [/index.html]
+===2018-04-05 09:20:08.759 [main] INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping Line:341-Root mapping to handler of type [class org.springframework.web.servlet.mvc.ParameterizableViewController]
+===2018-04-05 09:20:08.804 [main] INFO  org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping Line:354-Mapped URL path [/MoiveService] onto handler '/MoiveService'
+===2018-04-05 09:20:08.806 [main] INFO  org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping Line:354-Mapped URL path [/musicService] onto handler '/musicService'
+===2018-04-05 09:20:08.807 [main] INFO  org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping Line:354-Mapped URL path [/newsService] onto handler '/newsService'
+===2018-04-05 09:20:08.817 [main] INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping Line:354-Mapped URL path [/upload/image/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+===2018-04-05 09:20:08.818 [main] INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping Line:354-Mapped URL path [/upload/vedio/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+===2018-04-05 09:20:08.818 [main] INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping Line:354-Mapped URL path [/upload/music/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+===2018-04-05 09:20:08.818 [main] INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping Line:354-Mapped URL path [/upload/app/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+===2018-04-05 09:20:08.819 [main] INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping Line:354-Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+===2018-04-05 09:20:08.819 [main] INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping Line:354-Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+===2018-04-05 09:20:08.889 [main] INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping Line:354-Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+===2018-04-05 09:20:09.208 [main] INFO  org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping Line:543-Mapped "{[/env/{name:.*}],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EnvironmentMvcEndpoint.value(java.lang.String)
+===2018-04-05 09:20:09.208 [main] INFO  org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping Line:543-Mapped "{[/env || /env.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+===2018-04-05 09:20:09.209 [main] INFO  org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping Line:543-Mapped "{[/trace || /trace.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+===2018-04-05 09:20:09.210 [main] INFO  org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping Line:543-Mapped "{[/dump || /dump.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+===2018-04-05 09:20:09.210 [main] INFO  org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping Line:543-Mapped "{[/heapdump || /heapdump.json],methods=[GET],produces=[application/octet-stream]}" onto public void org.springframework.boot.actuate.endpoint.mvc.HeapdumpMvcEndpoint.invoke(boolean,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.io.IOException,javax.servlet.ServletException
+===2018-04-05 09:20:09.211 [main] INFO  org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping Line:543-Mapped "{[/info || /info.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+===2018-04-05 09:20:09.211 [main] INFO  org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping Line:543-Mapped "{[/autoconfig || /autoconfig.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+===2018-04-05 09:20:09.212 [main] INFO  org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping Line:543-Mapped "{[/configprops || /configprops.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+===2018-04-05 09:20:09.212 [main] INFO  org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping Line:543-Mapped "{[/mappings || /mappings.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+===2018-04-05 09:20:09.213 [main] INFO  org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping Line:543-Mapped "{[/logfile || /logfile.json],methods=[GET || HEAD]}" onto public void org.springframework.boot.actuate.endpoint.mvc.LogFileMvcEndpoint.invoke(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws javax.servlet.ServletException,java.io.IOException
+===2018-04-05 09:20:09.213 [main] INFO  org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping Line:543-Mapped "{[/health || /health.json],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.HealthMvcEndpoint.invoke(java.security.Principal)
+===2018-04-05 09:20:09.215 [main] INFO  org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping Line:543-Mapped "{[/beans || /beans.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+===2018-04-05 09:20:09.216 [main] INFO  org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping Line:543-Mapped "{[/metrics/{name:.*}],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.MetricsMvcEndpoint.value(java.lang.String)
+===2018-04-05 09:20:09.216 [main] INFO  org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping Line:543-Mapped "{[/metrics || /metrics.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+===2018-04-05 09:20:09.385 [main] INFO  org.springframework.jmx.export.annotation.AnnotationMBeanExporter Line:431-Registering beans for JMX exposure on startup
+===2018-04-05 09:20:09.387 [main] INFO  org.springframework.jmx.export.annotation.AnnotationMBeanExporter Line:912-Bean with name 'dataSource' has been autodetected for JMX exposure
+===2018-04-05 09:20:09.393 [main] INFO  org.springframework.jmx.export.annotation.AnnotationMBeanExporter Line:667-Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=dataSource,type=DruidDataSource]
+===2018-04-05 09:20:09.396 [main] INFO  org.springframework.boot.actuate.endpoint.jmx.EndpointMBeanExporter Line:431-Registering beans for JMX exposure on startup
+===2018-04-05 09:20:09.401 [main] INFO  org.springframework.context.support.DefaultLifecycleProcessor Line:341-Starting beans in phase 0
+===2018-04-05 09:20:09.409 [main] INFO  org.springframework.boot.actuate.endpoint.jmx.EndpointMBeanExporter Line:674-Located managed bean 'requestMappingEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=requestMappingEndpoint]
+===2018-04-05 09:20:09.432 [main] INFO  org.springframework.boot.actuate.endpoint.jmx.EndpointMBeanExporter Line:674-Located managed bean 'environmentEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=environmentEndpoint]
+===2018-04-05 09:20:09.438 [main] INFO  org.springframework.boot.actuate.endpoint.jmx.EndpointMBeanExporter Line:674-Located managed bean 'healthEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=healthEndpoint]
+===2018-04-05 09:20:09.441 [main] INFO  org.springframework.boot.actuate.endpoint.jmx.EndpointMBeanExporter Line:674-Located managed bean 'beansEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=beansEndpoint]
+===2018-04-05 09:20:09.444 [main] INFO  org.springframework.boot.actuate.endpoint.jmx.EndpointMBeanExporter Line:674-Located managed bean 'infoEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=infoEndpoint]
+===2018-04-05 09:20:09.450 [main] INFO  org.springframework.boot.actuate.endpoint.jmx.EndpointMBeanExporter Line:674-Located managed bean 'metricsEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=metricsEndpoint]
+===2018-04-05 09:20:09.453 [main] INFO  org.springframework.boot.actuate.endpoint.jmx.EndpointMBeanExporter Line:674-Located managed bean 'traceEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=traceEndpoint]
+===2018-04-05 09:20:09.456 [main] INFO  org.springframework.boot.actuate.endpoint.jmx.EndpointMBeanExporter Line:674-Located managed bean 'dumpEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=dumpEndpoint]
+===2018-04-05 09:20:09.461 [main] INFO  org.springframework.boot.actuate.endpoint.jmx.EndpointMBeanExporter Line:674-Located managed bean 'autoConfigurationReportEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=autoConfigurationReportEndpoint]
+===2018-04-05 09:20:09.464 [main] INFO  org.springframework.boot.actuate.endpoint.jmx.EndpointMBeanExporter Line:674-Located managed bean 'configurationPropertiesReportEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=configurationPropertiesReportEndpoint]
+===2018-04-05 09:20:09.476 [main] INFO  org.springframework.scheduling.annotation.ScheduledAnnotationBeanPostProcessor Line:244-No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+===2018-04-05 09:20:09.484 [main] INFO  org.apache.coyote.http11.Http11NioProtocol Line:179-Initializing ProtocolHandler ["http-nio-8080"]
+===2018-04-05 09:20:09.496 [main] INFO  org.apache.coyote.http11.Http11NioProtocol Line:179-Starting ProtocolHandler [http-nio-8080]
+===2018-04-05 09:20:09.661 [main] INFO  org.apache.tomcat.util.net.NioSelectorPool Line:179-Using a shared selector for servlet write/read
+===2018-04-05 09:20:09.680 [main] INFO  org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer Line:186-Tomcat started on port(s): 8080 (http)
+===2018-04-05 09:20:09.683 [main] INFO  com.army.util.TimerTask Line:34 -start.............
+===2018-04-05 09:20:09.685 [main] INFO  com.army.Army Line:57 -Started Army in 5.2 seconds (JVM running for 6.051)
+===2018-04-05 09:21:00.001 [pool-2-thread-1] INFO  com.army.util.Count Line:141-刷新访问量:头条访问量：3213624
+天下杂谈问量：15497
+音乐访问量：12463
+视频访问量：35454
+
+===2018-04-05 09:22:00.004 [pool-2-thread-1] INFO  com.army.util.Count Line:141-刷新访问量:头条访问量：3213624
+天下杂谈问量：15497
+音乐访问量：12463
+视频访问量：35454
+
+===2018-04-05 09:23:00.002 [pool-2-thread-1] INFO  com.army.util.Count Line:141-刷新访问量:头条访问量：3213624
+天下杂谈问量：15497
+音乐访问量：12463
+视频访问量：35454
+
+===2018-04-05 09:23:39.208 [RMI TCP Connection(8)-127.0.0.1] INFO  org.springframework.boot.admin.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin Line:125-Application shutdown requested.
+===2018-04-05 09:23:39.209 [RMI TCP Connection(8)-127.0.0.1] INFO  org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext Line:982-Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@3349e9bb: startup date [Thu Apr 05 09:20:04 CST 2018]; root of context hierarchy
+===2018-04-05 09:23:39.212 [RMI TCP Connection(8)-127.0.0.1] INFO  org.springframework.context.support.DefaultLifecycleProcessor Line:356-Stopping beans in phase 0
+===2018-04-05 09:23:39.214 [RMI TCP Connection(8)-127.0.0.1] INFO  org.springframework.boot.actuate.endpoint.jmx.EndpointMBeanExporter Line:449-Unregistering JMX-exposed beans on shutdown
+===2018-04-05 09:23:39.214 [RMI TCP Connection(8)-127.0.0.1] INFO  org.springframework.boot.actuate.endpoint.jmx.EndpointMBeanExporter Line:241-Unregistering JMX-exposed beans
+===2018-04-05 09:23:39.214 [RMI TCP Connection(8)-127.0.0.1] INFO  org.springframework.jmx.export.annotation.AnnotationMBeanExporter Line:449-Unregistering JMX-exposed beans on shutdown
+===2018-04-05 09:23:39.215 [RMI TCP Connection(8)-127.0.0.1] INFO  org.springframework.jmx.export.annotation.AnnotationMBeanExporter Line:241-Unregistering JMX-exposed beans
+===2018-04-05 09:24:02.461 [main] INFO  com.army.Army Line:48 -Starting Army on USER-20171102JJ with PID 5884 (started by Administrator in D:\上家项目资料\army)
+===2018-04-05 09:24:02.466 [main] INFO  com.army.Army Line:659-No active profile set, falling back to default profiles: default
+===2018-04-05 09:24:02.530 [main] INFO  org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext Line:581-Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@3349e9bb: startup date [Thu Apr 05 09:24:02 CST 2018]; root of context hierarchy
+===2018-04-05 09:24:02.625 [background-preinit] INFO  org.hibernate.validator.internal.util.Version Line:30 -HV000001: Hibernate Validator 5.2.4.Final
+===2018-04-05 09:24:03.659 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker Line:328-Bean 'druidConfiguration' of type [class com.army.util.DruidConfiguration$$EnhancerBySpringCGLIB$$f95aaf32] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+===2018-04-05 09:24:03.737 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker Line:328-Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [class org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$df54bbb1] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+===2018-04-05 09:24:04.009 [main] INFO  org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer Line:88 -Tomcat initialized with port(s): 8080 (http)
+===2018-04-05 09:24:04.018 [main] INFO  org.apache.catalina.core.StandardService Line:179-Starting service Tomcat
+===2018-04-05 09:24:04.019 [main] INFO  org.apache.catalina.core.StandardEngine Line:179-Starting Servlet Engine: Apache Tomcat/8.5.4
+===2018-04-05 09:24:04.309 [localhost-startStop-1] INFO  org.apache.jasper.servlet.TldScanner Line:179-At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+===2018-04-05 09:24:04.311 [localhost-startStop-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] Line:179-Initializing Spring embedded WebApplicationContext
+===2018-04-05 09:24:04.311 [localhost-startStop-1] INFO  org.springframework.web.context.ContextLoader Line:276-Root WebApplicationContext: initialization completed in 1781 ms
+===2018-04-05 09:24:04.495 [localhost-startStop-1] INFO  org.springframework.boot.web.servlet.ServletRegistrationBean Line:190-Mapping servlet: 'statViewServlet' to [/druid/*]
+===2018-04-05 09:24:04.496 [localhost-startStop-1] INFO  org.springframework.boot.web.servlet.ServletRegistrationBean Line:190-Mapping servlet: 'dispatcherServlet' to [/]
+===2018-04-05 09:24:04.499 [localhost-startStop-1] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean Line:258-Mapping filter: 'metricFilter' to: [/*]
+===2018-04-05 09:24:04.499 [localhost-startStop-1] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean Line:258-Mapping filter: 'characterEncodingFilter' to: [/*]
+===2018-04-05 09:24:04.499 [localhost-startStop-1] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean Line:258-Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+===2018-04-05 09:24:04.500 [localhost-startStop-1] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean Line:258-Mapping filter: 'httpPutFormContentFilter' to: [/*]
+===2018-04-05 09:24:04.500 [localhost-startStop-1] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean Line:258-Mapping filter: 'requestContextFilter' to: [/*]
+===2018-04-05 09:24:04.500 [localhost-startStop-1] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean Line:258-Mapping filter: 'webRequestLoggingFilter' to: [/*]
+===2018-04-05 09:24:04.500 [localhost-startStop-1] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean Line:271-Mapping filter: 'webStatFilter' to urls: [/*]
+===2018-04-05 09:24:04.500 [localhost-startStop-1] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean Line:258-Mapping filter: 'applicationContextIdFilter' to: [/*]
+===2018-04-05 09:24:05.224 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter Line:534-Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@3349e9bb: startup date [Thu Apr 05 09:24:02 CST 2018]; root of context hierarchy
+===2018-04-05 09:24:05.279 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping Line:543-Mapped "{[/data/getCount]}" onto public com.alibaba.fastjson.JSONObject com.army.controller.WebJumpController.getCount()
+===2018-04-05 09:24:05.281 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping Line:543-Mapped "{[/data/manager/findAllTVManeger],methods=[POST]}" onto public com.alibaba.fastjson.JSONArray com.army.controller.WebJumpController.findAllTVManeger(javax.servlet.http.HttpServletRequest,com.army.vo.PreFileInfo) throws java.lang.Exception
+===2018-04-05 09:24:05.281 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping Line:543-Mapped "{[/data/manager/deleteImg]}" onto public com.alibaba.fastjson.JSONObject com.army.controller.WebJumpController.deleteImg(javax.servlet.http.HttpServletRequest,com.army.vo.ImgsHisInfo) throws java.lang.Exception
+===2018-04-05 09:24:05.281 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping Line:543-Mapped "{[/data/manager/deleteVedio]}" onto public com.alibaba.fastjson.JSONObject com.army.controller.WebJumpController.deleteVedio(javax.servlet.http.HttpServletRequest,com.army.vo.VedioInfo) throws java.lang.Exception
+===2018-04-05 09:24:05.282 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping Line:543-Mapped "{[/data/manager/openfile]}" onto public com.alibaba.fastjson.JSONObject com.army.controller.WebJumpController.openfile() throws java.lang.Exception
+===2018-04-05 09:24:05.282 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping Line:543-Mapped "{[/data/manager/loadImg]}" onto public com.alibaba.fastjson.JSONObject com.army.controller.WebJumpController.loadImg(javax.servlet.http.HttpServletRequest,com.army.vo.ImgsHisInfo) throws java.lang.Exception
+===2018-04-05 09:24:05.282 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping Line:543-Mapped "{[/data/manager/deleteTv]}" onto public com.alibaba.fastjson.JSONObject com.army.controller.WebJumpController.deleteTv(javax.servlet.http.HttpServletRequest,com.army.vo.TVListInfo) throws java.lang.Exception
+===2018-04-05 09:24:05.283 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping Line:543-Mapped "{[/data/manager/findAllImgs]}" onto public com.alibaba.fastjson.JSONArray com.army.controller.WebJumpController.findAllImgs(javax.servlet.http.HttpServletRequest,com.army.vo.ImgsHisInfo) throws java.lang.Exception
+===2018-04-05 09:24:05.283 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping Line:543-Mapped "{[/data/manager/deletemusic]}" onto public com.alibaba.fastjson.JSONObject com.army.controller.WebJumpController.deletemusic(javax.servlet.http.HttpServletRequest,com.army.vo.MusicInfo) throws java.lang.Exception
+===2018-04-05 09:24:05.283 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping Line:543-Mapped "{[/data/findpullNewsById],methods=[POST]}" onto public com.alibaba.fastjson.JSONObject com.army.controller.WebJumpController.findpullNewsById(com.army.vo.ReptileNewsInfo) throws java.lang.Exception
+===2018-04-05 09:24:05.283 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping Line:543-Mapped "{[/data/manager/findById],methods=[POST]}" onto public com.alibaba.fastjson.JSONObject com.army.controller.WebJumpController.findById(com.army.vo.ReptileNewsInfo) throws java.lang.Exception
+===2018-04-05 09:24:05.284 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping Line:543-Mapped "{[/data/findAllTv],methods=[POST]}" onto public com.alibaba.fastjson.JSONArray com.army.controller.WebJumpController.findAllTv(com.army.vo.PreFileInfo) throws java.lang.Exception
+===2018-04-05 09:24:05.284 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping Line:543-Mapped "{[/data/manager/insertPreFile],methods=[POST]}" onto public com.alibaba.fastjson.JSONObject com.army.controller.WebJumpController.insertPreFile(javax.servlet.http.HttpServletRequest,com.army.vo.PreFileInfo) throws java.lang.Exception
+===2018-04-05 09:24:05.284 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping Line:543-Mapped "{[/data/login],methods=[POST]}" onto public com.alibaba.fastjson.JSONObject com.army.controller.WebJumpController.userLogin(javax.servlet.http.HttpServletRequest,com.army.vo.UserInfo) throws java.lang.Exception
+===2018-04-05 09:24:05.284 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping Line:543-Mapped "{[/data/manager/uploadFile],methods=[POST]}" onto public com.alibaba.fastjson.JSONObject com.army.controller.WebJumpController.uploadFile(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.lang.Exception
+===2018-04-05 09:24:05.284 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping Line:543-Mapped "{[/data/manager/updateTv],methods=[POST]}" onto public com.alibaba.fastjson.JSONObject com.army.controller.WebJumpController.updateTv(com.army.vo.PreFileInfo) throws java.lang.Exception
+===2018-04-05 09:24:05.284 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping Line:543-Mapped "{[/data/manager/findOpt],methods=[POST]}" onto public com.alibaba.fastjson.JSONArray com.army.controller.WebJumpController.findOpt(javax.servlet.http.HttpServletRequest,java.lang.String) throws java.lang.Exception
+===2018-04-05 09:24:05.285 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping Line:543-Mapped "{[/data/manager/findAllUser],methods=[POST]}" onto public com.alibaba.fastjson.JSONArray com.army.controller.WebJumpController.findAllUser(com.army.vo.UserInfo) throws java.lang.Exception
+===2018-04-05 09:24:05.285 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping Line:543-Mapped "{[/data/manager/findUserById],methods=[POST]}" onto public com.alibaba.fastjson.JSONObject com.army.controller.WebJumpController.findUserById(com.army.vo.UserInfo) throws java.lang.Exception
+===2018-04-05 09:24:05.285 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping Line:543-Mapped "{[/data/manager/updateUser],methods=[POST]}" onto public com.alibaba.fastjson.JSONObject com.army.controller.WebJumpController.updateUser(javax.servlet.http.HttpServletRequest,com.army.vo.UserInfo) throws java.lang.Exception
+===2018-04-05 09:24:05.285 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping Line:543-Mapped "{[/data/manager/findAllCount],methods=[POST]}" onto public com.alibaba.fastjson.JSONArray com.army.controller.WebJumpController.findAllCount(javax.servlet.http.HttpServletRequest) throws java.lang.Exception
+===2018-04-05 09:24:05.285 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping Line:543-Mapped "{[/data/manager/insertNew],methods=[POST]}" onto public com.alibaba.fastjson.JSONObject com.army.controller.WebJumpController.insertNew(javax.servlet.http.HttpServletRequest,com.army.vo.NewsInfo) throws java.lang.Exception
+===2018-04-05 09:24:05.285 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping Line:543-Mapped "{[/data/findAllNews],methods=[POST]}" onto public com.alibaba.fastjson.JSONArray com.army.controller.WebJumpController.findAllNews(com.army.vo.NewsInfo) throws java.lang.Exception
+===2018-04-05 09:24:05.285 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping Line:543-Mapped "{[/data/manager/findNewById],methods=[POST]}" onto public com.alibaba.fastjson.JSONObject com.army.controller.WebJumpController.findNewById(com.army.vo.NewsInfo) throws java.lang.Exception
+===2018-04-05 09:24:05.286 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping Line:543-Mapped "{[/data/findNewById],methods=[POST]}" onto public com.alibaba.fastjson.JSONObject com.army.controller.WebJumpController.findwebNewById(com.army.vo.NewsInfo) throws java.lang.Exception
+===2018-04-05 09:24:05.286 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping Line:543-Mapped "{[/data/manager/change],methods=[POST]}" onto public com.alibaba.fastjson.JSONObject com.army.controller.WebJumpController.changerValid(javax.servlet.http.HttpServletRequest,com.army.vo.NewsInfo) throws java.lang.Exception
+===2018-04-05 09:24:05.286 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping Line:543-Mapped "{[/data/manager/insertNotice],methods=[POST]}" onto public com.alibaba.fastjson.JSONObject com.army.controller.WebJumpController.insertNotice(javax.servlet.http.HttpServletRequest,com.army.vo.NoticeInfo) throws java.lang.Exception
+===2018-04-05 09:24:05.286 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping Line:543-Mapped "{[/data/manager/findNotice],methods=[POST]}" onto public com.alibaba.fastjson.JSONObject com.army.controller.WebJumpController.findNotice(com.army.vo.NoticeInfo) throws java.lang.Exception
+===2018-04-05 09:24:05.287 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping Line:543-Mapped "{[/data/manager/updateNotice],methods=[POST]}" onto public com.alibaba.fastjson.JSONObject com.army.controller.WebJumpController.updateNotice(javax.servlet.http.HttpServletRequest,com.army.vo.NoticeInfo) throws java.lang.Exception
+===2018-04-05 09:24:05.287 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping Line:543-Mapped "{[/data/findAllNotice],methods=[POST]}" onto public com.alibaba.fastjson.JSONArray com.army.controller.WebJumpController.findAllNotice() throws java.lang.Exception
+===2018-04-05 09:24:05.287 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping Line:543-Mapped "{[/data/regist],methods=[POST]}" onto public com.alibaba.fastjson.JSONObject com.army.controller.WebJumpController.userRegist(com.army.vo.UserInfo) throws java.lang.Exception
+===2018-04-05 09:24:05.287 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping Line:543-Mapped "{[/data/manager/getUser],methods=[POST]}" onto public com.alibaba.fastjson.JSONObject com.army.controller.WebJumpController.getUser(javax.servlet.http.HttpServletRequest) throws java.lang.Exception
+===2018-04-05 09:24:05.288 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping Line:543-Mapped "{[/data/manager/outLogin],methods=[POST]}" onto public com.alibaba.fastjson.JSONObject com.army.controller.WebJumpController.outLogin(javax.servlet.http.HttpServletRequest) throws java.lang.Exception
+===2018-04-05 09:24:05.288 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping Line:543-Mapped "{[/data/page/{pageName}]}" onto public org.springframework.web.servlet.ModelAndView com.army.controller.WebJumpController.pageUrl(java.lang.String)
+===2018-04-05 09:24:05.288 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping Line:543-Mapped "{[/data/page/{preFile}/{pageName}]}" onto public org.springframework.web.servlet.ModelAndView com.army.controller.WebJumpController.pageUrl(java.lang.String,java.lang.String)
+===2018-04-05 09:24:05.289 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping Line:543-Mapped "{[/data/manager/updateMusic],methods=[POST]}" onto public com.alibaba.fastjson.JSONObject com.army.controller.WebJumpController.updateMusic(javax.servlet.http.HttpServletRequest,com.army.vo.MusicInfo) throws java.lang.Exception
+===2018-04-05 09:24:05.289 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping Line:543-Mapped "{[/data/manager/insertMusics],methods=[POST]}" onto public com.alibaba.fastjson.JSONObject com.army.controller.WebJumpController.insertMusics(javax.servlet.http.HttpServletRequest,com.army.vo.MusicInfo) throws java.lang.Exception
+===2018-04-05 09:24:05.289 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping Line:543-Mapped "{[/data/findAllMusic],methods=[POST]}" onto public com.alibaba.fastjson.JSONArray com.army.controller.WebJumpController.findAllMusic(com.army.vo.MusicInfo) throws java.lang.Exception
+===2018-04-05 09:24:05.289 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping Line:543-Mapped "{[/data/manager/updateMoive],methods=[POST]}" onto public com.alibaba.fastjson.JSONObject com.army.controller.WebJumpController.updateMoive(javax.servlet.http.HttpServletRequest,com.army.vo.VedioInfo) throws java.lang.Exception
+===2018-04-05 09:24:05.289 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping Line:543-Mapped "{[/data/manager/insertMoive],methods=[POST]}" onto public com.alibaba.fastjson.JSONObject com.army.controller.WebJumpController.insertMoive(javax.servlet.http.HttpServletRequest,com.army.vo.VedioInfo) throws java.lang.Exception
+===2018-04-05 09:24:05.290 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping Line:543-Mapped "{[/data/findAllMoive],methods=[POST]}" onto public com.alibaba.fastjson.JSONArray com.army.controller.WebJumpController.findAllMoive(com.army.vo.VedioInfo) throws java.lang.Exception
+===2018-04-05 09:24:05.290 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping Line:543-Mapped "{[/data/manager/updateApp],methods=[POST]}" onto public com.alibaba.fastjson.JSONObject com.army.controller.WebJumpController.updateApp(javax.servlet.http.HttpServletRequest,com.army.vo.AppInfo) throws java.lang.Exception
+===2018-04-05 09:24:05.290 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping Line:543-Mapped "{[/data/manager/findAllApp],methods=[POST]}" onto public com.alibaba.fastjson.JSONArray com.army.controller.WebJumpController.findAllApp() throws java.lang.Exception
+===2018-04-05 09:24:05.291 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping Line:543-Mapped "{[/data/manager/findAllAppByName],methods=[POST]}" onto public com.alibaba.fastjson.JSONArray com.army.controller.WebJumpController.findAllAppByName(com.army.vo.AppInfo) throws java.lang.Exception
+===2018-04-05 09:24:05.291 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping Line:543-Mapped "{[/data/findAllReptileNews],methods=[POST]}" onto public com.alibaba.fastjson.JSONArray com.army.controller.WebJumpController.findAllReptileNews(com.army.vo.ReptileNewsInfo) throws java.lang.Exception
+===2018-04-05 09:24:05.291 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping Line:543-Mapped "{[/data/manager/findAllReptileNewsManager],methods=[POST]}" onto public com.alibaba.fastjson.JSONArray com.army.controller.WebJumpController.findAllReptileNewsManager(javax.servlet.http.HttpServletRequest,com.army.vo.ReptileNewsInfo) throws java.lang.Exception
+===2018-04-05 09:24:05.291 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping Line:543-Mapped "{[/data/manager/insertReptileNews],methods=[POST]}" onto public com.alibaba.fastjson.JSONObject com.army.controller.WebJumpController.insertReptileNews() throws java.lang.Exception
+===2018-04-05 09:24:05.291 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping Line:543-Mapped "{[/data/manager/updateReptileNews],methods=[POST]}" onto public com.alibaba.fastjson.JSONObject com.army.controller.WebJumpController.updateReptileNews(javax.servlet.http.HttpServletRequest,com.army.vo.ReptileNewsInfo) throws java.lang.Exception
+===2018-04-05 09:24:05.291 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping Line:543-Mapped "{[/data/manager/findAllNewManager],methods=[POST]}" onto public com.alibaba.fastjson.JSONArray com.army.controller.WebJumpController.findAllNewManager(javax.servlet.http.HttpServletRequest,com.army.vo.NewsInfo) throws java.lang.Exception
+===2018-04-05 09:24:05.292 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping Line:543-Mapped "{[/data/manager/findAllNoticeManager],methods=[POST]}" onto public com.alibaba.fastjson.JSONArray com.army.controller.WebJumpController.findAllNoticeManager(javax.servlet.http.HttpServletRequest,com.army.vo.NoticeInfo) throws java.lang.Exception
+===2018-04-05 09:24:05.292 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping Line:543-Mapped "{[/data/manager/findAllMusicManeger],methods=[POST]}" onto public com.alibaba.fastjson.JSONArray com.army.controller.WebJumpController.findAllMusicManeger(javax.servlet.http.HttpServletRequest,com.army.vo.MusicInfo) throws java.lang.Exception
+===2018-04-05 09:24:05.293 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping Line:543-Mapped "{[/data/manager/findAllMusicByName],methods=[POST]}" onto public com.alibaba.fastjson.JSONArray com.army.controller.WebJumpController.findAllMusicByName(com.army.vo.MusicInfo) throws java.lang.Exception
+===2018-04-05 09:24:05.293 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping Line:543-Mapped "{[/data/manager/findAllVedioManeger],methods=[POST]}" onto public com.alibaba.fastjson.JSONArray com.army.controller.WebJumpController.findAllVedioManeger(javax.servlet.http.HttpServletRequest,com.army.vo.VedioInfo) throws java.lang.Exception
+===2018-04-05 09:24:05.293 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping Line:543-Mapped "{[/data/manager/findAllMoiveByName],methods=[POST]}" onto public com.alibaba.fastjson.JSONArray com.army.controller.WebJumpController.findAllMoiveByName(com.army.vo.VedioInfo) throws java.lang.Exception
+===2018-04-05 09:24:05.296 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping Line:543-Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+===2018-04-05 09:24:05.296 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping Line:543-Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+===2018-04-05 09:24:05.301 [main] INFO  org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter Line:303-Adding welcome page: ServletContext resource [/index.html]
+===2018-04-05 09:24:05.311 [main] INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping Line:341-Root mapping to handler of type [class org.springframework.web.servlet.mvc.ParameterizableViewController]
+===2018-04-05 09:24:05.317 [main] INFO  org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping Line:354-Mapped URL path [/MoiveService] onto handler '/MoiveService'
+===2018-04-05 09:24:05.317 [main] INFO  org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping Line:354-Mapped URL path [/musicService] onto handler '/musicService'
+===2018-04-05 09:24:05.317 [main] INFO  org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping Line:354-Mapped URL path [/newsService] onto handler '/newsService'
+===2018-04-05 09:24:05.322 [main] INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping Line:354-Mapped URL path [/upload/image/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+===2018-04-05 09:24:05.322 [main] INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping Line:354-Mapped URL path [/upload/vedio/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+===2018-04-05 09:24:05.322 [main] INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping Line:354-Mapped URL path [/upload/music/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+===2018-04-05 09:24:05.323 [main] INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping Line:354-Mapped URL path [/upload/app/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+===2018-04-05 09:24:05.323 [main] INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping Line:354-Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+===2018-04-05 09:24:05.323 [main] INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping Line:354-Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+===2018-04-05 09:24:05.361 [main] INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping Line:354-Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+===2018-04-05 09:24:05.649 [main] INFO  org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping Line:543-Mapped "{[/env/{name:.*}],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EnvironmentMvcEndpoint.value(java.lang.String)
+===2018-04-05 09:24:05.650 [main] INFO  org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping Line:543-Mapped "{[/env || /env.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+===2018-04-05 09:24:05.650 [main] INFO  org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping Line:543-Mapped "{[/trace || /trace.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+===2018-04-05 09:24:05.651 [main] INFO  org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping Line:543-Mapped "{[/dump || /dump.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+===2018-04-05 09:24:05.651 [main] INFO  org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping Line:543-Mapped "{[/heapdump || /heapdump.json],methods=[GET],produces=[application/octet-stream]}" onto public void org.springframework.boot.actuate.endpoint.mvc.HeapdumpMvcEndpoint.invoke(boolean,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.io.IOException,javax.servlet.ServletException
+===2018-04-05 09:24:05.652 [main] INFO  org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping Line:543-Mapped "{[/info || /info.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+===2018-04-05 09:24:05.652 [main] INFO  org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping Line:543-Mapped "{[/autoconfig || /autoconfig.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+===2018-04-05 09:24:05.653 [main] INFO  org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping Line:543-Mapped "{[/configprops || /configprops.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+===2018-04-05 09:24:05.654 [main] INFO  org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping Line:543-Mapped "{[/mappings || /mappings.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+===2018-04-05 09:24:05.655 [main] INFO  org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping Line:543-Mapped "{[/logfile || /logfile.json],methods=[GET || HEAD]}" onto public void org.springframework.boot.actuate.endpoint.mvc.LogFileMvcEndpoint.invoke(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws javax.servlet.ServletException,java.io.IOException
+===2018-04-05 09:24:05.655 [main] INFO  org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping Line:543-Mapped "{[/health || /health.json],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.HealthMvcEndpoint.invoke(java.security.Principal)
+===2018-04-05 09:24:05.657 [main] INFO  org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping Line:543-Mapped "{[/beans || /beans.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+===2018-04-05 09:24:05.657 [main] INFO  org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping Line:543-Mapped "{[/metrics/{name:.*}],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.MetricsMvcEndpoint.value(java.lang.String)
+===2018-04-05 09:24:05.658 [main] INFO  org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping Line:543-Mapped "{[/metrics || /metrics.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+===2018-04-05 09:24:05.803 [main] INFO  org.springframework.jmx.export.annotation.AnnotationMBeanExporter Line:431-Registering beans for JMX exposure on startup
+===2018-04-05 09:24:05.804 [main] INFO  org.springframework.jmx.export.annotation.AnnotationMBeanExporter Line:912-Bean with name 'dataSource' has been autodetected for JMX exposure
+===2018-04-05 09:24:05.811 [main] INFO  org.springframework.jmx.export.annotation.AnnotationMBeanExporter Line:667-Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=dataSource,type=DruidDataSource]
+===2018-04-05 09:24:05.812 [main] INFO  org.springframework.boot.actuate.endpoint.jmx.EndpointMBeanExporter Line:431-Registering beans for JMX exposure on startup
+===2018-04-05 09:24:05.817 [main] INFO  org.springframework.context.support.DefaultLifecycleProcessor Line:341-Starting beans in phase 0
+===2018-04-05 09:24:05.823 [main] INFO  org.springframework.boot.actuate.endpoint.jmx.EndpointMBeanExporter Line:674-Located managed bean 'requestMappingEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=requestMappingEndpoint]
+===2018-04-05 09:24:05.842 [main] INFO  org.springframework.boot.actuate.endpoint.jmx.EndpointMBeanExporter Line:674-Located managed bean 'environmentEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=environmentEndpoint]
+===2018-04-05 09:24:05.846 [main] INFO  org.springframework.boot.actuate.endpoint.jmx.EndpointMBeanExporter Line:674-Located managed bean 'healthEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=healthEndpoint]
+===2018-04-05 09:24:05.849 [main] INFO  org.springframework.boot.actuate.endpoint.jmx.EndpointMBeanExporter Line:674-Located managed bean 'beansEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=beansEndpoint]
+===2018-04-05 09:24:05.851 [main] INFO  org.springframework.boot.actuate.endpoint.jmx.EndpointMBeanExporter Line:674-Located managed bean 'infoEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=infoEndpoint]
+===2018-04-05 09:24:05.854 [main] INFO  org.springframework.boot.actuate.endpoint.jmx.EndpointMBeanExporter Line:674-Located managed bean 'metricsEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=metricsEndpoint]
+===2018-04-05 09:24:05.858 [main] INFO  org.springframework.boot.actuate.endpoint.jmx.EndpointMBeanExporter Line:674-Located managed bean 'traceEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=traceEndpoint]
+===2018-04-05 09:24:05.861 [main] INFO  org.springframework.boot.actuate.endpoint.jmx.EndpointMBeanExporter Line:674-Located managed bean 'dumpEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=dumpEndpoint]
+===2018-04-05 09:24:05.866 [main] INFO  org.springframework.boot.actuate.endpoint.jmx.EndpointMBeanExporter Line:674-Located managed bean 'autoConfigurationReportEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=autoConfigurationReportEndpoint]
+===2018-04-05 09:24:05.869 [main] INFO  org.springframework.boot.actuate.endpoint.jmx.EndpointMBeanExporter Line:674-Located managed bean 'configurationPropertiesReportEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=configurationPropertiesReportEndpoint]
+===2018-04-05 09:24:05.882 [main] INFO  org.springframework.scheduling.annotation.ScheduledAnnotationBeanPostProcessor Line:244-No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+===2018-04-05 09:24:05.890 [main] INFO  org.apache.coyote.http11.Http11NioProtocol Line:179-Initializing ProtocolHandler ["http-nio-8080"]
+===2018-04-05 09:24:05.908 [main] INFO  org.apache.coyote.http11.Http11NioProtocol Line:179-Starting ProtocolHandler [http-nio-8080]
+===2018-04-05 09:24:06.071 [main] INFO  org.apache.tomcat.util.net.NioSelectorPool Line:179-Using a shared selector for servlet write/read
+===2018-04-05 09:24:06.090 [main] INFO  org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer Line:186-Tomcat started on port(s): 8080 (http)
+===2018-04-05 09:24:06.093 [main] INFO  com.army.util.TimerTask Line:34 -start.............
+===2018-04-05 09:24:06.094 [main] INFO  com.army.Army Line:57 -Started Army in 3.935 seconds (JVM running for 4.415)
+===2018-04-05 09:24:06.762 [http-nio-8080-exec-2] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] Line:179-Initializing Spring FrameworkServlet 'dispatcherServlet'
+===2018-04-05 09:24:06.762 [http-nio-8080-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet Line:489-FrameworkServlet 'dispatcherServlet': initialization started
+===2018-04-05 09:24:06.795 [http-nio-8080-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet Line:508-FrameworkServlet 'dispatcherServlet': initialization completed in 33 ms
+===2018-04-05 09:24:09.648 [http-nio-8080-exec-5] INFO  com.alibaba.druid.pool.DruidDataSource Line:721-{dataSource-1} inited
+===2018-04-05 09:24:09.824 [http-nio-8080-exec-5] INFO  com.army.service.user.impl.UserLoginServiceImpl Line:62 -执行了 userLogin: {"loginTip":"登录成功","tipStatus":1,"roleName":"超级管理员","tipStatusContent":"成功","userName":"admin","userId":1}
+===2018-04-05 09:25:00.002 [pool-2-thread-1] INFO  com.army.util.Count Line:141-刷新访问量:头条访问量：3213624
+天下杂谈问量：15497
+音乐访问量：12463
+视频访问量：35454
+
+===2018-04-05 09:26:00.002 [pool-2-thread-1] INFO  com.army.util.Count Line:141-刷新访问量:头条访问量：3213624
+天下杂谈问量：15497
+音乐访问量：12463
+视频访问量：35454
+
+===2018-04-05 09:26:56.048 [http-nio-8080-exec-2] INFO  com.army.service.news.impl.NewsServiceImpl Line:73 -[2018-4-5 9:26:56]开始拉取数据......
+===2018-04-05 09:26:56.048 [http-nio-8080-exec-2] INFO  com.army.service.news.impl.NewsServiceImpl Line:74 -开始拉取:http://www.xinhuanet.com/local/
+===2018-04-05 09:27:00.002 [pool-2-thread-1] INFO  com.army.util.Count Line:141-刷新访问量:头条访问量：3213624
+天下杂谈问量：15497
+音乐访问量：12463
+视频访问量：35454
+
+===2018-04-05 09:27:16.996 [http-nio-8080-exec-2] INFO  com.army.service.news.impl.NewsServiceImpl Line:106-拉取完毕:http://www.xinhuanet.com/local/
+===2018-04-05 09:27:16.997 [http-nio-8080-exec-2] INFO  com.army.service.news.impl.NewsServiceImpl Line:73 -[2018-4-5 9:27:16]开始拉取数据......
+===2018-04-05 09:27:16.998 [http-nio-8080-exec-2] INFO  com.army.service.news.impl.NewsServiceImpl Line:74 -开始拉取:http://www.news.cn/house/index.htm
+===2018-04-05 09:28:00.002 [pool-2-thread-1] INFO  com.army.util.Count Line:141-刷新访问量:头条访问量：3213624
+天下杂谈问量：15497
+音乐访问量：12463
+视频访问量：35454
+
+===2018-04-05 09:28:02.410 [http-nio-8080-exec-2] INFO  com.army.service.news.impl.NewsServiceImpl Line:106-拉取完毕:http://www.news.cn/house/index.htm
+===2018-04-05 09:28:02.411 [http-nio-8080-exec-2] INFO  com.army.service.news.impl.NewsServiceImpl Line:73 -[2018-4-5 9:28:02]开始拉取数据......
+===2018-04-05 09:28:02.413 [http-nio-8080-exec-2] INFO  com.army.service.news.impl.NewsServiceImpl Line:74 -开始拉取:http://www.news.cn/info/
+===2018-04-05 09:28:54.788 [http-nio-8080-exec-2] INFO  com.army.service.news.impl.NewsServiceImpl Line:106-拉取完毕:http://www.news.cn/info/
+===2018-04-05 09:28:54.790 [http-nio-8080-exec-2] INFO  com.army.service.news.impl.NewsServiceImpl Line:73 -[2018-4-5 9:28:54]开始拉取数据......
+===2018-04-05 09:28:54.791 [http-nio-8080-exec-2] INFO  com.army.service.news.impl.NewsServiceImpl Line:74 -开始拉取:http://www.news.cn/auto/
+===2018-04-05 09:29:00.002 [pool-2-thread-1] INFO  com.army.util.Count Line:141-刷新访问量:头条访问量：3213624
+天下杂谈问量：15497
+音乐访问量：12463
+视频访问量：35454
+
+===2018-04-05 09:29:41.178 [http-nio-8080-exec-2] INFO  com.army.service.news.impl.NewsServiceImpl Line:106-拉取完毕:http://www.news.cn/auto/
+===2018-04-05 09:29:41.180 [http-nio-8080-exec-2] INFO  com.army.service.news.impl.NewsServiceImpl Line:73 -[2018-4-5 9:29:41]开始拉取数据......
+===2018-04-05 09:29:41.181 [http-nio-8080-exec-2] INFO  com.army.service.news.impl.NewsServiceImpl Line:74 -开始拉取:http://www.news.cn/tech/
+===2018-04-05 09:30:00.001 [pool-2-thread-1] INFO  com.army.util.Count Line:141-刷新访问量:头条访问量：3213624
+天下杂谈问量：15497
+音乐访问量：12463
+视频访问量：35454
+
+===2018-04-05 09:30:27.294 [http-nio-8080-exec-2] INFO  com.army.service.news.impl.NewsServiceImpl Line:106-拉取完毕:http://www.news.cn/tech/
+===2018-04-05 09:30:27.295 [http-nio-8080-exec-2] INFO  com.army.service.news.impl.NewsServiceImpl Line:73 -[2018-4-5 9:30:27]开始拉取数据......
+===2018-04-05 09:30:27.297 [http-nio-8080-exec-2] INFO  com.army.service.news.impl.NewsServiceImpl Line:74 -开始拉取:http://www.news.cn/food/
+===2018-04-05 09:31:00.002 [pool-2-thread-1] INFO  com.army.util.Count Line:141-刷新访问量:头条访问量：3213624
+天下杂谈问量：15497
+音乐访问量：12463
+视频访问量：35454
+
+===2018-04-05 09:31:24.200 [http-nio-8080-exec-2] INFO  com.army.service.news.impl.NewsServiceImpl Line:106-拉取完毕:http://www.news.cn/food/
+===2018-04-05 09:31:24.201 [http-nio-8080-exec-2] INFO  com.army.service.news.impl.NewsServiceImpl Line:109-数据拉取完成,耗时:268秒
+===2018-04-05 09:31:25.402 [http-nio-8080-exec-2] INFO  com.army.service.news.impl.NewsServiceImpl Line:103-系统获取新闻添加成功[ {} ]{"tipStatus":1,"insertNum":13,"tipStatusContent":"成功"}
+===2018-04-05 09:32:00.001 [pool-2-thread-1] INFO  com.army.util.Count Line:141-刷新访问量:头条访问量：3213624
+天下杂谈问量：15497
+音乐访问量：12463
+视频访问量：35454
+
+===2018-04-05 09:33:00.001 [pool-2-thread-1] INFO  com.army.util.Count Line:141-刷新访问量:头条访问量：3213624
+天下杂谈问量：15497
+音乐访问量：12463
+视频访问量：35454
+
+===2018-04-05 09:34:00.003 [pool-2-thread-1] INFO  com.army.util.Count Line:141-刷新访问量:头条访问量：3213624
+天下杂谈问量：15497
+音乐访问量：12463
+视频访问量：35454
+
+===2018-04-05 09:35:00.001 [pool-2-thread-1] INFO  com.army.util.Count Line:141-刷新访问量:头条访问量：3213624
+天下杂谈问量：15497
+音乐访问量：12463
+视频访问量：35454
+
+===2018-04-05 09:36:00.003 [pool-2-thread-1] INFO  com.army.util.Count Line:141-刷新访问量:头条访问量：3213624
+天下杂谈问量：15497
+音乐访问量：12463
+视频访问量：35454
+
+===2018-04-05 09:37:00.001 [pool-2-thread-1] INFO  com.army.util.Count Line:141-刷新访问量:头条访问量：3213624
+天下杂谈问量：15497
+音乐访问量：12463
+视频访问量：35454
+
+===2018-04-05 09:38:00.003 [pool-2-thread-1] INFO  com.army.util.Count Line:141-刷新访问量:头条访问量：3213624
+天下杂谈问量：15497
+音乐访问量：12463
+视频访问量：35454
+
+===2018-04-05 09:39:00.001 [pool-2-thread-1] INFO  com.army.util.Count Line:141-刷新访问量:头条访问量：3213624
+天下杂谈问量：15497
+音乐访问量：12463
+视频访问量：35454
+
+===2018-04-05 09:40:00.001 [pool-2-thread-1] INFO  com.army.util.Count Line:141-刷新访问量:头条访问量：3213624
+天下杂谈问量：15497
+音乐访问量：12463
+视频访问量：35454
+
+===2018-04-05 09:41:00.003 [pool-2-thread-1] INFO  com.army.util.Count Line:141-刷新访问量:头条访问量：3213624
+天下杂谈问量：15497
+音乐访问量：12463
+视频访问量：35454
+
+===2018-04-05 09:42:00.001 [pool-2-thread-1] INFO  com.army.util.Count Line:141-刷新访问量:头条访问量：3213624
+天下杂谈问量：15497
+音乐访问量：12463
+视频访问量：35454
+
+===2018-04-05 09:43:00.001 [pool-2-thread-1] INFO  com.army.util.Count Line:141-刷新访问量:头条访问量：3213624
+天下杂谈问量：15497
+音乐访问量：12463
+视频访问量：35454
+
+===2018-04-05 09:44:00.001 [pool-2-thread-1] INFO  com.army.util.Count Line:141-刷新访问量:头条访问量：3213624
+天下杂谈问量：15497
+音乐访问量：12463
+视频访问量：35454
+
+===2018-04-05 09:45:00.003 [pool-2-thread-1] INFO  com.army.util.Count Line:141-刷新访问量:头条访问量：3213624
+天下杂谈问量：15497
+音乐访问量：12463
+视频访问量：35454
+
+===2018-04-05 09:46:00.002 [pool-2-thread-1] INFO  com.army.util.Count Line:141-刷新访问量:头条访问量：3213624
+天下杂谈问量：15497
+音乐访问量：12463
+视频访问量：35454
+
+===2018-04-05 09:47:00.001 [pool-2-thread-1] INFO  com.army.util.Count Line:141-刷新访问量:头条访问量：3213624
+天下杂谈问量：15497
+音乐访问量：12463
+视频访问量：35454
+
+===2018-04-05 09:48:00.002 [pool-2-thread-1] INFO  com.army.util.Count Line:141-刷新访问量:头条访问量：3213624
+天下杂谈问量：15497
+音乐访问量：12463
+视频访问量：35454
+
+===2018-04-05 09:49:00.001 [pool-2-thread-1] INFO  com.army.util.Count Line:141-刷新访问量:头条访问量：3213624
+天下杂谈问量：15497
+音乐访问量：12463
+视频访问量：35454
+
+===2018-04-05 09:50:00.002 [pool-2-thread-1] INFO  com.army.util.Count Line:141-刷新访问量:头条访问量：3213624
+天下杂谈问量：15497
+音乐访问量：12463
+视频访问量：35454
+
+===2018-04-05 09:51:00.001 [pool-2-thread-1] INFO  com.army.util.Count Line:141-刷新访问量:头条访问量：3213624
+天下杂谈问量：15497
+音乐访问量：12463
+视频访问量：35454
+
+===2018-04-05 09:51:54.181 [RMI TCP Connection(33)-127.0.0.1] INFO  org.springframework.boot.admin.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin Line:125-Application shutdown requested.
+===2018-04-05 09:51:54.181 [RMI TCP Connection(33)-127.0.0.1] INFO  org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext Line:982-Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@3349e9bb: startup date [Thu Apr 05 09:24:02 CST 2018]; root of context hierarchy
+===2018-04-05 09:51:54.183 [RMI TCP Connection(33)-127.0.0.1] INFO  org.springframework.context.support.DefaultLifecycleProcessor Line:356-Stopping beans in phase 0
+===2018-04-05 09:51:54.184 [RMI TCP Connection(33)-127.0.0.1] INFO  org.springframework.boot.actuate.endpoint.jmx.EndpointMBeanExporter Line:449-Unregistering JMX-exposed beans on shutdown
+===2018-04-05 09:51:54.185 [RMI TCP Connection(33)-127.0.0.1] INFO  org.springframework.boot.actuate.endpoint.jmx.EndpointMBeanExporter Line:241-Unregistering JMX-exposed beans
+===2018-04-05 09:51:54.185 [RMI TCP Connection(33)-127.0.0.1] INFO  org.springframework.jmx.export.annotation.AnnotationMBeanExporter Line:449-Unregistering JMX-exposed beans on shutdown
+===2018-04-05 09:51:54.185 [RMI TCP Connection(33)-127.0.0.1] INFO  org.springframework.jmx.export.annotation.AnnotationMBeanExporter Line:241-Unregistering JMX-exposed beans
+===2018-04-05 09:51:54.191 [RMI TCP Connection(33)-127.0.0.1] INFO  com.alibaba.druid.pool.DruidDataSource Line:1436-{dataSource-1} closed

@@ -1,0 +1,170 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>分内资讯</title>
+<link href="../source/css/bootstrap.css" rel="stylesheet" type="text/css" media="all">
+<link href="../source/css/style.css" rel="stylesheet" type="text/css" media="all" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="../manager/js/page/footable.core.css" rel="stylesheet" type="text/css" />
+<title>Blog</title>
+<link href="../source/css/bootstrap.css" rel="stylesheet" type="text/css" media="all">
+<link href="../source/css/style.css" rel="stylesheet" type="text/css" media="all" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="shortcut icon" href="../source/images/favicon.ico" type="image/x-icon"> 
+<meta name="keywords" content="Kaisersosa Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<link href='https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900' rel='stylesheet' type='text/css'>
+<script type="text/javascript" src="../manager/js/page/jquery-2.1.1.js"></script>
+<script type="text/javascript" src="../manager/js/page/footable.all.min.js"></script>
+<script type="text/javascript" src="../manager/js/page/jquery.page.js"></script>
+<style>
+.tcdPageCode a{display: inline-block;color:inherit;display: inline-block;height: 25px;	line-height: 25px;	padding: 0 10px;border: 1px solid #ddd;	margin: 0 2px;border-radius: 4px;vertical-align: middle;}
+.tcdPageCode a:hover{text-decoration: none;border: 1px solid #ccc;}
+.tcdPageCode span.current{display: inline-block;height: 25px;line-height: 25px;padding: 0 10px;margin: 0 2px;color: black;background-color:#f4f4f4;border:	1px solid #DDDDDD;border-radius: 4px;vertical-align: middle;}
+.tcdPageCode span.disabled{	display: inline-block;height: 25px;line-height: 25px;padding: 0 10px;margin: 0 2px;	color:#ccc;background: #f2f2f2;border:	1px solid #DDDDDD;border-radius: 4px;vertical-align: middle;}
+</style>
+</head>
+<body>
+<!-- header -->
+	<div class="container">
+		<div class="header">
+			<div class="logo">
+				<div style="height: 60px;font-style: italic;font-size: 15px;" id="showdate"></div></a>
+			</div>
+			<div class="header-left">
+				<div class="head-nav">
+						<span class="menu"> </span>
+					<ul class="cl-effect-1">
+							<li class="active" align="right"><a href="index.html">首页</a></li>
+							<li><a href="blog.html">头条新闻</a></li>
+						    <li><a href="pullNewsList.html">天下杂谈</a></li>
+							<div class="clearfix"></div>
+					</ul>
+				</div>
+						<script>
+							$( "span.menu" ).click(function() {
+							  $( ".head-nav ul" ).slideToggle(300, function() {
+								// Animation complete.
+							  });
+							});
+							setInterval(function(){
+								$("#showdate").html(new Date().toLocaleString());
+							},1000 );  
+						</script>
+					<div class="clearfix"> </div>
+			</div>
+				<div class="clearfix"> </div>
+		</div>
+	
+<!-- header -->	
+<div class="blog">
+			<div class="top-blog" id="allNews">
+		</div>
+			<div class="clearfix"> </div>
+		</div>
+		<div class="tcdPageCode" style="text-align: center;"></div>
+			
+   </div>
+
+</div>	
+	<!-- footer -->
+		<div class="footer">
+			<div class="container">
+			<div class="footer-top">
+			</div>
+			<i class="line"> </i>
+			<div class="footer-bottom">
+				<div class="foot-left">
+					<div class="foot-nav">
+					<ul>
+						<li class="active"><a href="index.html">首页</a></li>
+                        <li><a href="blog.html">头条新闻</a></li>
+						<li><a href="pullNewsList.html">天下杂谈</a></li>
+							<div class="clearfix"></div>
+					</ul>
+					</div>					
+				</div>
+				<div class="foot-right">
+					<p>Copyright &copy; 2018.Company - MagicalJ And MinAndMax Personal studio </p>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+		</div>
+		
+	</div>
+    <div id="goTop" class="goTop"></div>
+<!-- footer -->
+</body>
+<script type="text/javascript">
+	var totalPage;       //总页数 
+	var pageSize = 4;    //每页显示的数量
+	var current;       //dangqia
+
+	function load(current){
+		var newName = $("#newBy").val();
+		$.post("data/findAllNews",
+				{
+					newName : newName,
+					page : (current-1)*pageSize,
+					size : pageSize,
+					newType : "极速数据"
+				},
+				callback);
+	    function callback(date){
+	    	    $(".tcdPageCode").createPage({  
+   	    	    pageCount : date[0].totalPages,
+   	    	    current : current,
+	    	    backFn:function(p){
+				 }
+	    	    });
+	    	    var html = ""
+				if(date[0].totalPages != 0){
+					
+					var len = date.length;
+					for(var i = 0 ; i <  len; i++){
+						var str = date[i].newContent;
+						var dd=str.replace(/<\/?.+?>/g,"");
+						var dds=dd.replace(/ /g,"");//dds为得到后的内容
+						var d = dds.replace(/&nbsp;/g,"");
+						
+						html +='<div class="col-md-6 blog-top">';
+		    			html +='<h3><a title="'+d+'" href="newsDetail.jsp?newId='+date[i].newId+'">'+date[i].newName.substring(0,20)+'......</a></h3>';
+		    			html +='<h6>发布于:&nbsp;&nbsp;'+date[i].createTime+'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;作者：'+date[i].newAuthor+'</h6>';
+		    			if(date[i].showImg != null){
+		    				html +='<a href="newsDetail.jsp?newId='+date[i].newId+'"><img src="'+date[i].showImg+'" width="400" height="240"/></a>';
+		    			} else{
+		    				html +='<a href="newsDetail.jsp?newId='+date[i].newId+'"><img src="source/images/newsImages/timg1.jpg"  width="400" height="240"/></a>';
+		    			}
+		    			
+// 		    			html +='<p>'+date[i].newContent.substring(0,20)+'......</p>';
+						html +='<p>'+d.substring(0,35)+'......</p>';
+		    			html +='<div style="height:50px;">';
+		    			html +='<a  href="newsDetail.jsp?newId='+date[i].newId+'" class="read">更多</a>'; 
+		    			html +='</div>';
+		    			html +='</div>';
+					}
+				}
+				$("#allNews").html(html);
+       }
+	}
+
+	$("#searchBut").click(function(){
+		
+		load(1);
+		
+	})
+	
+	function pageHtml(current){
+	  load(current);
+    }
+  
+  
+	$(document).ready(function(){
+		 load(1);
+		})
+
+    
+</script>
+</html>

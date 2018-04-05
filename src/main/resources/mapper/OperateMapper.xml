@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.army.dao.OperateMapper">
+
+	<insert id="inserObject" parameterType="com.army.vo.OperateInfo">
+		INSERT INTO tb_operate_record
+           (opt_name
+           ,opt_remark
+           ,opt_user_id
+           ,type_id
+           ,create_time
+           ,opt_type)
+    	 VALUES
+           (#{optName}
+           ,#{optRemark}
+           ,#{optUserId}
+           ,#{typeId}
+           ,NOW()
+           ,#{optType})
+	</insert>
+	
+	<select id="findOpt" parameterType="com.army.vo.OperateInfo" resultType="com.army.vo.OperateInfo">
+		SELECT 
+		   opt_id AS optId
+	      ,opt_name AS optName
+	      ,opt_remark AS optRemark
+	      ,opt_user_id AS optUserId
+	      ,type_id AS typeId
+	      ,create_time AS createTime
+  		FROM tb_operate_record 
+  		<where>
+  			<if test="optType != null and optType != ''">
+	  			opt_type = #{optType}
+  			</if>
+  			<if test="optUserId != null and optUserId != 0">
+	  			AND opt_user_id = #{optUserId}
+  			</if>
+  		</where>
+  		ORDER BY opt_id DESC
+	</select>
+
+	
+	<select id="findAllImgs" resultType="com.army.vo.ImgsHisInfo" parameterType="com.army.vo.ImgsHisInfo">
+		SELECT
+			imgs_id AS imgsId,
+	    	imgs_his_src AS imgsHisSrc,
+	    	imgs_new_src AS imgsNewSrc,
+	    	create_time AS createTime
+		FROM tb_imgs_his
+	    ORDER BY create_time DESC LIMIT #{page},#{size}
+    </select>
+    
+    <select id="findAllImgsCount" resultType="int">
+    	SELECT
+	    	DISTINCT
+				COUNT( DISTINCT imgs_id) totalPages
+		FROM tb_imgs_his 
+    </select>
+    
+    <update id="updateImgs" parameterType="com.army.vo.ImgsHisInfo">
+    
+    		UPDATE tb_imgs_his SET
+    			<if test="imgsNewSrc != null and imgsNewSrc != ''">
+    				imgs_new_src = #{imgsNewSrc}
+    			</if>
+    		WHERE imgs_id = #{imgsId}
+    
+    </update>
+    
+    <select id="findBySrc" parameterType="com.army.vo.ImgsHisInfo" resultType="com.army.vo.ImgsHisInfo">
+    
+    	SELECT imgs_id AS imgsId,
+		    	imgs_his_src AS imgsHisSrc,
+		    	imgs_new_src AS imgsNewSrc,
+		    	create_time AS createTime
+		 FROM tb_imgs_his 
+		 <where>
+		 
+		 	<if test="imgsHisSrc != null and imgsHisSrc != ''">
+		 		imgs_his_src = #{imgsHisSrc}
+		 	</if>
+		 	<if test="imgsNewSrc != null and imgsNewSrc != ''">
+		 		AND imgs_new_src = #{imgsNewSrc}
+		 	</if>
+		    <if test="imgsId != null and imgsId != ''">
+		    	AND imgs_id = #{imgsId}
+		    </if>
+		 </where>
+    
+    </select>
+    
+    <insert id="insertImgs" parameterType="com.army.vo.ImgsHisInfo">
+    
+    	INSERT INTO tb_imgs_his (imgs_his_src,imgs_new_src,create_time) 
+    	VALUES(#{imgsHisSrc},#{imgsNewSrc},NOW())
+    
+    </insert>
+    
+    <delete id="deleteImg" parameterType="com.army.vo.ImgsHisInfo">
+    	
+    	DELETE FROM tb_imgs_his WHERE imgs_id = #{imgsId}
+    	
+    </delete>
+
+
+</mapper>

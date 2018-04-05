@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.army.dao.MoiveMapper">
+
+	<delete id="deleteVedio" parameterType="com.army.vo.VedioInfo">
+		DELETE FROM tb_vedio_player WHERE vedio_id = #{vedioId}
+	</delete>
+
+ <select id="findAllVedioManeger" resultType="com.army.vo.VedioInfo" parameterType="com.army.vo.VedioInfo">
+ 		SELECT
+			vedio_id AS vedioId,
+	    	vedio_name AS vedioName,
+	    	is_valid AS valid,
+	    	create_name AS createName,
+	    	vedio_main_user AS vedioMainUser,
+	    	vedio_director AS vedioDirector,
+	    	vedio_src AS vedioSrc,
+	    	create_time AS createTime,
+	    	update_time AS updateTime
+		FROM tb_vedio_player
+	    <where>
+		    <if test="vedioName != null and vedioName != ''">
+		    		vedio_name LIKE CONCAT('%', #{vedioName}, '%')
+		    </if>
+		    <if test="vedioMainUser != null and vedioMainUser != ''">
+		    		AND vedio_main_user LIKE CONCAT('%', #{vedioMainUser}, '%')
+		    </if>
+		    <if test="vedioDirector != null and vedioDirector != ''">
+		    		AND vedio_director LIKE CONCAT('%', #{vedioDirector}, '%')
+		    </if>
+		    <if test="createName != null and createName != ''">
+		    		AND create_name = #{createName}
+		    </if>
+	    </where> 
+	    ORDER BY vedio_id DESC LIMIT #{page},#{size}
+    </select>
+    
+    <select id="findVedioCount" resultType="int" parameterType="com.army.vo.VedioInfo">
+    	SELECT
+	    	DISTINCT
+				COUNT( DISTINCT vedio_id) totalPages
+		FROM tb_vedio_player 
+		   <where>
+		    <if test="vedioName != null and vedioName != ''">
+		    		vedio_name LIKE CONCAT('%', #{vedioName}, '%')
+		    </if>
+		    <if test="vedioMainUser != null and vedioMainUser != ''">
+		    		AND vedio_main_user LIKE CONCAT('%', #{vedioMainUser}, '%')
+		    </if>
+		    <if test="vedioDirector != null and vedioDirector != ''">
+		    		AND vedio_director LIKE CONCAT('%', #{vedioDirector}, '%')
+		    </if>
+		    <if test="valid != null and valid != ''">
+		    		AND is_valid = #{valid}
+		    </if>
+		    <if test="createName != null and createName != ''">
+		    		AND create_name = #{createName}
+		    </if>
+	    </where> 
+    </select>
+
+	<select id="findVedioById" parameterType="com.army.vo.VedioInfo" resultType="com.army.vo.VedioInfo">
+		SELECT
+			vedio_id AS vedioId,
+	    	vedio_name AS vedioName,
+	    	is_valid AS valid,
+	    	create_name AS createName,
+	    	vedio_main_user AS vedioMainUser,
+	    	vedio_director AS vedioDirector,
+	    	vedio_src AS vedioSrc,
+	    	create_time AS createTime,
+	    	update_time AS updateTime
+		FROM tb_vedio_player
+	    <where>
+		    <if test="vedioId != null and vedioId != ''">
+		    		vedio_id = #{vedioId}
+		    </if>
+		    <if test="vedioSrc != null and vedioSrc != ''">
+		    		AND vedio_src = #{vedioSrc}
+		    </if>
+	    </where> 
+	
+	</select>
+
+	<!--select all vedio-->
+    <select id="findAllMoive" resultType="com.army.vo.VedioInfo">
+		SELECT
+			vedio_id AS vedioId,
+	    	vedio_name AS vedioName,
+	    	vedio_main_user AS vedioMainUser,
+	    	vedio_director AS vedioDirector,
+	    	is_valid AS valid,
+	    	create_name AS createName,
+	    	vedio_src AS vedioSrc,
+	    	create_time AS createTime,
+	    	update_time AS updateTime
+		FROM tb_vedio_player
+	    <where> is_valid='Y'  
+	    	<if test="vedioName != null and vedioName != ''">
+		    		AND vedio_name LIKE CONCAT('%', #{vedioName}, '%')
+		    		OR vedio_main_user LIKE CONCAT('%', #{vedioName}, '%') 
+		    		OR vedio_director LIKE CONCAT('%', #{vedioName}, '%')
+		    </if>
+	    </where>
+	    ORDER BY vedio_id DESC
+    </select>
+    <!--select one vedio-->
+    <select id="findOneMoiveByName" resultType="com.army.vo.VedioInfo">
+		SELECT
+			vedio_id AS vedioId,
+	    	vedio_name AS vedioName,
+	    	vedio_main_user AS vedioMainUser,
+	    	vedio_director AS vedioDirector,
+	    	is_valid AS valid,
+	    	create_name AS createName,
+	    	vedio_src AS vedioSrc,
+	    	create_time AS createTime,
+	    	update_time AS updateTime
+		FROM tb_vedio_player
+	    WHERE is_valid='Y' AND vedio_name LIKE CONCAT('%', #{vedioName}, '%')
+    </select>
+    <!-- add vedio -->
+    <insert id="insertMoive" parameterType="com.army.vo.VedioInfo">
+    	<selectKey keyProperty='vedioId' resultType='long' order='AFTER'  >
+    		SELECT LAST_INSERT_ID()
+    	</selectKey>
+	    	INSERT INTO tb_vedio_player
+				(vedio_name,
+	    	     is_valid,
+	    	     create_name,
+	    	     vedio_main_user,
+	    	     vedio_director,
+	    	     vedio_src,
+	    	     create_time,
+	    	     update_time)
+	     	VALUES
+	           (#{vedioName},
+	            #{valid},
+	            #{createName},
+	            #{vedioMainUser},
+	            #{vedioDirector},
+	            #{vedioSrc},
+	            NOW(),
+	            NOW())
+    </insert>
+    <!--  modify moive information-->
+    <update id="updateMoive" parameterType="com.army.vo.VedioInfo">
+    	UPDATE tb_vedio_player SET
+    		<if test="valid != null and valid != ''">
+    			is_valid = #{valid},
+    		</if>
+    	        update_time = NOW()   
+		 WHERE vedio_id = #{vedioId}
+    </update>
+</mapper>

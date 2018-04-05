@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.army.dao.MusicMapper">
+	<!--select all music-->
+    <select id="findAllMusic" resultType="com.army.vo.MusicInfo">
+		SELECT
+			music_id AS musicId,
+	    	music_name AS musicName,
+	    	file_name AS fileName,
+	    	music_singer AS musicSinger,
+	    	music_src AS musicSrc,
+	    	create_name AS createName,
+	    	is_valid AS valid,
+	    	create_time AS createTime,
+	    	update_time AS updateTime
+		FROM tb_music_player
+	    WHERE is_valid='Y' 
+	    <if test="musicName != null and musicName != ''">
+	    	AND music_name LIKE CONCAT('%', #{musicName}, '%')
+	    	OR music_singer LIKE CONCAT('%', #{musicName}, '%')
+	    </if>
+	    ORDER BY music_id DESC
+    </select>
+    
+    <select id="findAllMusicManeger" resultType="com.army.vo.MusicInfo" parameterType="com.army.vo.MusicInfo">
+		SELECT
+			music_id AS musicId,
+	    	music_name AS musicName,
+	    	file_name AS fileName,
+	    	music_singer AS musicSinger,
+	    	music_src AS musicSrc,
+	    	create_name AS createName,
+	    	is_valid AS valid,
+	    	create_time AS createTime,
+	    	update_time AS updateTime
+		FROM tb_music_player
+	    <where>
+		    <if test="musicName != null and musicName != ''">
+		    		music_name LIKE CONCAT('%', #{musicName}, '%')
+		    </if>
+		    <if test="musicSinger != null and musicSinger != ''">
+		    		AND music_singer LIKE CONCAT('%', #{musicSinger}, '%')
+		    </if>
+		     <if test="createName != null and createName != ''">
+		    		AND create_name = #{createName}
+		     </if>
+	    </where> 
+	    ORDER BY music_id DESC LIMIT #{page},#{size}
+    </select>
+    
+    <delete id="deleteMusic" parameterType="com.army.vo.MusicInfo">
+    	DELETE FROM tb_music_player WHERE music_id = ${musicId}
+    </delete>
+    
+    <select id="findMusicCount" resultType="int" parameterType="com.army.vo.MusicInfo">
+    	SELECT
+	    	DISTINCT
+				COUNT( DISTINCT music_id) totalPages
+		FROM tb_music_player 
+		  <where>
+		    <if test="musicName != null and musicName != ''">
+		    		music_name LIKE CONCAT('%', #{musicName}, '%')
+		    </if>
+		    <if test="musicSinger != null and musicSinger != ''">
+		    		AND music_singer LIKE CONCAT('%', #{musicSinger}, '%')
+		    </if>
+		     <if test="valid != null and valid != ''">
+		    		AND is_valid = #{valid}
+		    </if>
+		    <if test="createName != null and createName != ''">
+		    		AND create_name = #{createName}
+		    </if>
+	    </where> 
+    </select>
+    
+    <!--select one music-->
+    <select id="findOneMusicByName" resultType="com.army.vo.MusicInfo">
+		SELECT
+			music_id AS musicId,
+	    	music_name AS musicName,
+	    	file_name AS fileName,
+	    	music_singer AS musicSinger,
+	    	music_src AS musicSrc,
+	    	create_name AS createName,
+	    	is_valid AS valid,
+	    	create_time AS createTime,
+	    	update_time AS updateTime
+		FROM tb_music_player
+	    <where>
+	    	<if test="musicId != null and musicId != ''">
+	    		music_id = #{musicId}
+	    	</if>
+	    	<if test="musicSrc != null and musicSrc != ''">
+	    		AND music_src = #{musicSrc}
+	    	</if>
+	    </where>
+    </select>
+    <!-- add music -->
+    <insert id="insertMusics" parameterType="com.army.vo.MusicInfo">
+    	<selectKey keyProperty='musicId' resultType='long' order='AFTER'  >
+    		SELECT LAST_INSERT_ID()
+    	</selectKey>
+	    	INSERT INTO tb_music_player
+				(music_name,
+	             file_name,
+	             music_singer,
+	             create_name,
+	             is_valid,
+	             music_src,
+	             create_time,
+	             update_time)
+	     	VALUES
+	           (#{musicName},
+	            #{fileName},
+	            #{musicSinger},
+	            #{createName},
+	            #{valid},
+	            #{musicSrc},
+	            NOW(),
+	            NOW())
+    </insert>
+    <!--  modify music information-->
+    <update id="updateMusic" parameterType="com.army.vo.MusicInfo">
+    	UPDATE tb_music_player SET
+    		<if test="valid != null and valid != ''">
+    			is_valid = #{valid},
+    		</if>
+    	        update_time = NOW()   
+		 WHERE music_id = #{musicId}
+    </update>
+</mapper>

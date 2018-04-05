@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.army.dao.NewsMapper">
+    <select id="findAllNews" parameterType="com.army.vo.NewsInfo" resultType="com.army.vo.NewsInfo">
+    
+		SELECT
+	    	new_id AS newId,
+	    	new_name AS newName,
+	    	new_content AS newContent,
+	    	new_type AS newType,
+	    	new_author AS newAuthor,
+			create_time AS createTime,
+			new_imgs AS newImags,
+			show_img AS showImg,
+			is_valid AS valid
+		FROM tb_new_info WHERE is_valid='Y' 
+		<if test="newName != null and newName != ''">
+			AND new_name LIKE CONCAT('%', #{newName}, '%') OR new_author LIKE CONCAT('%', #{newName}, '%')
+		</if>
+		ORDER BY new_id DESC
+		LIMIT #{page},#{size}
+    </select>
+    
+    <select id="findAllNewManager" parameterType="com.army.vo.NewsInfo" resultType="com.army.vo.NewsInfo">
+    
+		SELECT
+	    	new_id AS newId,
+	    	new_name AS newName,
+	    	new_content AS newContent,
+	    	show_img AS showImg,
+	    	new_type AS newType,
+	    	new_author AS newAuthor,
+			create_time AS createTime,
+			create_name AS createName,
+			new_imgs AS newImags,
+			is_valid AS valid
+		FROM tb_new_info 
+		<where>
+			<if test="newId != null and newId != 0">
+				new_id = #{newId}
+			</if>
+			<if test="newName != null and newName != ''">
+				AND new_name LIKE CONCAT('%', #{newName}, '%')
+			</if>
+			<if test="newAuthor != null and newAuthor != ''">
+				AND new_author LIKE CONCAT('%', #{newAuthor}, '%')
+			</if>
+			<if test="createTime != null and createTime != ''">
+				AND create_time LIKE CONCAT('%', #{createTime}, '%')
+			</if>
+			 <if test="createName != null and createName != ''">
+		    		AND create_name = #{createName}
+		    </if>
+		</where>
+		ORDER BY new_id DESC LIMIT #{page},#{size}
+    
+    </select>
+    
+    <select id="findCount" parameterType="com.army.vo.NewsInfo" resultType="int">
+    
+		SELECT
+	    	DISTINCT
+				COUNT( DISTINCT new_id) totalPages
+		FROM tb_new_info 
+		<where>
+			<if test="newId != null and newId != 0">
+				new_id = #{newId}
+			</if>
+			<if test="newName != null and newName != ''">
+				AND new_name LIKE CONCAT('%', #{newName}, '%')
+			</if>
+			<if test="newAuthor != null and newAuthor != ''">
+				AND new_author LIKE CONCAT('%', #{newAuthor}, '%')
+			</if>
+			<if test="createTime != null and createTime != ''">
+				AND create_time LIKE CONCAT('%', #{createTime}, '%')
+			</if>
+			 <if test="valid != null and valid != ''">
+		    		AND is_valid = #{valid}
+		    </if>
+		    <if test="createName != null and createName != ''">
+		    		AND create_name = #{createName}
+		    </if>
+		</where>
+
+    </select>
+    
+    <select id="findwebNewsCount" parameterType="com.army.vo.NewsInfo" resultType="int">
+		SELECT
+	    	DISTINCT
+				COUNT( DISTINCT new_id) totalPages
+		FROM tb_new_info  
+		WHERE is_valid ='Y'
+    </select>
+    
+    <update id="updateNews" parameterType="com.army.vo.NewsInfo">
+    
+    	UPDATE tb_new_info SET
+    		<if test="newName != null and newName != ''">
+    			new_name = #{newName},
+    		</if>
+    		<if test="newAuthor != null and newAuthor != ''">
+    			new_author = #{newAuthor},
+    		</if>
+    		<if test="newContent != null and newContent != ''">
+    			new_content = #{newContent},
+    		</if>
+    		<if test="newImags != null and newImags != ''">
+    			new_imgs = #{newImags},
+    		</if>
+    		<if test="valid != null and valid != ''">
+    			is_valid = #{valid},
+    		</if>
+    	        update_time = NOW()
+		 WHERE new_id = #{newId}
+    	
+    </update>
+    
+    <select id="findNewById" resultType="com.army.vo.NewsInfo" parameterType="com.army.vo.NewsInfo">
+    
+    	SELECT
+	    	new_id AS newId,
+	    	new_name AS newName,
+	    	new_content AS newContent,
+	    	new_type AS newType,
+	    	new_author AS newAuthor,
+			create_time AS createTime,
+			show_img AS showImg,
+			new_imgs AS newImags,
+			is_valid AS valid
+		FROM tb_new_info 
+		<where>
+			<if test="newId != null and newId != 0">
+				new_id = #{newId}
+			</if>
+		</where>
+    
+    </select>
+    
+    <insert id="insertNews" parameterType="com.army.vo.NewsInfo">
+    
+    	<selectKey keyProperty='newId' resultType='long' order='AFTER'  >
+    		SELECT LAST_INSERT_ID()
+    	</selectKey>
+    
+	    	INSERT INTO tb_new_info
+	           (new_name
+	           ,new_content
+	           ,new_type
+	           ,new_author
+	           ,new_remark
+	           ,create_name
+	           ,new_imgs
+	           ,is_valid
+	           ,show_img
+	           ,create_time
+	           ,update_time)
+	     	VALUES
+	           (#{newName},
+	            #{newContent},
+	            #{newType},
+	            #{newAuthor},
+	            #{newRemark},
+	            #{createName},
+	            #{newImags},
+	            #{valid},
+	            #{showImg},
+	            #{createTime},
+	            NOW())
+    
+    </insert>
+    
+    
+    
+</mapper>

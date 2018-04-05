@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.army.dao.UserLoginMapper">
+      
+	<select id="userLogin" parameterType="com.army.vo.UserInfo" resultType="com.army.vo.UserInfo">
+	
+		SELECT 
+			user_id AS userId,
+			user_name AS userName,
+			role_name AS roleName
+		FROM tb_user_login WHERE user_name=#{userName} AND user_password=#{userPassword} AND is_valid = 'Y'
+		
+	</select>
+	
+	<insert id="userRegist" parameterType="com.army.vo.UserInfo">
+	    INSERT INTO tb_user_login
+	    (
+	       user_name,
+	       user_password,
+	       user_real_name,
+	       user_phone,
+	       role_name,
+	       create_time,
+	       is_valid
+	    )
+	    VALUES
+	    (
+	        #{userName},
+	        #{userPassword},
+	        #{userRealName},
+	        #{userPhone},
+	        #{roleName},
+	        NOW(),
+	        #{valid}
+	    )
+	</insert>
+	
+	<select id="findUserLoginByUserName" parameterType="com.army.vo.UserInfo" resultType="com.army.vo.UserInfo">
+		
+		SELECT
+			user_name AS userName,
+			user_id AS userId,
+			user_phone AS userPhone,
+			user_password AS userPassword
+		FROM tb_user_login WHERE user_id=#{userId}
+		
+	</select>
+      
+	<select id="findAllUserInfo" parameterType="com.army.vo.UserInfo" resultType="com.army.vo.UserInfo">
+		SELECT 
+			user_id AS userId,
+			user_name AS userName,
+			user_password AS userPassword,
+			user_phone AS userPhone,
+			role_name AS roleName,
+			create_time AS createTime,
+			is_valid AS valid
+		FROM tb_user_login
+		<where>
+		    <if test="userName != null and userName != ''">
+		    		user_name LIKE CONCAT('%', #{userName}, '%')
+		    </if>
+		    AND role_name= '管理员'
+	    </where> 
+	    ORDER BY user_id DESC
+    </select>  
+    
+    <update id="updateUser"  parameterType="com.army.vo.UserInfo">
+    	UPDATE tb_user_login 
+    	SET
+			<if test="valid != null and valid != ''">
+				is_valid = #{valid},
+			</if>
+			<if test="userPhone != null and userPhone != ''">
+				user_phone = #{userPhone},
+			</if>
+			<if test="userPassword != null and userPassword != ''">
+				user_password = #{userPassword},
+			</if>
+    	    create_time = NOW() ,
+    	    update_time = NOW()   
+		WHERE user_id = #{userId}
+    </update>
+</mapper>

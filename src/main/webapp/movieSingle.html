@@ -1,0 +1,283 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>视频区</title>
+<link href="../source/css/bootstrap.css" rel="stylesheet" type="text/css" media="all">
+<link href="../source/css/style.css" rel="stylesheet" type="text/css" media="all" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Kaisersosa Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<link href='https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="../source/css/flexslider.css" type="text/css" media="screen" />
+<script src="../source/js/jquery.min.js"></script>
+<link rel="shortcut icon" href="../source/images/favicon.ico" type="image/x-icon"> 
+<!-- player -->
+	<style type="text/css">
+	*{margin:0;padding:0;list-style-type:none;}
+	a,img{border:0;}
+	body{font:12px/180% Arial, Helvetica, sans-serif, "新宋体";}
+	/* videobox */
+	.videobox{background:#ff6600;width:1208px;margin:0 auto 0 auto;}
+	.video-img{width:1000px;height:618px;overflow:hidden;float: left;}
+	.video-list{height:618px;padding:0 0 0 0;width: 180px;float: left;background-image: url(../source/images/vedioImages/movebg.jpg) left center no-repeat;}
+	.vedioList{
+		float: left; width: 160px; height: 618px;
+	}
+	.bord{
+		border-bottom: 3px solid green;
+	}
+	.changecolor1{
+		background-color: #F5F5F5;
+	}
+	.changecolor0{
+		background-color: 	#C0C0C0;
+	}
+	.video-list li{width:170px;height:30px;overflow:hidden;margin:0 10px;cursor:pointer; font-size: 15px;}
+	.now{
+/* 		overflow: hidden;  */
+/* 		list-style-type:none; */
+/* 		padding-left: 15px;  */
+/* 		height: 15px;  */
+/*  		background: url(../source/images/musicimages/volume.png) left center no-repeat;   */
+/*  		background-size: 15px 15px;  */
+ 		background-color: gray;
+	}
+	.showlist{
+		display : none;
+	}
+	.video-list li .icon-video{position:absolute;left:22px;top:12px;width:33px;height:33px;z-index:99;}
+	.video-list li.now .icon-video{display:none;}
+	</style>
+<!-- player -->
+</head>
+<body>
+<!-- header -->
+	<div class="container">
+		<div class="header">
+			<div class="logo">
+				<div style="height: 60px;font-style: italic;font-size: 15px;" id="showdate"></div>
+			</div>
+			<div class="header-left">
+				<div class="head-nav">
+						<span class="menu"> </span>
+					<ul class="cl-effect-1">
+					     <li class="active"><a href="index.html" target="_blank">首页</a></li>
+						  <li><a href="blog.html" target="_blank">头条新闻</a></li>
+						<li><a href="pullNewsList.html" target="_blank">天下杂谈</a></li>
+							<div class="clearfix"></div>
+					</ul>
+				</div>
+				<!-- script-for-nav -->
+						<script>
+							$( "span.menu" ).click(function() {
+							  $( ".head-nav ul" ).slideToggle(300, function() {
+								// Animation complete.
+							  });
+							});
+							setInterval(function(){
+								$("#showdate").html(new Date().toLocaleString());
+							},1000 );
+						</script>
+					<!-- script-for-nav -->
+				<div class="search2">
+					<form>
+						搜索<input type="text" id="vedioSearch" onfocus="this.value = '';">
+						<input type="button" id="submitsearch" value="">
+					</form>
+				</div>
+					<div class="clearfix"> </div>
+			</div>
+				<div class="clearfix"> </div>
+		</div>
+<!-- header -->	
+<div class="single-page-artical">
+	<h4>视频区&nbsp;/&nbsp;当前播放:<span id="tipCur"></span></h4>
+	
+				<div class="artical-content">
+					<div class="videobox">
+						<div class="video-img" id="vedioPlayer">
+							
+						</div>
+						
+						<div class="video-list">
+							<div id="showbut" class="bord" style='cursor: pointer;background-color:gray; float: left;width: 50%;height: 20px;text-align: center;'>
+								电影
+							</div>
+							<div id="tvshow" style='cursor: pointer;float: left;background-color:gray;width: 50%;height: 20px;text-align: center;'>
+								电视
+							</div>
+							<div  style="overflow: hidden; background: url() left center no-repeat; width: 180px;overflow-y:scroll;height: 596px;border: 1px solid gray;">
+								<ul id="vedioList" class="">
+								</ul>
+								<ul id="tvlist" class="tvlist showlist">
+								</ul>
+							</div>
+						</div>
+					</div>
+				    </div>
+		</div>
+</div>
+<!-- </div>	 -->
+	<!-- footer -->
+		<div class="footer">
+			<div class="container">
+			<div class="footer-top">
+				<div class="clearfix"> </div>
+			</div>
+			<i class="line"> </i>
+			<div class="footer-bottom">
+				<div class="foot-left">
+					<div class="foot-nav">
+					<ul>
+					    <li class="active"><a href="index.html">首页</a></li>
+						  <li><a href="blog.html" target="_blank">头条新闻</a></li>
+						<li><a href="pullNewsList.html" target="_blank">天下杂谈</a></li>
+							<div class="clearfix"></div>
+					</ul>
+					</div>					
+				</div>
+				<div class="foot-right">
+					<p>Copyright &copy; 2018.Company - MagicalJ And MinAndMax Personal studio </p>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+		</div>
+	</div>
+	<!-- footer -->
+<script type="text/javascript">
+	$(document).ready(function(){
+		$("#vedioPlayer").html('请选择视频');
+		loadVedio();
+		loadTV();
+	});
+	
+	var datatv = '';
+	var datavedio = '';
+	
+	$("#submitsearch").click(function(){
+		loadVedio();
+		loadTV();
+		$("#tipCur").html('请选择视频');
+		$("#vedioPlayer").html('请选择视频');
+		window.setTimeout(function(){
+			if(datatv == '' && datavedio == ''){
+				$("#vedioPlayer").html("没有搜到与<font color='red'><strong>"+$("#vedioSearch").val()+"</strong></font>相关的内容");
+				$("#tipCur").html('');
+				$("#showbut").removeClass("bord");
+				$("#tvshow").removeClass("bord");
+			} else if(datatv == '' && datavedio != ''){
+				 $("#showbut").addClass("bord");
+  				 $("#tvshow").removeClass("bord");
+  				$("#vedioList").removeClass("showlist");
+			} else if(datatv != '' && datavedio == ''){
+				 $("#tvlist").removeClass("showlist");
+				 $("#showbut").removeClass("bord");
+  				 $("#tvshow").addClass("bord");
+			} 
+			
+		},200);
+	});
+	function show(obj){
+		var id = $(obj).attr("id");
+        $(obj).toggleClass('selected');
+        $(obj).siblings('.c_'+id).toggle();
+    }
+	function loadTV(){
+		
+		var vedioName = $("#vedioSearch").val();
+		$.post("/data/findAllTv",{preFileName : vedioName},function(data){
+				 datatv = data;
+			 var tabhtml = ""
+						
+  					var len = data.length;
+  					for(var i = 0 ; i <  len; i++){
+  					var tv = data[i].tvlist;
+  						tabhtml += "<li onclick=show(this) id='p"+i+"' class='changecolor"+i%2+"' style='cursor: pointer;'>";
+  						tabhtml += data[i].preFileName+"&nbsp;&nbsp;"+tv.length+"集";
+  						for(var j = 0 ; j < tv.length ; j++){
+  							var playersrc = tv[j].tvSrc;
+      						tabhtml += "<li  onmouseover='over(this)' onmouseout='out(this)' onclick='change(this)' class='c_p"+i+"' sc='"+playersrc+"' style='display: none;'>&nbsp;&nbsp;&nbsp;"+tv[j].tvName+"-"+tv[j].tvLevel+"</li>";
+      						
+  						}
+      				tabhtml += "</li>";
+  					}
+			$("#tvlist").html(tabhtml);
+		});
+	}
+	
+	function loadVedio(){
+		var vedioName = $("#vedioSearch").val();
+		$.post("/data/findAllMoive",{vedioName:vedioName},function(data){
+				datavedio = data;
+			var n = 1;
+			var len = data.length;
+			var vedioList = "";
+			for(var i = 0 ; i < len ; i++){
+				var playersrc = data[i].vedioSrc;
+					vedioList += '<li class="changecolor'+i%2+'" onmouseover="over(this)" onmouseout="out(this)" onclick="change(this)" video="'+n+'" sc="'+playersrc+'"vid="'+n+'">'+n+"."+data[i].vedioName+'</li>';
+				n++;
+			}
+			$("#vedioList").html(vedioList);
+		})
+		
+	}
+	// 切换视频
+	function change(object){
+			var obj = $(object);
+			var path = obj.attr("sc");
+			var htmll = '';
+			htmll += '<video onclick = "playPause(this)"  width="950" height="620" src="'+path+'" type="video/mp4" id="vedios" controls >';
+			htmll += '</video>';
+			$("#vedioPlayer").html(htmll);
+			
+			$("#tipCur").html("<font color='red'><strong>"+$(object).html()+"</strong></font>");
+			obj.addClass("now").siblings().removeClass("now");
+	}
+	 function over(obj){
+		 $(obj).css("background-color","#ADD8E6") ;  
+	 }
+	 
+	 function out(obj){
+		 $(obj).css("background-color","") ;  
+	 }
+	 
+	 function canplay(obj){
+		 alert(obj);
+	 }
+	 
+	 $("#showbut").click(function(){
+	
+		 $("#vedioList").removeClass("showlist");
+		 $("#tvlist").addClass("showlist");
+		 $("#showbut").addClass("bord");
+		 $("#tvshow").removeClass("bord");
+	 })
+	 $("#tvshow").click(function(){
+		  
+		 $("#showbut").removeClass("bord");
+		 $("#tvshow").addClass("bord");
+		 $("#tvlist").removeClass("showlist");
+		 $("#vedioList").addClass("showlist");
+		 
+	 })
+	 
+	 function playPause(obj) {
+		 
+		 	if ($(obj).hasClass('pause')) {
+				 $("video").trigger("play");
+				 $(obj).removeClass('pause');
+				 $(obj).addClass('play');
+			} else {
+				 $("video").trigger("pause");
+				 $(obj).removeClass('play');
+				 $(obj).addClass('pause');
+			 }
+	}
+
+</script>  
+</body>
+<!-- <script type="text/javascript" src="../source/js/jquery-1.4.2.min.js"></script> -->
+
+</html>

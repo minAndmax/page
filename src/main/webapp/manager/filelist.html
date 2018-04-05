@@ -1,0 +1,83 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/jquery.js"></script>
+</head>
+
+
+<body>
+
+	<div class="place">
+    <span>位置：</span>
+    <ul class="placeul">
+    <li><a href="#">首页</a></li>
+    <li><a href="computer.html">文件管理</a></li>
+    <li><a href="#">列表</a></li>
+    </ul>
+    </div>
+    
+	    <table class="filetable">
+	    
+	    <thead>
+	    	<tr>
+	        <th width="25%">名称</th>
+	        <th width="11%">修改日期</th>
+	        <th width="10%">类型</th>
+	        <th width="6%">大小</th>
+	        <th width="48%"></th>
+	        </tr>    	
+	    </thead>
+	    
+	    <tbody>
+	    
+	        
+	        <tr>
+	        <td><img src="images/f03.png" />访问记录</td>
+	        <td>2018/03/14 17:38</td>
+	        <td>文件</td>
+	        <td class="tdlast" align="left"></td>
+	        <td></td>
+	        </tr>
+	    
+	    </tbody>
+	    </table>
+    <div id="showfile" style="margin-left: 30px;">
+    	<table>
+    		<tbody id="tbody">
+    		</tbody>
+    	</table>
+    </div>
+</body>
+	<script>
+		$(document).ready(function(){
+			openfile();
+		})
+		function openfile(){
+			
+			$.post("/data/manager/openfile",{},function(data){
+				var arr = data.file.split(",");
+				var ht = "";
+					ht += "<tr style='width: 100%;'>";
+				var n = 1;
+				for(var i = 0 ; i < arr.length ; i++){
+					ht += "<td style='width: 10%;'>";
+					ht += arr[i];
+					ht += "<br/>";
+					ht += "</td>";
+					if(n % 10 == 0){
+						ht += "<tr/>";
+					}
+					n++;
+				}
+				ht += "</tr>";
+				var a = data.size;
+				
+				$(".tdlast").html(Number(a.toString().match(/^\d+(?:\.\d{0,2})?/)) + "kb");
+				$("#tbody").html(ht);
+			})
+		}
+	</script>
+</html>
