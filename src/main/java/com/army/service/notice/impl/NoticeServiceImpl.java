@@ -67,7 +67,7 @@ public class NoticeServiceImpl implements NoticeService {
             e.printStackTrace();
             obj.put(KeyWord.TIPSTATUS, StatusEnum.FAIL.getNum());
 			obj.put(KeyWord.TIPSTATUSCONTEN, StatusEnum.FAIL.getValue());
-			log.error("程序异常，通知添加失败[ {} ]" + e.getMessage());
+			log.error("程序异常，通知添加失败[ {} ]" + e.getStackTrace());
 		}
 
 		
@@ -120,7 +120,7 @@ public class NoticeServiceImpl implements NoticeService {
 
 			obj.put(KeyWord.TIPSTATUS, StatusEnum.FAIL.getNum());
 			obj.put(KeyWord.TIPSTATUSCONTEN, StatusEnum.FAIL.getValue());
-			log.info("程序异常，通知修改失败[ {} ]" + e.getMessage());
+			log.info("程序异常，通知修改失败[ {} ]" + e.getStackTrace());
 		}
 		
 		return obj;

@@ -1,14 +1,9 @@
 package com.army.util;
 
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.InputStream;
-import java.net.URL;
-import java.net.URLConnection;
 import java.net.URLEncoder;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.List;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -48,31 +43,25 @@ public class Get {
 	@Autowired
 	private OperateMapper operateMapper;
 
-	@Scheduled(cron = "0 0 6,8,10,12,14,16,18,19,20,21,23 * * ?") // 每天8点18点执行执行一次
+	@Scheduled(cron = "0 0 6,10,14,17,19,21 * * ?") // 每天8点18点执行执行一次
 	public void getToken() {
 		try {
 			newGet();
 			log.info("执行极速数据拉取，当前时间" + new Date().toLocaleString() + ",n的值n=" + n);
-			OperateInfo opt = new OperateInfo();
-			opt.setOptType("system");
-			opt.setOptName("系统记录");
-			opt.setOptUserId((long) 1);
-			opt.setOptRemark("执行极速数据拉取，当前时间" + new Date().toLocaleString() + ",n的值n=" + n);
-			operateMapper.inserObject(opt);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 	}
-
-	// public static void main(String[] args) {
-	// Get g = new Get();
-	// System.out.println(g);
-	// try {
-	// g.newGet();
-	// } catch (Exception e) {
-	// e.printStackTrace();
-	// }
-	// }
+//
+//	 public static void main(String[] args) {
+//	 Get g = new Get();
+//	 System.out.println(g);
+//	 try {
+//	 g.newGet();
+//	 } catch (Exception e) {
+//	 e.printStackTrace();
+//	 }
+//	 }
 
 	@Scheduled(cron = "0 0 00 * * ?")
 	public void clearn() {
@@ -129,71 +118,86 @@ public class Get {
 								+ obj.getString("content"));
 						img.setImgsHisSrc(pic);
 						img.setImgsNewSrc("/upload/image/" + pic.substring(pic.lastIndexOf("/") + 1, pic.length()));
-						ImgsHisInfo imfo = operateMapper.findBySrc(img);
-						if (imfo == null) {
-							operateMapper.insertImgs(img);
-						}
+//						ImgsHisInfo imfo = operateMapper.findBySrc(img);
+//						if (imfo == null) {
+//							operateMapper.insertImgs(img);
+//						}
 					} else {
 						news.setNewContent(obj.getString("content"));
 					}
 					news.setNewImags(pic);
 					news.setNewType("极速数据");
 					news.setValid(ValidEnum.VALID.getValidStatus());
-					downloadImg(obj.getString("pic")); // 获取的图片写入到文件夹
+//					downloadImg(obj.getString("pic")); // 获取的图片写入到文件夹
 					news.setNewAuthor("极速数据");
 					news.setCreateName("系统");
 					news.setNewRemark("系统自动添加数据，当前时间：" + new Date().toLocaleString());
-					// System.out.println(pic+"<----->"+title);
-					newsMapper.insertNews(news);
+					 System.out.println(pic+"<----->");
+					List<NewsInfo> ls = newsMapper.findByImgs(news);
+					if(ls.isEmpty()) {
+						newsMapper.insertNews(news);
+					}
 					// String url1 = obj.getString("url");
 					// String weburl = obj.getString("weburl");
 					// System.out.println( time+ "---" + title);
 				}
 
 				log.info("添加极速新闻成功,共" + list.size() + "条");
+				OperateInfo opt = new OperateInfo();
+				opt.setOptType("system");
+				opt.setOptName("系统记录");
+				opt.setOptUserId((long) 1);
+				opt.setOptRemark("执行极速数据拉取，当前时间" + new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new Date()) + ",添加极速新闻成功,共" + list.size() + "条,n=" + n);
+				operateMapper.inserObject(opt);
 				n += 6;
 
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
-			log.info("程序异常" + e.getStackTrace());
+			log.info("程序异常" + e);
 		}
 	}
 
-	public static void downloadImg(String ImgUrl) throws IOException {
-		// System.out.println("ImgUrl：" + ImgUrl.substring(ImgUrl.lastIndexOf("/") + 1,
-		// ImgUrl.lastIndexOf(".")));
-		// 下载图片
-		if (!ImgUrl.endsWith(".png") || !ImgUrl.endsWith(".jpg") || !ImgUrl.endsWith(".jif")
-				|| !ImgUrl.endsWith(".jpeg")) {
-		String str = "D:" + File.separator + "/upload/image/";// 保存下载图片文件夹
-		String ss = str + ImgUrl.substring(ImgUrl.lastIndexOf("/") + 1, ImgUrl.length());// 保存图片路径
-		URL url = new URL(ImgUrl); // 构造URL
-		URLConnection uc = url.openConnection(); // 打开连接
-		uc.setRequestProperty("User-Agent", "Mozilla/4.0 (compatible; MSIE 5.0; Windows NT; DigExt)");
-		uc.setReadTimeout(50000);
-		InputStream is = uc.getInputStream(); // 输入流
-		File file = new File(ss); // 创建文件
-		if (!new File(str).exists()) {
-			new File(str).mkdirs();
-		}
-		if (file.exists()) {
-			file.delete();
-		}
-		FileOutputStream out = new FileOutputStream(file); // 输出的文件流
-		byte[] bs = new byte[1024];
-		// 读取到的数据长度
-		int len;
-		// 开始读取
-		while ((len = is.read(bs)) != -1) {
-			out.write(bs, 0, len);
-			out.flush();
-		}
-
-		// 完毕，关闭所有链接
-		out.close();
-		is.close();
-		}
-	}
+//	public static void downloadImg(String ImgUrl) throws IOException {
+//		if(ImgUrl == null) {
+//			return;
+//		}
+//		if(ImgUrl.indexOf("http://") == -1) {
+//			ImgUrl = "http://" + ImgUrl;
+//		}
+//		// System.out.println("ImgUrl：" + ImgUrl.substring(ImgUrl.lastIndexOf("/") + 1,
+//		// ImgUrl.lastIndexOf(".")));
+//		// 下载图片
+//		if (!ImgUrl.endsWith(".png") || !ImgUrl.endsWith(".jpg") || !ImgUrl.endsWith(".jif")
+//				|| !ImgUrl.endsWith(".jpeg")) {
+//		String str = "D:" + File.separator + "/upload/image/";// 保存下载图片文件夹
+//		String ss = str + ImgUrl.substring(ImgUrl.lastIndexOf("/") + 1, ImgUrl.length());// 保存图片路径
+//		URL url = new URL(ImgUrl); // 构造URL
+//		URLConnection uc = url.openConnection(); // 打开连接
+//		uc.setRequestProperty("User-Agent", "Mozilla/4.0 (compatible; MSIE 5.0; Windows NT; DigExt)");
+//		uc.setReadTimeout(50000);
+//		InputStream is = uc.getInputStream(); // 输入流
+//		File file = new File(ss); // 创建文件
+//		if (!new File(str).exists()) {
+//			new File(str).mkdirs();
+//		}
+//		if (file.exists()) {
+//			file.delete();
+//		}
+//		FileOutputStream out = new FileOutputStream(file); // 输出的文件流
+//		byte[] bs = new byte[1024];
+//		// 读取到的数据长度
+//		int len;
+//		// 开始读取
+//		while ((len = is.read(bs)) != -1) {
+//			out.write(bs, 0, len);
+//			out.flush();
+//		}
+//
+//		// 完毕，关闭所有链接
+//		out.close();
+//		is.close();
+//		}
+//	}
 
 }

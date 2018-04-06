@@ -50,26 +50,26 @@ $(function(){
     	 
         <li><cite></cite><a href="imgtable.html" target="rightFrame">图片数据表</a><i></i></li>
         <li><cite></cite><a href="imglist.jsp" target="rightFrame">图片列表</a><i></i></li>
-        <li><cite></cite><a href="filelist.html" target="rightFrame">历史访问量</a><i></i></li>
         </ul>    
     </dd>
         
     
     <dd>
     <div class="title">
-    <span><img src="images/leftico02.png" /></span>其他设置
+    <span><img src="images/leftico02.png" /></span>文件管理
     </div>
     <ul class="menuson">
-        <li><cite></cite><a href="#">编辑内容</a><i></i></li>
+        <li><cite></cite><a href="filelist.html" target="rightFrame">历史访问量</a><i></i></li>
+        <li><cite></cite><a href="log/log.jsp" target="rightFrame">日志列表</a><i></i></li>
         <li><cite></cite><a href="#">发布信息</a><i></i></li>
         <li><cite></cite><a href="#">档案列表显示</a><i></i></li>
         </ul>     
     </dd> 
     
     
-    <dd><div class="title"><span><img src="images/leftico03.png" /></span>编辑器</div>
+    <dd><div class="title"><span><img src="images/leftico03.png" /></span>线上管理&nbsp;&nbsp;&nbsp;&nbsp;<font style="background-color: red; width: 10px; height: 10px;" color="#ffffff" id="showcount1"></font></div>
     <ul class="menuson">
-        <li><cite></cite><a href="#">自定义</a><i></i></li>
+        <li><cite></cite><a href="userManager/message.jsp" target="rightFrame">用户留言&nbsp;&nbsp;&nbsp;&nbsp;<font style="background-color: red; width: 10px; height: 10px;" color="#ffffff" id="showcount"></font></a><i></i></li>
         <li><cite></cite><a href="#">常用资料</a><i></i></li>
         <li><cite></cite><a href="#">信息列表</a><i></i></li>
         <li><cite></cite><a href="#">其他</a><i></i></li>
@@ -89,4 +89,20 @@ $(function(){
     
     </dl>
 </body>
+	<script type="text/javascript">
+		
+	window.setInterval(function(){
+			loadnum()
+		},10000)
+	
+		function loadnum(){
+			
+			$.post("/data/manager/findAllMsgCount",{msgType : "Y"},function(data){
+				$("#showcount").html(data.num);
+				$("#showcount1").html(data.num);
+			})
+			
+		}	
+	
+	</script>
 </html>

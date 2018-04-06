@@ -1,5 +1,6 @@
 com\army\util\FindNews.class
 com\army\util\NewLevelEnum.class
+com\army\util\file\LOGFileUtil.class
 com\army\controller\WebJumpController.class
 com\army\service\notice\impl\NoticeServiceImpl.class
 com\army\util\UpLoadImageUtil.class
@@ -8,6 +9,7 @@ com\army\vo\ImgsHisInfo.class
 com\army\util\ParamsSignUtil.class
 com\army\service\news\impl\NewsServiceImpl.class
 com\army\service\app\impl\AppServiceImpl.class
+com\army\vo\UserMessage.class
 com\army\vo\NoticeInfo.class
 com\army\dao\NoticeMapper.class
 com\army\util\HttpUtil.class

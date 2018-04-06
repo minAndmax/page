@@ -137,7 +137,7 @@ public class UserLoginServiceImpl implements UserLoginService {
 			} catch (Exception e) {
 				obj.put(KeyWord.TIPSTATUS, StatusEnum.FAIL.getNum());
 				obj.put(KeyWord.TIPSTATUSCONTEN, StatusEnum.FAIL.getValue());
-					log.error("程序异常，用户信息修改失败[ {} ]" + e.getMessage());
+					log.error("程序异常，用户信息修改失败[ {} ]" + e.getStackTrace());
 			}
 			return obj;
 	}

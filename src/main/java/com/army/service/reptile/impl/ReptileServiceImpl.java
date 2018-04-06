@@ -98,10 +98,10 @@ public class ReptileServiceImpl implements ReptileService {
 			opt = new OperateInfo();
 			if (n == 0) {
 				log.info("暂无新数据[ {} ]" + obj);
-				opt.setOptRemark("暂无新数据[ {} ]" + obj);
+				opt.setOptRemark("暂无新数据");
 			} else {
-				log.info("系统获取新闻添加成功[ {} ]" + obj);
-				opt.setOptRemark("系统获取新闻添加成功[ {} ]" + obj);
+				log.info("系统获取新闻添加成功:" + obj);
+				opt.setOptRemark("系统获取新闻添加成功,新增" + n + "条新闻");
 			}
 			opt.setOptType("system");
 			opt.setOptName("系统记录");
@@ -112,7 +112,7 @@ public class ReptileServiceImpl implements ReptileService {
 			e.printStackTrace();
 			obj.put(KeyWord.TIPSTATUS, StatusEnum.FAIL.getNum());
 			obj.put(KeyWord.TIPSTATUSCONTEN, StatusEnum.FAIL.getValue());
-			log.error("程序异常，系统获取新闻添加失败[ {} ]" + e.getMessage());
+			log.error("程序异常，系统获取新闻添加失败[ {} ]" + e.getStackTrace());
 		}
 		return obj;
 
@@ -151,7 +151,7 @@ public class ReptileServiceImpl implements ReptileService {
 
 			obj.put(KeyWord.TIPSTATUS, StatusEnum.FAIL.getNum());
 			obj.put(KeyWord.TIPSTATUSCONTEN, StatusEnum.FAIL.getValue());
-			log.info("程序异常，系统新闻修改失败[ {} ]" + e.getMessage());
+			log.info("程序异常，系统新闻修改失败[ {} ]" + e.getStackTrace());
 		}
 
 		return obj;
@@ -262,8 +262,7 @@ public class ReptileServiceImpl implements ReptileService {
 			operateMapper.inserObject(opt);
 			log.info("系统获取极速新闻添加成功");
 		} catch (Exception e) {
-			e.printStackTrace();
-			log.error("程序异常，系统获取极速新闻添加失败[ {} ]" + e.getMessage());
+			log.error("程序异常，系统获取极速新闻添加失败[ {} ]" +e.getStackTrace());
 		}
 
 	}

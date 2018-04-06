@@ -29,12 +29,14 @@ import com.army.util.GetUserInfo;
 import com.army.util.KeyWord;
 import com.army.util.StatusEnum;
 import com.army.util.UpLoadImageUtil;
+import com.army.util.file.LOGFileUtil;
 import com.army.vo.NewsInfo;
 import com.army.vo.NoticeInfo;
 import com.army.vo.PreFileInfo;
 import com.army.vo.ReptileNewsInfo;
 import com.army.vo.TVListInfo;
 import com.army.vo.UserInfo;
+import com.army.vo.UserMessage;
 import com.army.vo.VedioInfo;
 
 @RestController
@@ -84,6 +86,13 @@ public class WebJumpController {
 
 		return arry;
 	}
+	
+	@RequestMapping("/manager/findLog")
+	public JSONArray findLog(String type,String src) throws Exception {
+		JSONArray arr = LOGFileUtil.getLogFile(type,src);
+		return arr;
+	}
+	
 	
 	@RequestMapping("/manager/deleteVedio")
 	public JSONObject deleteVedio(HttpServletRequest request, VedioInfo imgs) throws Exception {
@@ -146,6 +155,45 @@ public class WebJumpController {
 
 		return obj;
 	}
+	
+	@RequestMapping("/manager/findAllMsgCount")
+	public JSONObject findAllMsgCount(HttpServletRequest request, UserMessage msg) throws Exception {
+		msg.setCreateName(GetUserInfo.getUserName(request));
+		int num = operateService.findAllMsgCount(msg);
+		JSONObject obj = new JSONObject();
+		obj.put("num", num);
+		return obj;
+	}
+	
+	@RequestMapping("/manager/reader")
+	public JSONObject reader(HttpServletRequest request, UserMessage msg) throws Exception {
+		msg.setCreateName(GetUserInfo.getUserName(request));
+		JSONObject obj = operateService.reader(request, msg);
+
+		return obj;
+	}
+	
+	/**
+	 * 访问记录
+	 * @return
+	 */
+	@RequestMapping("/manager/findAllMsg")
+	public JSONArray findAllMsg(HttpServletRequest request, UserMessage msg) throws Exception {
+		msg.setCreateName(GetUserInfo.getUserName(request));
+		JSONArray arr = operateService.findAllMsg(msg);
+		return arr;
+	}
+	
+	/**
+	 * 访问记录
+	 * @return
+	 */
+	@RequestMapping("/submitmsg")
+	public JSONObject submitmsg(UserMessage msg) throws Exception {
+		JSONObject obj = operateService.submitmsg(msg);
+		return obj;
+	}
+	
 	/**
 	 * 访问记录
 	 * @return

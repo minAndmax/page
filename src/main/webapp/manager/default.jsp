@@ -33,7 +33,7 @@
     
     <div class="leftinfo">
     <div class="listtitle">获取新闻记录</div>
-        <ul class="tooli" id="systemrecord" style="overflow-y:scroll;height: 130px;">
+        <ul class="tooli" id="systemrecord" style="overflow-y:scroll;height: 190px;">
     	</ul>
     <div class="maintj">  
     </div>
@@ -48,7 +48,8 @@
     <div class="infoleft">
     
     <div class="listtitle">更新事项</div>    
-    <ul class="newlist" id="newlist" style="overflow-y:scroll;height: 170px;">
+    <ul class="newlist" id="newlist" style="overflow-y:scroll;height: 180px;">
+    	
     </ul>   
     
     </div>
@@ -78,7 +79,7 @@
     <ul class="newlist"><strong>历史总访问量</strong>
     	<ul id="recordCount"></ul>
     </ul>
-    <ul class="newlist"><font><strong>昨日访问量</strong></font>
+    <ul class="newlist"><font><strong>今日访问量</strong></font>
     	<ul id="todays"></ul>
     </ul>
     </div>
@@ -115,7 +116,7 @@
 			  if(data.userName != null){
 	    		  $("#showuser").html(data.roleName+":"+data.userName);
 			  } else{
-				  window.top.location = "/manager/login.html";
+				  window.top.location = "/manager/login.jsp";
 			  }
 		  });
 			loadUpdate();

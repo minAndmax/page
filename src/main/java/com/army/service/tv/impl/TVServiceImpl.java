@@ -116,7 +116,7 @@ public class TVServiceImpl implements TVService {
 			e.printStackTrace();
 			obj.put(KeyWord.TIPSTATUS, StatusEnum.FAIL.getNum());
 			obj.put(KeyWord.TIPSTATUSCONTEN, StatusEnum.FAIL.getValue());
-			log.error("程序异常，电视目录添加失败[ {} ]" + e.getMessage());
+			log.error("程序异常，电视目录添加失败[ {} ]" + e.getStackTrace());
 		}
 
 		return obj;
@@ -153,7 +153,7 @@ public class TVServiceImpl implements TVService {
 			e.printStackTrace();
 			obj.put(KeyWord.TIPSTATUS, StatusEnum.FAIL.getNum());
 			obj.put(KeyWord.TIPSTATUSCONTEN, StatusEnum.FAIL.getValue());
-			log.info("电视删除失败[{}]" + obj);
+			log.info("电视删除失败[{}]" + e.getStackTrace());
 		}
 
 		return obj;

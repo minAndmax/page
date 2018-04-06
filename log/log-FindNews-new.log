@@ -1,0 +1,108 @@
+===2018-04-06 13:49:34.253 [http-nio-8080-exec-6] INFO  com.army.service.news.impl.NewsServiceImpl Line:73 -[2018-4-6 13:49:34]开始拉取数据......
+===2018-04-06 13:49:34.254 [http-nio-8080-exec-6] INFO  com.army.service.news.impl.NewsServiceImpl Line:74 -开始拉取:http://www.xinhuanet.com/local/
+===2018-04-06 13:50:08.075 [http-nio-8080-exec-6] INFO  com.army.service.news.impl.NewsServiceImpl Line:106-拉取完毕:http://www.xinhuanet.com/local/
+===2018-04-06 13:50:08.076 [http-nio-8080-exec-6] INFO  com.army.service.news.impl.NewsServiceImpl Line:73 -[2018-4-6 13:50:08]开始拉取数据......
+===2018-04-06 13:50:08.077 [http-nio-8080-exec-6] INFO  com.army.service.news.impl.NewsServiceImpl Line:74 -开始拉取:http://www.news.cn/house/index.htm
+===2018-04-06 13:50:55.283 [http-nio-8080-exec-6] INFO  com.army.service.news.impl.NewsServiceImpl Line:106-拉取完毕:http://www.news.cn/house/index.htm
+===2018-04-06 13:50:55.285 [http-nio-8080-exec-6] INFO  com.army.service.news.impl.NewsServiceImpl Line:73 -[2018-4-6 13:50:55]开始拉取数据......
+===2018-04-06 13:50:55.286 [http-nio-8080-exec-6] INFO  com.army.service.news.impl.NewsServiceImpl Line:74 -开始拉取:http://www.news.cn/info/
+===2018-04-06 13:52:03.427 [http-nio-8080-exec-6] INFO  com.army.service.news.impl.NewsServiceImpl Line:106-拉取完毕:http://www.news.cn/info/
+===2018-04-06 13:52:03.427 [http-nio-8080-exec-6] INFO  com.army.service.news.impl.NewsServiceImpl Line:73 -[2018-4-6 13:52:03]开始拉取数据......
+===2018-04-06 13:52:03.428 [http-nio-8080-exec-6] INFO  com.army.service.news.impl.NewsServiceImpl Line:74 -开始拉取:http://www.news.cn/auto/
+===2018-04-06 13:52:50.711 [http-nio-8080-exec-6] INFO  com.army.service.news.impl.NewsServiceImpl Line:106-拉取完毕:http://www.news.cn/auto/
+===2018-04-06 13:52:50.711 [http-nio-8080-exec-6] INFO  com.army.service.news.impl.NewsServiceImpl Line:73 -[2018-4-6 13:52:50]开始拉取数据......
+===2018-04-06 13:52:50.711 [http-nio-8080-exec-6] INFO  com.army.service.news.impl.NewsServiceImpl Line:74 -开始拉取:http://www.news.cn/tech/
+===2018-04-06 13:53:42.781 [http-nio-8080-exec-6] INFO  com.army.service.news.impl.NewsServiceImpl Line:106-拉取完毕:http://www.news.cn/tech/
+===2018-04-06 13:53:42.784 [http-nio-8080-exec-6] INFO  com.army.service.news.impl.NewsServiceImpl Line:73 -[2018-4-6 13:53:42]开始拉取数据......
+===2018-04-06 13:53:42.785 [http-nio-8080-exec-6] INFO  com.army.service.news.impl.NewsServiceImpl Line:74 -开始拉取:http://www.news.cn/food/
+===2018-04-06 13:54:40.817 [http-nio-8080-exec-6] INFO  com.army.service.news.impl.NewsServiceImpl Line:106-拉取完毕:http://www.news.cn/food/
+===2018-04-06 13:54:40.817 [http-nio-8080-exec-6] INFO  com.army.service.news.impl.NewsServiceImpl Line:109-数据拉取完成,耗时:306秒
+===2018-04-06 13:54:42.013 [http-nio-8080-exec-6] INFO  com.army.service.news.impl.NewsServiceImpl Line:103-系统获取新闻添加成功:{"tipStatus":1,"insertNum":6,"tipStatusContent":"成功"}
+===2018-04-06 14:00:01.391 [pool-2-thread-1] INFO  com.army.service.news.impl.NewsServiceImpl Line:163-程序异常org.mybatis.spring.MyBatisSystemException: nested exception is org.apache.ibatis.exceptions.PersistenceException: 
+### Error querying database.  Cause: java.lang.NumberFormatException: For input string: "http://api.jisuapi.com/news/upload/201804/06100006_63116.jpg"
+### Cause: java.lang.NumberFormatException: For input string: "http://api.jisuapi.com/news/upload/201804/06100006_63116.jpg"
+===2018-04-06 14:00:01.391 [pool-2-thread-1] INFO  com.army.service.news.impl.NewsServiceImpl Line:56 -执行极速数据拉取，当前时间2018-4-6 14:00:01,n的值n=0
+===2018-04-06 14:00:01.392 [pool-2-thread-1] INFO  com.army.service.news.impl.NewsServiceImpl Line:73 -[2018-4-6 14:00:01]开始拉取数据......
+===2018-04-06 14:00:01.392 [pool-2-thread-1] INFO  com.army.service.news.impl.NewsServiceImpl Line:74 -开始拉取:http://www.xinhuanet.com/local/
+===2018-04-06 14:00:08.129 [pool-2-thread-1] INFO  com.army.service.news.impl.NewsServiceImpl Line:106-拉取完毕:http://www.xinhuanet.com/local/
+===2018-04-06 14:00:08.131 [pool-2-thread-1] INFO  com.army.service.news.impl.NewsServiceImpl Line:73 -[2018-4-6 14:00:08]开始拉取数据......
+===2018-04-06 14:00:08.131 [pool-2-thread-1] INFO  com.army.service.news.impl.NewsServiceImpl Line:74 -开始拉取:http://www.news.cn/house/index.htm
+===2018-04-06 14:00:53.951 [pool-2-thread-1] INFO  com.army.service.news.impl.NewsServiceImpl Line:106-拉取完毕:http://www.news.cn/house/index.htm
+===2018-04-06 14:00:53.955 [pool-2-thread-1] INFO  com.army.service.news.impl.NewsServiceImpl Line:73 -[2018-4-6 14:00:53]开始拉取数据......
+===2018-04-06 14:00:53.956 [pool-2-thread-1] INFO  com.army.service.news.impl.NewsServiceImpl Line:74 -开始拉取:http://www.news.cn/info/
+===2018-04-06 14:01:46.121 [pool-2-thread-1] INFO  com.army.service.news.impl.NewsServiceImpl Line:106-拉取完毕:http://www.news.cn/info/
+===2018-04-06 14:01:46.121 [pool-2-thread-1] INFO  com.army.service.news.impl.NewsServiceImpl Line:73 -[2018-4-6 14:01:46]开始拉取数据......
+===2018-04-06 14:01:46.122 [pool-2-thread-1] INFO  com.army.service.news.impl.NewsServiceImpl Line:74 -开始拉取:http://www.news.cn/auto/
+===2018-04-06 14:02:33.457 [pool-2-thread-1] INFO  com.army.service.news.impl.NewsServiceImpl Line:106-拉取完毕:http://www.news.cn/auto/
+===2018-04-06 14:02:33.458 [pool-2-thread-1] INFO  com.army.service.news.impl.NewsServiceImpl Line:73 -[2018-4-6 14:02:33]开始拉取数据......
+===2018-04-06 14:02:33.459 [pool-2-thread-1] INFO  com.army.service.news.impl.NewsServiceImpl Line:74 -开始拉取:http://www.news.cn/tech/
+===2018-04-06 14:03:18.800 [pool-2-thread-1] INFO  com.army.service.news.impl.NewsServiceImpl Line:106-拉取完毕:http://www.news.cn/tech/
+===2018-04-06 14:03:18.800 [pool-2-thread-1] INFO  com.army.service.news.impl.NewsServiceImpl Line:73 -[2018-4-6 14:03:18]开始拉取数据......
+===2018-04-06 14:03:18.800 [pool-2-thread-1] INFO  com.army.service.news.impl.NewsServiceImpl Line:74 -开始拉取:http://www.news.cn/food/
+===2018-04-06 14:04:16.983 [pool-2-thread-1] INFO  com.army.service.news.impl.NewsServiceImpl Line:106-拉取完毕:http://www.news.cn/food/
+===2018-04-06 14:04:16.983 [pool-2-thread-1] INFO  com.army.service.news.impl.NewsServiceImpl Line:109-数据拉取完成,耗时:255秒
+===2018-04-06 14:04:17.984 [pool-2-thread-1] INFO  com.army.service.news.impl.NewsServiceImpl Line:100-暂无新数据[ {} ]{"tipStatus":1,"insertNum":0,"tipStatusContent":"成功"}
+===2018-04-06 15:00:01.679 [pool-2-thread-1] INFO  com.army.service.news.impl.NewsServiceImpl Line:163-程序异常[Ljava.lang.StackTraceElement;@16502e36
+===2018-04-06 15:00:01.692 [pool-2-thread-1] INFO  com.army.service.news.impl.NewsServiceImpl Line:56 -执行极速数据拉取，当前时间2018-4-6 15:00:01,n的值n=0
+===2018-04-06 15:00:01.703 [pool-2-thread-1] INFO  com.army.service.news.impl.NewsServiceImpl Line:73 -[2018-4-6 15:00:01]开始拉取数据......
+===2018-04-06 15:00:01.703 [pool-2-thread-1] INFO  com.army.service.news.impl.NewsServiceImpl Line:74 -开始拉取:http://www.xinhuanet.com/local/
+===2018-04-06 15:00:33.438 [pool-2-thread-1] INFO  com.army.service.news.impl.NewsServiceImpl Line:106-拉取完毕:http://www.xinhuanet.com/local/
+===2018-04-06 15:00:33.439 [pool-2-thread-1] INFO  com.army.service.news.impl.NewsServiceImpl Line:73 -[2018-4-6 15:00:33]开始拉取数据......
+===2018-04-06 15:00:33.440 [pool-2-thread-1] INFO  com.army.service.news.impl.NewsServiceImpl Line:74 -开始拉取:http://www.news.cn/house/index.htm
+===2018-04-06 15:01:20.510 [pool-2-thread-1] INFO  com.army.service.news.impl.NewsServiceImpl Line:106-拉取完毕:http://www.news.cn/house/index.htm
+===2018-04-06 15:01:20.511 [pool-2-thread-1] INFO  com.army.service.news.impl.NewsServiceImpl Line:73 -[2018-4-6 15:01:20]开始拉取数据......
+===2018-04-06 15:01:20.511 [pool-2-thread-1] INFO  com.army.service.news.impl.NewsServiceImpl Line:74 -开始拉取:http://www.news.cn/info/
+===2018-04-06 15:02:34.359 [pool-2-thread-1] INFO  com.army.service.news.impl.NewsServiceImpl Line:106-拉取完毕:http://www.news.cn/info/
+===2018-04-06 15:02:34.360 [pool-2-thread-1] INFO  com.army.service.news.impl.NewsServiceImpl Line:73 -[2018-4-6 15:02:34]开始拉取数据......
+===2018-04-06 15:02:34.360 [pool-2-thread-1] INFO  com.army.service.news.impl.NewsServiceImpl Line:74 -开始拉取:http://www.news.cn/auto/
+===2018-04-06 15:03:22.147 [pool-2-thread-1] INFO  com.army.service.news.impl.NewsServiceImpl Line:106-拉取完毕:http://www.news.cn/auto/
+===2018-04-06 15:03:22.147 [pool-2-thread-1] INFO  com.army.service.news.impl.NewsServiceImpl Line:73 -[2018-4-6 15:03:22]开始拉取数据......
+===2018-04-06 15:03:22.147 [pool-2-thread-1] INFO  com.army.service.news.impl.NewsServiceImpl Line:74 -开始拉取:http://www.news.cn/tech/
+===2018-04-06 15:04:16.054 [pool-2-thread-1] INFO  com.army.service.news.impl.NewsServiceImpl Line:106-拉取完毕:http://www.news.cn/tech/
+===2018-04-06 15:04:16.055 [pool-2-thread-1] INFO  com.army.service.news.impl.NewsServiceImpl Line:73 -[2018-4-6 15:04:16]开始拉取数据......
+===2018-04-06 15:04:16.055 [pool-2-thread-1] INFO  com.army.service.news.impl.NewsServiceImpl Line:74 -开始拉取:http://www.news.cn/food/
+===2018-04-06 15:05:14.309 [pool-2-thread-1] INFO  com.army.service.news.impl.NewsServiceImpl Line:106-拉取完毕:http://www.news.cn/food/
+===2018-04-06 15:05:14.309 [pool-2-thread-1] INFO  com.army.service.news.impl.NewsServiceImpl Line:109-数据拉取完成,耗时:312秒
+===2018-04-06 15:05:15.594 [pool-2-thread-1] INFO  com.army.service.news.impl.NewsServiceImpl Line:103-系统获取新闻添加成功:{"tipStatus":1,"insertNum":5,"tipStatusContent":"成功"}
+===2018-04-06 16:00:00.041 [pool-2-thread-1] INFO  com.army.service.news.impl.NewsServiceImpl Line:73 -[2018-4-6 16:00:00]开始拉取数据......
+===2018-04-06 16:00:00.042 [pool-2-thread-1] INFO  com.army.service.news.impl.NewsServiceImpl Line:74 -开始拉取:http://www.xinhuanet.com/local/
+===2018-04-06 16:00:45.212 [pool-2-thread-1] INFO  com.army.service.news.impl.NewsServiceImpl Line:106-拉取完毕:http://www.xinhuanet.com/local/
+===2018-04-06 16:00:45.213 [pool-2-thread-1] INFO  com.army.service.news.impl.NewsServiceImpl Line:73 -[2018-4-6 16:00:45]开始拉取数据......
+===2018-04-06 16:00:45.213 [pool-2-thread-1] INFO  com.army.service.news.impl.NewsServiceImpl Line:74 -开始拉取:http://www.news.cn/house/index.htm
+===2018-04-06 16:01:32.179 [pool-2-thread-1] INFO  com.army.service.news.impl.NewsServiceImpl Line:106-拉取完毕:http://www.news.cn/house/index.htm
+===2018-04-06 16:01:32.179 [pool-2-thread-1] INFO  com.army.service.news.impl.NewsServiceImpl Line:73 -[2018-4-6 16:01:32]开始拉取数据......
+===2018-04-06 16:01:32.179 [pool-2-thread-1] INFO  com.army.service.news.impl.NewsServiceImpl Line:74 -开始拉取:http://www.news.cn/info/
+===2018-04-06 16:02:46.483 [pool-2-thread-1] INFO  com.army.service.news.impl.NewsServiceImpl Line:106-拉取完毕:http://www.news.cn/info/
+===2018-04-06 16:02:46.483 [pool-2-thread-1] INFO  com.army.service.news.impl.NewsServiceImpl Line:73 -[2018-4-6 16:02:46]开始拉取数据......
+===2018-04-06 16:02:46.483 [pool-2-thread-1] INFO  com.army.service.news.impl.NewsServiceImpl Line:74 -开始拉取:http://www.news.cn/auto/
+===2018-04-06 16:03:34.292 [pool-2-thread-1] INFO  com.army.service.news.impl.NewsServiceImpl Line:106-拉取完毕:http://www.news.cn/auto/
+===2018-04-06 16:03:34.293 [pool-2-thread-1] INFO  com.army.service.news.impl.NewsServiceImpl Line:73 -[2018-4-6 16:03:34]开始拉取数据......
+===2018-04-06 16:03:34.293 [pool-2-thread-1] INFO  com.army.service.news.impl.NewsServiceImpl Line:74 -开始拉取:http://www.news.cn/tech/
+===2018-04-06 16:04:26.081 [pool-2-thread-1] INFO  com.army.service.news.impl.NewsServiceImpl Line:106-拉取完毕:http://www.news.cn/tech/
+===2018-04-06 16:04:26.081 [pool-2-thread-1] INFO  com.army.service.news.impl.NewsServiceImpl Line:73 -[2018-4-6 16:04:26]开始拉取数据......
+===2018-04-06 16:04:26.081 [pool-2-thread-1] INFO  com.army.service.news.impl.NewsServiceImpl Line:74 -开始拉取:http://www.news.cn/food/
+===2018-04-06 16:05:24.421 [pool-2-thread-1] INFO  com.army.service.news.impl.NewsServiceImpl Line:106-拉取完毕:http://www.news.cn/food/
+===2018-04-06 16:05:24.421 [pool-2-thread-1] INFO  com.army.service.news.impl.NewsServiceImpl Line:109-数据拉取完成,耗时:324秒
+===2018-04-06 16:05:25.616 [pool-2-thread-1] INFO  com.army.service.news.impl.NewsServiceImpl Line:103-系统获取新闻添加成功:{"tipStatus":1,"insertNum":7,"tipStatusContent":"成功"}
+===2018-04-06 16:05:26.020 [pool-2-thread-1] INFO  com.army.service.news.impl.NewsServiceImpl Line:163-程序异常java.lang.IllegalArgumentException: protocol = http host = null
+===2018-04-06 16:05:26.020 [pool-2-thread-1] INFO  com.army.service.news.impl.NewsServiceImpl Line:56 -执行极速数据拉取，当前时间2018-4-6 16:05:26,n的值n=0
+===2018-04-06 17:00:00.581 [pool-2-thread-1] INFO  com.army.service.news.impl.NewsServiceImpl Line:73 -[2018-4-6 17:00:00]开始拉取数据......
+===2018-04-06 17:00:00.582 [pool-2-thread-1] INFO  com.army.service.news.impl.NewsServiceImpl Line:74 -开始拉取:http://www.xinhuanet.com/local/
+===2018-04-06 17:00:30.064 [pool-2-thread-1] INFO  com.army.service.news.impl.NewsServiceImpl Line:106-拉取完毕:http://www.xinhuanet.com/local/
+===2018-04-06 17:00:30.069 [pool-2-thread-1] INFO  com.army.service.news.impl.NewsServiceImpl Line:73 -[2018-4-6 17:00:30]开始拉取数据......
+===2018-04-06 17:00:30.070 [pool-2-thread-1] INFO  com.army.service.news.impl.NewsServiceImpl Line:74 -开始拉取:http://www.news.cn/house/index.htm
+===2018-04-06 17:01:17.196 [pool-2-thread-1] INFO  com.army.service.news.impl.NewsServiceImpl Line:106-拉取完毕:http://www.news.cn/house/index.htm
+===2018-04-06 17:01:17.198 [pool-2-thread-1] INFO  com.army.service.news.impl.NewsServiceImpl Line:73 -[2018-4-6 17:01:17]开始拉取数据......
+===2018-04-06 17:01:17.200 [pool-2-thread-1] INFO  com.army.service.news.impl.NewsServiceImpl Line:74 -开始拉取:http://www.news.cn/info/
+===2018-04-06 17:02:22.698 [pool-2-thread-1] INFO  com.army.service.news.impl.NewsServiceImpl Line:106-拉取完毕:http://www.news.cn/info/
+===2018-04-06 17:02:22.698 [pool-2-thread-1] INFO  com.army.service.news.impl.NewsServiceImpl Line:73 -[2018-4-6 17:02:22]开始拉取数据......
+===2018-04-06 17:02:22.699 [pool-2-thread-1] INFO  com.army.service.news.impl.NewsServiceImpl Line:74 -开始拉取:http://www.news.cn/auto/
+===2018-04-06 17:03:10.358 [pool-2-thread-1] INFO  com.army.service.news.impl.NewsServiceImpl Line:106-拉取完毕:http://www.news.cn/auto/
+===2018-04-06 17:03:10.359 [pool-2-thread-1] INFO  com.army.service.news.impl.NewsServiceImpl Line:73 -[2018-4-6 17:03:10]开始拉取数据......
+===2018-04-06 17:03:10.359 [pool-2-thread-1] INFO  com.army.service.news.impl.NewsServiceImpl Line:74 -开始拉取:http://www.news.cn/tech/
+===2018-04-06 17:04:01.705 [pool-2-thread-1] INFO  com.army.service.news.impl.NewsServiceImpl Line:106-拉取完毕:http://www.news.cn/tech/
+===2018-04-06 17:04:01.705 [pool-2-thread-1] INFO  com.army.service.news.impl.NewsServiceImpl Line:73 -[2018-4-6 17:04:01]开始拉取数据......
+===2018-04-06 17:04:01.706 [pool-2-thread-1] INFO  com.army.service.news.impl.NewsServiceImpl Line:74 -开始拉取:http://www.news.cn/food/
+===2018-04-06 17:05:00.332 [pool-2-thread-1] INFO  com.army.service.news.impl.NewsServiceImpl Line:106-拉取完毕:http://www.news.cn/food/
+===2018-04-06 17:05:00.332 [pool-2-thread-1] INFO  com.army.service.news.impl.NewsServiceImpl Line:109-数据拉取完成,耗时:299秒
+===2018-04-06 17:05:01.588 [pool-2-thread-1] INFO  com.army.service.news.impl.NewsServiceImpl Line:103-系统获取新闻添加成功:{"tipStatus":1,"insertNum":10,"tipStatusContent":"成功"}

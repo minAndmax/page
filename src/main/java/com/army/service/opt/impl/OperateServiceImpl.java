@@ -5,6 +5,8 @@ import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -27,6 +29,7 @@ import com.army.vo.NewsInfo;
 import com.army.vo.NoticeInfo;
 import com.army.vo.OperateInfo;
 import com.army.vo.ReptileNewsInfo;
+import com.army.vo.UserMessage;
 import com.army.vo.VedioInfo;
 
 @Service("operateService")
@@ -50,9 +53,11 @@ public class OperateServiceImpl implements OperateService {
 	@Autowired
 	private ReptileMapper reptileMapper;
 
+	private static final Logger log = LoggerFactory.getLogger(OperateServiceImpl.class);
 	@Override
 	public JSONArray findOpt(HttpServletRequest request, String tip) throws Exception {
-
+		
+		
 		OperateInfo op = new OperateInfo();
 		JSONObject sessionObj = (JSONObject) request.getSession().getAttribute(KeyWord.USERSESSION);
 		if (!sessionObj.getString("userName").equals("admin")) {
@@ -196,6 +201,95 @@ public class OperateServiceImpl implements OperateService {
 		obj.put("success", StatusEnum.SSUCCESS.getNum());
 
 		return obj;
+	}
+
+	@Override
+	public JSONObject submitmsg(UserMessage msg) throws Exception{
+		
+		operateMapper.userMessage(msg);
+		JSONObject obj = new JSONObject();
+		obj.put("success", StatusEnum.SSUCCESS.getNum());
+		
+		return obj;
+	}
+
+	@Override
+	public JSONArray findAllMsg(UserMessage msg) throws Exception {
+		
+		if (msg.getCreateName().equals("admin")) {
+			msg.setCreateName(null);
+			msg.setValid(null);
+		}
+
+		int pages = operateMapper.findAllMsgCount(msg);
+
+		double db = Math.ceil((double) pages / (double) msg.getSize());
+
+		JSONArray arry = new JSONArray();
+
+		List<UserMessage> minfo = operateMapper.findAllMsg(msg);
+		if (minfo.size() > 0) {
+			minfo.get(0).setTotalPages((int) db);
+		} else {
+			UserMessage f = new UserMessage();
+			f.setTotalPages(-1);
+			minfo.add(f);
+		}
+		for (UserMessage m : minfo) {
+			arry.add(m);
+		}
+		return arry;
+		
+	}
+
+	@Override
+	public JSONObject reader(HttpServletRequest request, UserMessage msg) {
+		
+		JSONObject obj = new JSONObject();
+
+		try {
+			operateMapper.reader(msg);
+
+			JSONObject sessionObj = (JSONObject) request.getSession().getAttribute(KeyWord.USERSESSION);
+
+			OperateInfo opt = new OperateInfo();
+			opt.setOptType("update");
+			opt.setOptUserId(sessionObj.getLong("userId"));
+			opt.setOptName("确认反馈");
+			StringBuilder sb = new StringBuilder();
+			
+			sb.append(sessionObj.getString("roleName") + "-" + sessionObj.getString("userName") + "确认了：" + msg.getMsgId() + "反馈");
+			opt.setOptRemark(sb.toString());
+			
+			opt.setTypeId((long)msg.getMsgId());
+
+			operateMapper.inserObject(opt);
+			
+			obj.put(KeyWord.TIPSTATUS, StatusEnum.SSUCCESS.getNum());
+			obj.put(KeyWord.TIPSTATUSCONTEN, StatusEnum.SSUCCESS.getValue());
+			
+			log.info("用户反馈确认成功[ {} ]" + obj);
+
+		} catch (Exception e) {
+
+			obj.put(KeyWord.TIPSTATUS, StatusEnum.FAIL.getNum());
+			obj.put(KeyWord.TIPSTATUSCONTEN, StatusEnum.FAIL.getValue());
+			log.info("程序异常，用户反馈确认失败[ {} ]" + e);
+		}
+
+		return obj;
+	}
+
+	@Override
+	public int findAllMsgCount(UserMessage msg) {
+		int num = 0;
+		try {
+			num = operateMapper.findAllMsgCount(msg);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return num;
 	}
 
 }

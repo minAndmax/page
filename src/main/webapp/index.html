@@ -119,6 +119,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		</div>
 		<div id="notice" class="twets-top" style="overflow-y:scroll;height: 300px;">
 				<p><a href='jsq.jsp'>计算器</a></p>
+				<p><a href='massege.jsp'>给我留言</a></p>
 		</div>
 	</div>
 	<div class="clearfix"> </div>
@@ -225,8 +226,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				
     			html +="<div class='popular-top'>";
 	    		html +="<div class='pop-im'>";
-    			if(date[i].showImg != null){
-    				html +='<a href="newsDetail.jsp?newId='+date[i].newId+'"><img src="'+date[i].showImg+'" class="img-responsive"/></a>';
+    			if(date[i].newImags != null){
+    				html +='<a href="newsDetail.jsp?newId='+date[i].newId+'"><img src="'+date[i].newImags+'" class="img-responsive"/></a>';
     			} else{
     				html +='<a href="newsDetail.jsp?newId='+date[i].newId+'"><img src="source/images/newsImages/timg1.jpg"  class="img-responsive"/></a>';
     			}

@@ -4,6 +4,7 @@ D:\上家项目资料\army\src\main\java\com\army\dao\MusicMapper.java
 D:\上家项目资料\army\src\main\java\com\army\util\Get.java
 D:\上家项目资料\army\src\main\java\com\army\service\Moive\MoiveService.java
 D:\上家项目资料\army\src\main\java\com\army\controller\WebJumpController.java
+D:\上家项目资料\army\src\main\java\com\army\util\file\LOGFileUtil.java
 D:\上家项目资料\army\src\main\java\com\army\service\user\UserLoginService.java
 D:\上家项目资料\army\src\main\java\com\army\service\tv\TVService.java
 D:\上家项目资料\army\src\main\java\com\army\vo\NewsInfo.java
@@ -24,6 +25,7 @@ D:\上家项目资料\army\src\main\java\com\army\service\Moive\impl\MoiveServic
 D:\上家项目资料\army\src\main\java\com\army\service\user\impl\UserLoginServiceImpl.java
 D:\上家项目资料\army\src\main\java\com\army\util\TimerTask.java
 D:\上家项目资料\army\src\main\java\com\army\vo\UserInfo.java
+D:\上家项目资料\army\src\main\java\com\army\vo\UserMessage.java
 D:\上家项目资料\army\src\main\java\com\army\dao\NoticeMapper.java
 D:\上家项目资料\army\src\main\java\com\army\vo\ReptileNewsInfo.java
 D:\上家项目资料\army\src\main\java\com\army\service\opt\impl\OperateServiceImpl.java

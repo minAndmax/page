@@ -96,7 +96,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     		
 				html += "<div class='artical-content'>";
 				html += "<h3>"+date.jsonobejct.newName+"</h3>";
-// 				html += "<img class='img-responsive' src='"+date.jsonobejct+"' title='banner1'>";
+				if(date.newImags != null){
+					html += "<img class='img-responsive' src='"+date.newImags+"' title='banner1'>";
+				}
 				html +="<p>"+date.jsonobejct.newContent+"</p>";
 				html += "</div>";
 				html += "<div class='artical-links'>";

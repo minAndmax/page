@@ -101,6 +101,59 @@
     	DELETE FROM tb_imgs_his WHERE imgs_id = #{imgsId}
     	
     </delete>
-
+	
+	<!-- 留言 -->
+	<insert id="userMessage" parameterType="com.army.vo.UserMessage">
+		   INSERT INTO tb_message
+			(
+			msg_content,
+			email,
+			create_time,
+			msg_type)
+			VALUES
+			(
+			#{msgContent},
+			#{email},
+			NOW(),
+			'Y')
+	</insert>
+	
+	<select id="findAllMsg"  resultType="com.army.vo.UserMessage" parameterType="com.army.vo.UserMessage">
+		
+		SELECT  msg_id AS msgId,
+			    msg_content AS msgContent,
+			    email AS email,
+			    create_time AS createTime,
+			    msg_type AS msgType
+		FROM tb_message 
+		<where>
+			<if test="msgType != null and msgType != ''">
+				msg_type = #{msgType}
+			</if>
+		</where>
+		ORDER BY msg_type DESC limit #{page},#{size}
+	</select>
+	
+	<select id="findAllMsgCount"  resultType="int" parameterType="com.army.vo.UserMessage">
+		
+		SELECT DISTINCT
+				COUNT( DISTINCT msg_id) totalPages
+		FROM tb_message 
+		<where>
+			<if test="msgType != null and msgType != ''">
+				msg_type = #{msgType}
+			</if>
+		</where>
+	</select>
+	
+	<update id="reader" parameterType="com.army.vo.UserMessage">
+		
+		UPDATE tb_message SET 
+			<if test="msgType != null and msgType = ''">
+				msg_type = 'N'
+			</if>
+		WHERE msg_id = #{msgId}
+		
+	</update>
 
 </mapper>

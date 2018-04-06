@@ -64,7 +64,7 @@ public class MusicServiceImpl implements MusicService {
 		} catch (Exception e) {
 			obj.put(KeyWord.TIPSTATUS, StatusEnum.FAIL.getNum());
 			obj.put(KeyWord.TIPSTATUSCONTEN, StatusEnum.FAIL.getValue());
-			log.error("程序异常，音乐修改失败[ {} ]" + e.getMessage());
+			log.error("程序异常，音乐修改失败[ {} ]" + e.getStackTrace());
 		}
 		return obj;
 	}
@@ -150,7 +150,7 @@ public class MusicServiceImpl implements MusicService {
 			e.printStackTrace();
 			obj.put(KeyWord.TIPSTATUS, StatusEnum.FAIL.getNum());
 			obj.put(KeyWord.TIPSTATUSCONTEN, StatusEnum.FAIL.getValue());
-			log.error("程序异常，音乐添加失败[ {} ]" + e.getMessage());
+			log.error("程序异常，音乐添加失败[ {} ]" + e.getStackTrace());
 		}
 
 		return obj;
@@ -191,7 +191,7 @@ public class MusicServiceImpl implements MusicService {
 			e.printStackTrace();
 			obj.put(KeyWord.TIPSTATUS, StatusEnum.FAIL.getNum());
 			obj.put(KeyWord.TIPSTATUSCONTEN, StatusEnum.FAIL.getValue());
-			log.error("程序异常，音乐删除失败[ {} ]" + e.getMessage());
+			log.error("程序异常，音乐删除失败[ {} ]" + e.getStackTrace());
 		}
 		return obj;
 	}

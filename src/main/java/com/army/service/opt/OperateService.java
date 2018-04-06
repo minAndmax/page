@@ -1,11 +1,12 @@
 package com.army.service.opt;
 
+
 import javax.servlet.http.HttpServletRequest;
 
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
 import com.army.vo.ImgsHisInfo;
-import com.army.vo.TVListInfo;
+import com.army.vo.UserMessage;
 
 public interface OperateService {
 
@@ -22,5 +23,13 @@ public interface OperateService {
 	JSONObject loadImg(ImgsHisInfo img) throws Exception;
 
 	JSONObject deleteImg(ImgsHisInfo imgs) throws Exception;
+
+	JSONObject submitmsg(UserMessage msg) throws Exception;
+	
+	JSONArray findAllMsg(UserMessage msg)throws Exception;
+
+	JSONObject reader(HttpServletRequest request, UserMessage msg);
+
+	int findAllMsgCount(UserMessage msg);
 	
 }

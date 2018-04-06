@@ -56,6 +56,29 @@
     
     </select>
     
+    <select id="findByImgs"  parameterType="com.army.vo.NewsInfo" resultType="com.army.vo.NewsInfo">
+    	SELECT 
+    		new_id AS newId,
+	    	new_name AS newName,
+	    	new_content AS newContent,
+	    	show_img AS showImg,
+	    	new_type AS newType,
+	    	new_author AS newAuthor,
+			create_time AS createTime,
+			create_name AS createName,
+			new_imgs AS newImags,
+			is_valid AS valid
+		FROM tb_new_info 
+		<where>
+			<if test="newImags != null and newImags != ''">
+				new_imgs = #{newImags}
+			</if>
+			<if test="newName != null and newName != ''">
+				AND new_name = #{newName}
+			</if>
+		</where>
+    </select>
+    
     <select id="findCount" parameterType="com.army.vo.NewsInfo" resultType="int">
     
 		SELECT

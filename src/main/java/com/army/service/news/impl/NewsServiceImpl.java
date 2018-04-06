@@ -71,7 +71,7 @@ public class NewsServiceImpl implements NewsService {
             e.printStackTrace();
             obj.put(KeyWord.TIPSTATUS, StatusEnum.FAIL.getNum());
 			obj.put(KeyWord.TIPSTATUSCONTEN, StatusEnum.FAIL.getValue());
-			log.error("程序异常，新闻添加失败[ {} ]" + e.getMessage());
+			log.error("程序异常，新闻添加失败[ {} ]" + e.getStackTrace());
 		}
 
 		return obj;
@@ -121,7 +121,7 @@ public class NewsServiceImpl implements NewsService {
 
 			obj.put(KeyWord.TIPSTATUS, StatusEnum.FAIL.getNum());
 			obj.put(KeyWord.TIPSTATUSCONTEN, StatusEnum.FAIL.getValue());
-			log.info("程序异常，新闻修改失败[ {} ]" + e.getMessage());
+			log.info("程序异常，新闻修改失败[ {} ]" + e.getStackTrace());
 		}
 
 		return obj;

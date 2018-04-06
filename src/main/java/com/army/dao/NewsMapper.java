@@ -20,4 +20,6 @@ public interface NewsMapper {
 	
 	int findwebNewsCount (NewsInfo news)throws Exception;
 	
+	List<NewsInfo> findByImgs(NewsInfo news)throws Exception;
+	
 }

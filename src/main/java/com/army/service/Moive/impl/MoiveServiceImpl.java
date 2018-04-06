@@ -63,7 +63,7 @@ public class MoiveServiceImpl implements MoiveService{
 		} catch (Exception e) {
 				obj.put(KeyWord.TIPSTATUS, StatusEnum.FAIL.getNum());
 				obj.put(KeyWord.TIPSTATUSCONTEN, StatusEnum.FAIL.getValue());
-				log.error("程序异常，影视修改失败[ {} ]" + e.getMessage());
+				log.error("程序异常，影视修改失败[ {} ]" + e.getStackTrace());
 		}
 		return obj;
 	}
@@ -153,7 +153,7 @@ public class MoiveServiceImpl implements MoiveService{
             e.printStackTrace();
             obj.put(KeyWord.TIPSTATUS, StatusEnum.FAIL.getNum());
 			obj.put(KeyWord.TIPSTATUSCONTEN, StatusEnum.FAIL.getValue());
-			log.error("程序异常，添加视频失败[ {} ]" + e.getMessage());
+			log.error("程序异常，添加视频失败[ {} ]" + e.getStackTrace());
 		}
 		
 		return obj;

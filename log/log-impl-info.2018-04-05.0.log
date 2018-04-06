@@ -1,0 +1,2 @@
+===2018-04-05 09:24:09.824 [http-nio-8080-exec-5] INFO  com.army.service.user.impl.UserLoginServiceImpl Line:62 -执行了 userLogin: {"loginTip":"登录成功","tipStatus":1,"roleName":"超级管理员","tipStatusContent":"成功","userName":"admin","userId":1}
+===2018-04-05 11:41:37.266 [http-nio-8080-exec-3] INFO  com.army.service.user.impl.UserLoginServiceImpl Line:62 -执行了 userLogin: {"loginTip":"登录成功","tipStatus":1,"roleName":"超级管理员","tipStatusContent":"成功","userName":"admin","userId":1}

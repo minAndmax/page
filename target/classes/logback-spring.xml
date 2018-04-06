@@ -177,17 +177,17 @@
 		</filter>  
     </appender>      
     
-     <appender name="log-get-new"      
+       <appender name="log-FindNews-new"      
         class="ch.qos.logback.core.rolling.RollingFileAppender">      
-        <File>log/log-get-new.log</File>      
+        <File>log/log-FindNews-new.log</File>      
         <!-- rollingPolicy:当发生滚动时，决定 RollingFileAppender 的行为，涉及文件移动和重命名。 -->  
         <!-- TimeBasedRollingPolicy： 最常用的滚动策略，它根据时间来制定滚动策略，既负责滚动也负责出发滚动 -->  
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">      
             <!-- 活动文件的名字会根据fileNamePattern的值，每隔一段时间改变一次 -->  
             <!-- 文件名：log/sys.2017-12-05.0.log -->  
-            <fileNamePattern>log/log-get-new.%d.%i.log</fileNamePattern>   
+            <fileNamePattern>log/log-FindNews-new.%d.%i.log</fileNamePattern>   
             <timeBasedFileNamingAndTriggeringPolicy  class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">      
-                <!-- maxFileSize:这是活动文件的大小，默认值是10MB,本篇设置为1KB，只是为了演示 -->    
+                <!-- maxFileSize:这是活动文件的大小，默认值是10MB,本篇设置为5MB-->    
                 <maxFileSize>5MB</maxFileSize>      
             </timeBasedFileNamingAndTriggeringPolicy>      
         </rollingPolicy>      
@@ -220,8 +220,8 @@
     	<appender-ref ref="log-dao-debug" />     
     </logger>
     
-    <logger name="com.army.util" level="info" >
-    	<appender-ref ref="log-get-new" />  
+    <logger name="com.army.service.news.impl.NewsServiceImpl" level="info" >
+    	<appender-ref ref="log-FindNews-new" />  
     </logger>
     <logger name="com.army.service.user.impl" level="info" >
     	<appender-ref ref="log-impl-info" />  

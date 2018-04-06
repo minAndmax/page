@@ -2,7 +2,6 @@ package com.army.util;
 
 import java.io.BufferedReader;
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -42,32 +41,28 @@ public class Count {
 
 	private static long TODAYVEDIOCOUNT = 0; // 视频点击量
 
-	public static void addTop() {
+	public static synchronized void addTop() {
 		TOPCOUNT += 1;
 		TODAYTOPCOUNT += 1;
 		log.info("头条访问量 : " + TOPCOUNT);
 	}
 
-	public static void addOther() {
+	public static synchronized void addOther() {
 		OTHERCOUNT += 1;
 		TODAYOTHERCOUNT += 1;
 		log.info("天下杂谈访问量 : " + OTHERCOUNT);
 	}
 
-	public static void addMusic() {
+	public static synchronized void addMusic() {
 		MUSICCOUNT += 1;
 		TODAYMUSICCOUNT += 1;
 		log.info("音乐访问量 : " + MUSICCOUNT);
 	}
 
-	public static void addVedio() {
+	public static synchronized void addVedio() {
 		VEDIOCOUNT += 1;
 		TODAYVEDIOCOUNT += 1;
 		log.info("视频访问量 : " + VEDIOCOUNT);
-	}
-
-	public Count() {
-		// TODO Auto-generated constructor stub
 	}
 
 	public void setCount(long TOPCOUNT, long OTHERCOUNT, long MUSICCOUNT, long VEDIOCOUNT) {
