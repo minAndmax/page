@@ -6650,3 +6650,28 @@ Error starting ApplicationContext. To display the auto-configuration report enab
 
 ===2018-04-06 18:07:31.669 [http-nio-8080-exec-7] INFO  com.alibaba.druid.pool.DruidDataSource Line:721-{dataSource-1} inited
 ===2018-04-06 18:07:31.753 [http-nio-8080-exec-7] INFO  com.army.service.user.impl.UserLoginServiceImpl Line:62 -执行了 userLogin: {"loginTip":"登录成功","tipStatus":1,"roleName":"超级管理员","tipStatusContent":"成功","userName":"admin","userId":1}
+===2018-04-06 18:08:00.004 [pool-2-thread-1] INFO  com.army.util.Count Line:136-刷新访问量:头条访问量：3213678
+天下杂谈问量：15520
+音乐访问量：12470
+视频访问量：35474
+
+===2018-04-06 18:09:00.002 [pool-2-thread-1] INFO  com.army.util.Count Line:136-刷新访问量:头条访问量：3213678
+天下杂谈问量：15520
+音乐访问量：12470
+视频访问量：35474
+
+===2018-04-06 18:10:00.003 [pool-2-thread-1] INFO  com.army.util.Count Line:136-刷新访问量:头条访问量：3213678
+天下杂谈问量：15520
+音乐访问量：12470
+视频访问量：35474
+
+===2018-04-06 18:11:00.002 [pool-2-thread-1] INFO  com.army.util.Count Line:136-刷新访问量:头条访问量：3213678
+天下杂谈问量：15520
+音乐访问量：12470
+视频访问量：35474
+
+===2018-04-06 18:12:00.002 [pool-2-thread-1] INFO  com.army.util.Count Line:136-刷新访问量:头条访问量：3213678
+天下杂谈问量：15520
+音乐访问量：12470
+视频访问量：35474
+
