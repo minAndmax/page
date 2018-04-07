@@ -101,7 +101,7 @@ public class ReptileServiceImpl implements ReptileService {
 				opt.setOptRemark("暂无新数据");
 			} else {
 				log.info("系统获取新闻添加成功:" + obj);
-				opt.setOptRemark("系统获取新闻添加成功,新增" + n + "条新闻");
+				opt.setOptRemark("执行爬虫获取数据,系统获取新闻添加成功,新增" + n + "条新闻");
 			}
 			opt.setOptType("system");
 			opt.setOptName("系统记录");

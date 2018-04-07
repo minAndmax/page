@@ -142,7 +142,7 @@ public class Get {
 					// System.out.println( time+ "---" + title);
 				}
 
-				log.info("添加极速新闻成功,共" + list.size() + "条");
+				log.info("执行极速api,添加极速新闻成功,共" + list.size() + "条");
 				OperateInfo opt = new OperateInfo();
 				opt.setOptType("system");
 				opt.setOptName("系统记录");

@@ -5,7 +5,9 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 import java.util.regex.Pattern;
 
 import org.slf4j.Logger;
@@ -15,65 +17,78 @@ import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
 
 public class LOGFileUtil {
-	
+
 	private static final Logger log = LoggerFactory.getLogger(LOGFileUtil.class);
-//	private static final ConcurrentHashMap<String, JSONObject> cahe = new ConcurrentHashMap<String, JSONObject>();
+	private static final List<String> srcs = new ArrayList<String>();
 	
-//	public static void main(String[] args) {
-////		getLogFile();
-//		
-//		File[] files = File.listRoots();
-//		for(File file : files) {
-//			System.out.println(file.getName());
-//		}
-//		
-//	}
-	public static JSONArray getLogFile(String type,String src) {
-		
-		if("delete".equals(type)) {
-			
+	static {
+		srcs.add("log-debug.log");
+		srcs.add("log-dao-debug.log");
+		srcs.add("log-info.log");
+		srcs.add("log-impl-info.log");
+		srcs.add("log-error.log");
+		srcs.add("log-FindNews-new.log");
+		srcs.add("log-warn.log");
+	}
+
+	public static JSONArray getLogFile(String type, String src, String date) {
+
+		if ("delete".equals(type)) {
+
 			deleteSrc(src);
-			log.info("删除文件:"+src);
+			log.info("删除文件:" + src);
 			return null;
 		}
-		
-		File f = new File("log");
+
+		File f = new File("/root/app/log");
 		File[] files = f.listFiles();
 		JSONObject obj = null;
 		JSONArray arr = new JSONArray();
 		Date d = new Date();
-		for(File file : files) {
-			
-//			if(cahe.containsKey(file.getName())) {
-//				arr.add(cahe.get(file.getName()));
-//				continue;
-//			}
-			obj = new JSONObject();
-			obj.put("fileName", file.getName());
-			obj.put("fileSize", (file.length() / 1024.00 / 1024));
-			d.setTime(file.lastModified()); 
-			obj.put("createTime", new SimpleDateFormat("yyyy-MM-dd").format(d));
-			obj.put("fileContent", readFile(file.getName()));
-//			cahe.put(file.getName(), obj);
-			arr.add(obj);
+		if (date.indexOf("-") == -1) {
+			d.setTime(Long.valueOf(date));
+			date = new SimpleDateFormat("yyyy-MM-dd").format(d);
+		}
+		if (date.equals(new SimpleDateFormat("yyyy-MM-dd").format(new Date()))) {
+			for (File file : files) {
+				if (file.getName().indexOf(date) != -1 || srcs.contains(file.getName())) {
+					obj = new JSONObject();
+					obj.put("fileName", file.getName());
+					obj.put("fileSize", (file.length() / 1024.00 / 1024));
+					d.setTime(file.lastModified());
+					obj.put("createTime", new SimpleDateFormat("yyyy-MM-dd").format(d));
+					obj.put("fileContent", readFile(file.getName()));
+					arr.add(obj);
+				}
+			}
+		} else {
+			for (File file : files) {
+				if (file.getName().indexOf(date) != -1) {
+					obj = new JSONObject();
+					obj.put("fileName", file.getName());
+					obj.put("fileSize", (file.length() / 1024.00 / 1024));
+					d.setTime(file.lastModified());
+					obj.put("createTime", new SimpleDateFormat("yyyy-MM-dd").format(d));
+					obj.put("fileContent", readFile(file.getName()));
+					arr.add(obj);
+				}
+			}
 		}
 		return arr;
 	}
 
 	private static void deleteSrc(String src) {
-		
-		File f = new File("log" + File.separator + src);
-		
-		if(f.exists()) {
+
+		File f = new File("/root/app/log" + File.separator + src);
+
+		if (f.exists()) {
 			f.delete();
 		}
-		
-		// TODO Auto-generated method stub
-		
+
 	}
 
 	private static String readFile(String string) {
-		File f = new File("log/" + File.separator + string);
+		File f = new File("/root/app/log" + File.separator + string);
 		FileReader fr = null;
 		BufferedReader br = null;
 		StringBuffer sb = new StringBuffer();
@@ -82,10 +97,11 @@ public class LOGFileUtil {
 			fr = new FileReader(f);
 			br = new BufferedReader(fr);
 			while ((line = br.readLine()) != null) {
-				if(line.indexOf("===") == -1) {
+				if (line.indexOf("===") == -1) {
 					continue;
 				}
-				sb.append(Pattern.compile("<[^>]+>",Pattern.CASE_INSENSITIVE).matcher(line).replaceAll("") + "<br/>\r\n");
+				sb.append(Pattern.compile("<[^>]+>", Pattern.CASE_INSENSITIVE).matcher(line).replaceAll("")
+						+ "<br/>\r\n");
 			}
 		} catch (Exception e) {
 			e.printStackTrace();

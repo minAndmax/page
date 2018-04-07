@@ -31,19 +31,10 @@ public class TimerTask implements CommandLineRunner {
 
 	public static void exec() {
 
-		String url = "http://www.bianyl.cn:8080/data/findAllReptileNews";
-		String url1 = "http://www.bianyl.cn:8080/data/findAllNews";
-		String url2 = "http://www.bianyl.cn:8080/data/findAllMusic";
-		String url3 = "http://www.bianyl.cn:8080/data/findAllMoive";
-		HttpUtil h1 = null;
-		HttpUtil h2 = null;
-		HttpUtil h3 = null;
-		HttpUtil h4 = null;
-
-		h1 = new HttpUtil(url);
-		h2 = new HttpUtil(url1);
-		h3 = new HttpUtil(url2);
-		h4 = new HttpUtil(url3);
+		Count h1 = new Count();
+		Count h2 = new Count();
+		Count h3 = new Count();
+		Count h4 = new Count();
 
 		h1.start();
 		h2.start();
@@ -57,7 +48,6 @@ public class TimerTask implements CommandLineRunner {
 		log.info("start.............");
 		start();
 		exec();
-		// start();
 	}
 
 }

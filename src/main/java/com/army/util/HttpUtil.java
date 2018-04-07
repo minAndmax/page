@@ -60,12 +60,13 @@ public class HttpUtil extends Thread{
 	 public static String sendPost(String url,String charset) throws Exception {
 			
 	        URL realurl = new URL(url);
+	        
 	        HttpURLConnection con = (HttpURLConnection) realurl.openConnection();
-	         
 	        con.setRequestMethod("POST");
 	        con.setRequestProperty("User-Agent", USER_AGENT);
 //	        StringBuffer buffer = new StringBuffer();
 	        con.setDoOutput(true);
+	        con.setReadTimeout(50000);
 	        DataOutputStream wr = new DataOutputStream(con.getOutputStream());
 //	        wr.writeBytes(buffer.toString());
 	        wr.flush();

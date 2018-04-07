@@ -88,8 +88,8 @@ public class WebJumpController {
 	}
 	
 	@RequestMapping("/manager/findLog")
-	public JSONArray findLog(String type,String src) throws Exception {
-		JSONArray arr = LOGFileUtil.getLogFile(type,src);
+	public JSONArray findLog(String type,String src,String date) throws Exception {
+		JSONArray arr = LOGFileUtil.getLogFile(type,src,date);
 		return arr;
 	}
 	

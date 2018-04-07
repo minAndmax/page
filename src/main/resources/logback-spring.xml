@@ -25,7 +25,7 @@
             <fileNamePattern>log/log-debug.%d.%i.log</fileNamePattern>   
             <timeBasedFileNamingAndTriggeringPolicy  class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">      
                 <!-- maxFileSize:这是活动文件的大小，默认值是10MB,本篇设置为1KB，只是为了演示 -->    
-                <maxFileSize>5MB</maxFileSize>      
+                <maxFileSize>2MB</maxFileSize>      
             </timeBasedFileNamingAndTriggeringPolicy>      
         </rollingPolicy>      
         <encoder>      
@@ -54,7 +54,7 @@
             <fileNamePattern>log/log-dao-debug.%d.%i.log</fileNamePattern>   
             <timeBasedFileNamingAndTriggeringPolicy  class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">      
                 <!-- maxFileSize:这是活动文件的大小，默认值是10MB,本篇设置为1KB，只是为了演示 -->    
-                <maxFileSize>5MB</maxFileSize>      
+                <maxFileSize>2MB</maxFileSize>      
             </timeBasedFileNamingAndTriggeringPolicy>      
         </rollingPolicy>      
         <encoder>      
@@ -77,7 +77,7 @@
             <fileNamePattern>log/log-info.%d.%i.log</fileNamePattern>   
             <timeBasedFileNamingAndTriggeringPolicy  class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">      
                 <!-- maxFileSize:这是活动文件的大小，默认值是10MB,本篇设置为1KB，只是为了演示 -->    
-                <maxFileSize>5MB</maxFileSize>      
+                <maxFileSize>2MB</maxFileSize>      
             </timeBasedFileNamingAndTriggeringPolicy>      
         </rollingPolicy>      
         <encoder>      
@@ -105,7 +105,7 @@
             <fileNamePattern>log/log-impl-info.%d.%i.log</fileNamePattern>   
             <timeBasedFileNamingAndTriggeringPolicy  class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">      
                 <!-- maxFileSize:这是活动文件的大小，默认值是10MB,本篇设置为1KB，只是为了演示 -->    
-                <maxFileSize>5MB</maxFileSize>      
+                <maxFileSize>2MB</maxFileSize>      
             </timeBasedFileNamingAndTriggeringPolicy>      
         </rollingPolicy>      
         <encoder>      
@@ -132,7 +132,7 @@
             <fileNamePattern>log/log-error.%d.%i.log</fileNamePattern>   
             <timeBasedFileNamingAndTriggeringPolicy  class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">      
                 <!-- maxFileSize:这是活动文件的大小，默认值是10MB,本篇设置为1KB，只是为了演示 -->    
-                <maxFileSize>5MB</maxFileSize>      
+                <maxFileSize>2MB</maxFileSize>      
             </timeBasedFileNamingAndTriggeringPolicy>      
         </rollingPolicy>      
         <encoder>      
@@ -160,7 +160,7 @@
             <fileNamePattern>log/log-warn.%d.%i.log</fileNamePattern>   
             <timeBasedFileNamingAndTriggeringPolicy  class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">      
                 <!-- maxFileSize:这是活动文件的大小，默认值是10MB,本篇设置为1KB，只是为了演示 -->    
-                <maxFileSize>5MB</maxFileSize>      
+                <maxFileSize>2MB</maxFileSize>      
             </timeBasedFileNamingAndTriggeringPolicy>      
         </rollingPolicy>      
         <encoder>      
@@ -188,7 +188,7 @@
             <fileNamePattern>log/log-FindNews-new.%d.%i.log</fileNamePattern>   
             <timeBasedFileNamingAndTriggeringPolicy  class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">      
                 <!-- maxFileSize:这是活动文件的大小，默认值是10MB,本篇设置为5MB-->    
-                <maxFileSize>5MB</maxFileSize>      
+                <maxFileSize>2MB</maxFileSize>      
             </timeBasedFileNamingAndTriggeringPolicy>      
         </rollingPolicy>      
         <encoder>      

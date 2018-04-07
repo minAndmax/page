@@ -1,4 +1,0 @@
-===2018-03-28 08:45:34.698 [http-nio-8080-exec-3] INFO  com.army.service.user.impl.UserLoginServiceImpl Line:62 -执行了 userLogin: {"loginTip":"登录成功","tipStatus":1,"roleName":"超级管理员","tipStatusContent":"成功","userName":"admin","userId":1}
-===2018-03-28 10:50:27.217 [http-nio-8080-exec-2] INFO  com.army.service.user.impl.UserLoginServiceImpl Line:62 -执行了 userLogin: {"loginTip":"登录成功","tipStatus":1,"roleName":"超级管理员","tipStatusContent":"成功","userName":"admin","userId":1}
-===2018-03-28 13:23:29.694 [http-nio-8080-exec-5] INFO  com.army.service.user.impl.UserLoginServiceImpl Line:62 -执行了 userLogin: {"loginTip":"登录成功","tipStatus":1,"roleName":"超级管理员","tipStatusContent":"成功","userName":"admin","userId":1}
-===2018-03-28 14:24:26.036 [http-nio-8080-exec-3] INFO  com.army.service.user.impl.UserLoginServiceImpl Line:62 -执行了 userLogin: {"loginTip":"登录成功","tipStatus":1,"roleName":"超级管理员","tipStatusContent":"成功","userName":"admin","userId":1}

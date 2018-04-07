@@ -7,6 +7,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.Random;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -20,7 +21,7 @@ import org.springframework.stereotype.Component;
  *
  */
 @Component
-public class Count {
+public class Count extends Thread {
 
 	private static final Logger log = LoggerFactory.getLogger(Count.class);
 
@@ -41,28 +42,46 @@ public class Count {
 
 	private static long TODAYVEDIOCOUNT = 0; // 视频点击量
 
+	@Override
+	public synchronized void run() {
+		int m = 0;
+		while (true) {
+			m = new Random().nextInt(100);
+			if (m > 90) {
+				addVedio();
+			} else if (m <= 90 && m > 75) {
+				addMusic();
+			} else if (m <= 75 && m > 40) {
+				addTop();
+			} else {
+				addOther();
+			}
+			try {
+				Thread.sleep(new Random().nextInt(10000) + 2000);
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
+		}
+	}
+
 	public static synchronized void addTop() {
 		TOPCOUNT += 1;
 		TODAYTOPCOUNT += 1;
-		log.info("头条访问量 : " + TOPCOUNT);
 	}
 
 	public static synchronized void addOther() {
 		OTHERCOUNT += 1;
 		TODAYOTHERCOUNT += 1;
-		log.info("天下杂谈访问量 : " + OTHERCOUNT);
 	}
 
 	public static synchronized void addMusic() {
 		MUSICCOUNT += 1;
 		TODAYMUSICCOUNT += 1;
-		log.info("音乐访问量 : " + MUSICCOUNT);
 	}
 
 	public static synchronized void addVedio() {
 		VEDIOCOUNT += 1;
 		TODAYVEDIOCOUNT += 1;
-		log.info("视频访问量 : " + VEDIOCOUNT);
 	}
 
 	public void setCount(long TOPCOUNT, long OTHERCOUNT, long MUSICCOUNT, long VEDIOCOUNT) {
@@ -75,13 +94,13 @@ public class Count {
 	}
 
 	@Scheduled(cron = "0 0 00 * * ?")
-//	@Scheduled(cron = "0/5 * *  * * ? ")
+	// @Scheduled(cron = "0/5 * * * * ? ")
 	public void clearn() {
 		FileWriter fw = null;
 		try {
 
 			File topFile = new File("D:" + java.io.File.separator + "log.txt");
-			
+
 			StringBuffer sb = new StringBuffer();
 			String date = new SimpleDateFormat("yyyy-MM-dd").format(new Date());
 			sb.append(date + "<br/>\r\n");
@@ -115,7 +134,7 @@ public class Count {
 	}
 
 	// 将数据写入磁盘中
-	@Scheduled(cron = "0/90 * *  * * ? ") // 每1.5分钟执行执行一次
+	@Scheduled(cron = "0/260 * *  * * ? ") // 每1.5分钟执行执行一次
 	public static void writer() {
 
 		File topFile = new File("D:" + java.io.File.separator + "count.txt");
@@ -133,7 +152,6 @@ public class Count {
 			fw = new FileWriter(topFile);
 			fw.write(sb.toString());
 			fw.flush();
-			log.info("刷新访问量:" + sb.toString());
 		} catch (Exception e) {
 			log.info("刷新访问数量失败 ：" + e.getMessage());
 		} finally {
@@ -165,7 +183,7 @@ public class Count {
 	public static String getCount() {
 
 		File f = new File("D:" + File.separator + "count.txt");
-		if(!f.exists()) {
+		if (!f.exists()) {
 			return null;
 		}
 		FileReader fr = null;
@@ -178,7 +196,7 @@ public class Count {
 
 			while ((line = br.readLine()) != null) {
 				sb.append(line + "\r\n");
-				
+
 			}
 			return sb.toString();
 		} catch (Exception e) {

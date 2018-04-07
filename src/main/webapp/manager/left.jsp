@@ -47,7 +47,7 @@ $(function(){
     	 <li><cite></cite><a href="vedio/tvtab.html" target="rightFrame">电视管理</a><i></i></li>
     	 <li><cite></cite><a href="music/musictab.html" target="rightFrame">音乐管理</a><i></i></li>
     	 <li><cite></cite><a href="userManager/userManager.html" target="rightFrame">用户管理</a><i></i></li>
-    	 
+    	 <li><cite></cite><a href="notice/tab.html" target="rightFrame">通知管理</a><i></i></li>
         <li><cite></cite><a href="imgtable.html" target="rightFrame">图片数据表</a><i></i></li>
         <li><cite></cite><a href="imglist.jsp" target="rightFrame">图片列表</a><i></i></li>
         </ul>    
@@ -90,10 +90,9 @@ $(function(){
     </dl>
 </body>
 	<script type="text/javascript">
-		
-	window.setInterval(function(){
+		$(document).ready(function(){
 			loadnum()
-		},10000)
+		})
 	
 		function loadnum(){
 			

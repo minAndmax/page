@@ -42,7 +42,8 @@
     
     <div class="itab">
   	<ul> 
-    <li><a href="#tab2" class="selected">日志列表</a></li> 
+    <li><a href="#tab2" class="selected">日志列表</a></li>
+
 <!--     <li><a href="#tab1">添加电视</a></li>  -->
   	</ul>
     </div> 
@@ -50,7 +51,11 @@
     </div> 
     
   	<div id="tab2" class="tabson">
-    
+    <ul class="seachform">
+    	 <li><label>通知时间:</label><input name="date" type="text" id="date" onclick="new Calendar().show(this);" size="10" maxlength="10" class="scinput" /></li> 
+	   	<li><label>&nbsp;</label><input name="" type="button" class="scbtn" id="scbtn" value="查询"/></li>
+	    <li><label>&nbsp;</label><input name="" type="button" class="scbtn"  id ="reset" value="重置"/></li>
+    </ul>
     <table class="tablelist">
     	<thead>
     	<tr>
@@ -106,10 +111,12 @@
  			
 		     	function load(){
 	        		
-	        		var tvName = $("#tvName").val();
-	        		
+	        		var date = $("#date").val();
+	        		if(date == ''){
+	        			date = new Date().getTime();
+	        		}
 	        		$.post("/data/manager/findLog",
-	        				{},
+	        				{date : date},
 	        				callback);
 	        	    function callback(data){
 	        	    	    var tabhtml = ""
@@ -158,8 +165,6 @@
     						confirmButtonText: "确认",
     						type: "success"
     					},function(inputValue){
-    						
-// 			     			KindEditor.html("#content7","");
     						load();
         	            }, 2000);
      				
@@ -167,9 +172,13 @@
 					}
        			 });
 			}
- 			  
-     	$(document).ready(function(){
+	    $("#reset").click(function(){
+	    	$("#date").val('');
+	    })
+ 		$("#scbtn").click(function(){
      		load();
+ 		})
+     	$(document).ready(function(){
 		})
      </script>
      <script type="text/javascript">
