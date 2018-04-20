@@ -1,11 +1,17 @@
 package com.army.vo;
 
+import java.io.Serializable;
 import java.util.List;
 
 import com.alibaba.fastjson.JSONObject;
 
-public class BaseInfo {
+public class BaseInfo implements Serializable{
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
 	private String createName;
 	
 	private String createTime;

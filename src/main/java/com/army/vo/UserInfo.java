@@ -1,7 +1,14 @@
 package com.army.vo;
 
-public class UserInfo extends BaseInfo{
+import java.io.Serializable;
+
+public class UserInfo extends BaseInfo implements Serializable{
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
 	private Long userId;
 	
 	private String userName;

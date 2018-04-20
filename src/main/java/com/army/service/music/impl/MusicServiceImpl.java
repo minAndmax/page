@@ -8,6 +8,7 @@ import javax.servlet.http.HttpServletRequest;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -70,6 +71,7 @@ public class MusicServiceImpl implements MusicService {
 	}
 
 	@Override
+	@Cacheable(value="findAllMusic")
 	public JSONArray findAllMusic(MusicInfo info) throws Exception {
 		JSONArray arry = new JSONArray();
 
@@ -81,6 +83,7 @@ public class MusicServiceImpl implements MusicService {
 	}
 
 	@Override
+	@Cacheable(value="findOneMusicByName")
 	public JSONArray findOneMusicByName(MusicInfo musicInfo) throws Exception {
 		JSONArray arry = new JSONArray();
 
@@ -92,6 +95,7 @@ public class MusicServiceImpl implements MusicService {
 	}
 
 	@Override
+	@Cacheable(value="findAllMusicManeger")
 	public JSONArray findAllMusicManeger(MusicInfo musicInfo) throws Exception {
 
 		if (musicInfo.getCreateName().equals("admin")) {

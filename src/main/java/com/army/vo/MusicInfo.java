@@ -1,7 +1,14 @@
 package com.army.vo;
 
-public class MusicInfo extends BaseInfo{
+import java.io.Serializable;
+
+public class MusicInfo extends BaseInfo implements Serializable{
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
 	private Long musicId;
 
 	private String musicName;

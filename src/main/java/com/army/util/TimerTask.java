@@ -47,7 +47,7 @@ public class TimerTask implements CommandLineRunner {
 	public void run(String... arg0) throws Exception {
 		log.info("start.............");
 		start();
-		exec();
+//		exec();
 	}
 
 }

@@ -9,6 +9,7 @@ import javax.servlet.http.HttpServletRequest;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -129,6 +130,7 @@ public class NewsServiceImpl implements NewsService {
 	}
 
 	@Override
+	@Cacheable(value="findAllNews")
 	public JSONArray findAllNews(NewsInfo news) throws Exception {
 
         int pages = newsMapper.findwebNewsCount(news);
@@ -158,6 +160,7 @@ public class NewsServiceImpl implements NewsService {
 	}
 
 	@Override
+	@Cacheable(value="findAllNewManager")
 	public JSONArray findAllNewManager(NewsInfo news) throws Exception {
 		
 		if(news.getCreateName().equals("admin")) {
@@ -184,11 +187,12 @@ public class NewsServiceImpl implements NewsService {
 		for (NewsInfo info : nws) {
 			arr.add(info);
 		}
-//		log.info("后台管理员查看所有新闻，[ {} ]" + arr);
+		log.info("没有走缓存");
 		return arr;
 	}
 
 	@Override
+//	@Cacheable(value="findNewById")
 	public JSONObject findNewById(NewsInfo news) throws Exception {
 		
 		NewsInfo nw = newsMapper.findNewById(news);

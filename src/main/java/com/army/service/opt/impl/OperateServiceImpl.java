@@ -8,6 +8,7 @@ import javax.servlet.http.HttpServletRequest;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 
 import com.alibaba.fastjson.JSONArray;
@@ -54,7 +55,9 @@ public class OperateServiceImpl implements OperateService {
 	private ReptileMapper reptileMapper;
 
 	private static final Logger log = LoggerFactory.getLogger(OperateServiceImpl.class);
+	
 	@Override
+//	@Cacheable(value="findOpt")
 	public JSONArray findOpt(HttpServletRequest request, String tip) throws Exception {
 		
 		
@@ -88,6 +91,7 @@ public class OperateServiceImpl implements OperateService {
 	}
 
 	@Override
+//	@Cacheable(value="findAllCount")
 	public JSONArray findAllCount(HttpServletRequest request) throws Exception {
 
 		JSONObject sessionObj = (JSONObject) request.getSession().getAttribute(KeyWord.USERSESSION);
@@ -132,6 +136,7 @@ public class OperateServiceImpl implements OperateService {
 	}
 
 	@Override
+	@Cacheable(value="findAllImgs")
 	public JSONArray findAllImgs(ImgsHisInfo img) throws Exception {
 
 		int pages = operateMapper.findAllImgsCount();
@@ -170,6 +175,7 @@ public class OperateServiceImpl implements OperateService {
 	}
 
 	@Override
+//	@Cacheable(value="loadImg")
 	public JSONObject loadImg(ImgsHisInfo img) throws Exception {
 
 		ImgsHisInfo im = operateMapper.findBySrc(img);

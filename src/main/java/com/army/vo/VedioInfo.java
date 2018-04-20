@@ -1,6 +1,13 @@
 package com.army.vo;
 
-public class VedioInfo extends BaseInfo{
+import java.io.Serializable;
+
+public class VedioInfo extends BaseInfo implements Serializable{
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 
 	private Long vedioId;
 	

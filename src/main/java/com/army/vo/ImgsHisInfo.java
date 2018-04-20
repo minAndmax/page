@@ -1,7 +1,14 @@
 package com.army.vo;
 
-public class ImgsHisInfo extends BaseInfo {
+import java.io.Serializable;
+
+public class ImgsHisInfo extends BaseInfo  implements Serializable{
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
 	private Long imgsId;
 	
 	private String imgsHisSrc;

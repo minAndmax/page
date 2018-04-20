@@ -1,6 +1,13 @@
 package com.army.vo;
 
-public class NewsInfo extends BaseInfo{
+import java.io.Serializable;
+
+public class NewsInfo extends BaseInfo implements Serializable{
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 
 	private Long newId;
 
